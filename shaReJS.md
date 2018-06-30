@@ -1,6 +1,8 @@
 ---
 permalink: /sharedjs.html
 ---
+[Home](https://layik.github.io) | About | Current
+<hr/>
 
 Recently have been working on [att](https://github.com/ATFutures/activeTransportToolbox), where I had to share some JS lists with the R serverside code. I found out that R [V8](https://github.com/jeroen/V8) package is obviously not able to run in the browser so things cannot be as rosey as they are in Node. Here is how it worked:
 
@@ -24,3 +26,6 @@ require('Shared.js')
 console.log("global.list")
 [ 1, 2, 3 ]
 ```
+
+<hr/>
+[Home](https://layik.github.io) | Footer | Menu
