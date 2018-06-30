@@ -1,4 +1,4 @@
-Recently have been working on att, where I had to share some JS lists with the R serverside code. I found out that V8 package is obviously not able to run in the browser so things cannot be as rosey as they are in Node. Here is how it worked.
+Recently have been working on [att](https://github.com/ATFutures/activeTransportToolbox), where I had to share some JS lists with the R serverside code. I found out that R [V8](https://github.com/jeroen/V8) package is obviously not able to run in the browser so things cannot be as rosey as they are in Node. Here is how it worked:
 
 ``` js
 //Shared.js file
