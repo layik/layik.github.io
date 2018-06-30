@@ -26,6 +26,3 @@ require('Shared.js')
 console.log("global.list")
 [ 1, 2, 3 ]
 ```
-
-<hr/>
-[Home](https://layik.github.io) | Footer | Menu
