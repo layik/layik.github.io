@@ -22,7 +22,8 @@ list <- ct$get("global.list")
 ```
 We cannot use import as `Shared.js` does not use modules.
 ``` js
-require('Shared.js')
+//test.js
+require('./Shared.js')
 console.log("global.list")
 [ 1, 2, 3 ]
 ```
