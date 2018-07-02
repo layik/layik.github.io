@@ -1,4 +1,4 @@
-Layik's GitHub Pages Repo
+Layik's GitHub Pages [Repo](https://github.com/layik/layik.github.io)
 
 ![Image from PixaBay](/images/pixabay.png)
 
