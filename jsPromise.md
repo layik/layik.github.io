@@ -24,8 +24,10 @@ var promise = new Promise(function(callbackOne, callbackTwo) { // initialization
 In both above chunks, the caller using 
 ```{js}
 promise.then(() => console.log("callbackOne"), //only this one is called 
-             () => console.log("callbackTow"))
+             () => console.log("callbackTow")) //if not interested in the error, second one can be ignored.
+// output 
+// callbackOne
 ```
-The reason is just order and nothing else because the first console statement is the one returned in the "then" function.
+The reason is just order and nothing else because the first console statement is the one returned in the "then" function. I could not make sense of the NodeJS/V8 source code by a quick look but at least the [`enum`](https://github.com/nodejs/node/blob/master/deps/v8/src/objects/promise.h#L136) here also has the same order. 
 
-TBC
+Both functions (one/resolve, two/reject) are able to return any object desired. Usually with the resolve a useful object is returned. with the reject, usually an error is returned.
