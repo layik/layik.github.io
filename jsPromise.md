@@ -24,7 +24,7 @@ var promise = new Promise(function(callbackOne, callbackTwo) { // initialization
 In both above chunks, the caller using 
 ```{js}
 promise.then(() => console.log("callbackOne"), //only this one is called 
-             () => console.log("callbackTow")) //if not interested in the error, second one can be ignored.
+             () => console.log("callbackTow")) //if not interested in the error, second one can be ignored, in this example this is actually null
 // output 
 // callbackOne
 ```
