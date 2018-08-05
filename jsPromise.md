@@ -30,6 +30,23 @@ promise.then(() => console.log("callbackOne"), //only this one is called
 ```
 The reason is just order and nothing else because the first console statement is the one returned in the "then" function. I could not make sense of the NodeJS/V8 source code by a quick look but at least the [`enum`](https://github.com/nodejs/node/blob/master/deps/v8/src/objects/promise.h#L136) here also has the same order. 
 
-Both functions (one/resolve, two/reject) are able to return any object desired. Usually with the resolve a useful object is returned. with the reject, usually an error is returned.
+Both functions (one/resolve, two/reject) are able to return any object desired. Usually with the resolve a useful object is returned. with the reject or in the case of throwing an error, the error value is returned. Here comes the important bit about promises: `then` prototype function or in the V8 code, thenable object.
+
+The `promise.then` prototype function above, returns the `promise` itself with both callback functions. One of the two is always null, because it has not been called. To be pedantic, in the of the `resolve` or first callback, the second is `null` and vice versa. Here is the [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) outlining `then` function:
+
+```{js}
+var promise = new Promise(function(resolve, reject) {
+  resolve('Success!'); //here we call the resolve without any delay
+});
+
+promise.then(function(value) {
+  console.log(value);
+  // expected output: "Success!"
+}); //notice we dont even pass a second function, we know above we called "resolve" or the first callback.
+```
+The docs in `then` outlines order and how handlers (callbacks) are called, for the sake of similicity I am going to ignore this.
+
+Finally, and perhaps crucially, these two callback functions are different from the methods [`reject`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) and [`resolve`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) which both return a promise which has been "resolved" with a value or "rejected" with a reason respectively. 
+
 
 last updated: 4th Aug 2018 - 21:50 BST
