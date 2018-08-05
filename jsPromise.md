@@ -49,4 +49,4 @@ The docs in `then` outlines order and how handlers (callbacks) are called, for t
 Finally, and perhaps crucially, these two callback functions are different from the methods [`reject`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) and [`resolve`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) which both return a promise which has been "resolved" with a value or "rejected" with a reason respectively. 
 
 
-last updated: 4th Aug 2018 - 21:50 BST
+last updated: 5th Aug 2018 - 23:10 BST
