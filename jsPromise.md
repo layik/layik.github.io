@@ -6,7 +6,7 @@ permalink: /jspromise.html
 
 The name (Promise) is slightly confusing for the context but once clear in your head, it has been hard for me to think about a better name. You promise to get back to the caller with one of two `callback functions` (notice functions) in any case. To be more useful, you promise to return a "positive" result or a "negative" one. And "conventionally" two other terms are used: `resolve` and `reject`. These are nothing but placeholder terms and anything else could be used in their place. It is the order that matter not the terms.
 
-Here is the bit that made it so confusing for me, there is nothign in the naming except the `Promise` object. The rest, is just about order of the parameters of the function. So when the [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) define promise as
+Here is the bit that made it so confusing for me, there is nothing in the naming except the `Promise` object. The rest, is just about order of the parameters of the function. So when the [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) define promise as
 
 ```{js}
 var promise = new Promise(function(resolve, reject) {
@@ -19,7 +19,7 @@ var promise = new Promise(function(callbackOne, callbackTwo) { // initialization
   setTimeout(callbackOne, 100, 'foo'); //this is to simulate a delay
 });
 ```
-In both above chunks, the caller using 
+In both above chunks, the caller using below chunk will get the result shown:
 ```{js}
 promise.then(() => console.log("callbackOne"), //only this one is called 
              () => console.log("callbackTow")) //if not interested in the error, second one can be ignored, in this example this is actually null
