@@ -2,7 +2,7 @@ Layik's GitHub Pages [Repo](https://github.com/layik/layik.github.io)
 
 ![Image from PixaBay](/images/pixabay.png)
 
-Welcome. See if I can set up a microblog without Jekyll or Hugo.
+Welcome. See if I can set up a microblog witHugohout too much Jekyll etc. I just became aware Jekyll powers `gh-pages`.
 
 Posts:
 - 
