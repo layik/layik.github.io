@@ -40,6 +40,8 @@ permalink: /htmljsx.html
 ```
 The notes there are what I want to discuss a little here. You can certainly include it in the HTML file using `<script type="text/babel">` with the attribute `text/bable` and obviously you would then need the Babel `.js` file (minified or not transpiler).
 
+Now, can we take the JSX out into a separate file and include it in the HTML using the same or standard `<srcipt src='react.js'>`? I was not able to.
+
 The only way I have found to do this, is to have a precompiled version of the code in ES as stated by the [React docs](https://reactjs.org/docs/add-react-to-a-website.html), and import into the browser with a standard `<script src='react_no_jsx.js'>`. Here is what the `Hello World` React would would be transpiled.
  
 <img width="1055" alt="Screenshot 2019-03-28 at 17 55 56" src="https://user-images.githubusercontent.com/408568/55181067-c4bf9900-5182-11e9-860f-e2f9ee545483.png">
@@ -63,3 +65,5 @@ ReactDOM.render(React.createElement(
   'Hello, world!'
 ), document.getElementById('root'));
 ```
+
+Maybe the reason why the JSX tags within a separate file is not "compiled" by the Babel compiler is just context, maybe not. I could not be sure so far. I would love to update this post with a definite answer.
