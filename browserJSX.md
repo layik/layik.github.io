@@ -67,3 +67,9 @@ ReactDOM.render(React.createElement(
 ```
 
 Maybe the reason why the JSX tags within a separate file is not "compiled" by the Babel compiler is just context, maybe not. I could not be sure so far. I would love to update this post with a definite answer.
+
+The three cases have been tested in these playcode.io lines
+
+* playcode.io/jsx1 (all in once place)
+* playcode.io/jsx2 (importing JSX from HTML)
+* playcode.io/jsx3 (importing Babel transpiled from HTML)
