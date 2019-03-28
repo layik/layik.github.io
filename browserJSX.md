@@ -70,6 +70,6 @@ Maybe the reason why the JSX tags within a separate file is not "compiled" by th
 
 The three cases have been tested in these playcode.io lines
 
-* playcode.io/jsx1 (all in once place)
-* playcode.io/jsx2 (importing JSX from HTML)
-* playcode.io/jsx3 (importing Babel transpiled from HTML)
+* [playcode.io/jsx1](https://playcode.io/jsx1) (all in once place)
+* [playcode.io/jsx2](https://playcode.io/jsx2) (importing JSX from HTML)
+* [playcode.io/jsx3](https://playcode.io/jsx3) (importing Babel transpiled from HTML)
