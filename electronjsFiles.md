@@ -45,6 +45,6 @@ document.getElementById("myImg").src = image;
 <img src={image} alt="appropriate alt" />
 ```
 
-How did we do this? We read the file using Node's `fs` and turned the image into a data URL and that can be assigned to the `img` element.
+How did we do this? We read the file using Node's `fs` and turned the image into a [data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) (using the `data:` scheme) and that *can* be assigned to the `img` element.
 
 It is not allowed to achieve this by providing local file path just as you cannot do it in a browser by providing the local path `/tmp/image.png`. Also we cannot use the FileReader API going around "rooting" users's files. It can be done via the dialog API by asking the user to select it. 
