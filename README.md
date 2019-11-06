@@ -16,7 +16,7 @@ Presentations:
 This README:
 - 
 
-This read me serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)
+This readme.md file serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)
 
 
 A microblog without much Jekyll. Jekyll powers `gh-pages`, so will do my best to keep content readable to humans and machines.
