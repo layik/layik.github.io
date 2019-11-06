@@ -14,3 +14,7 @@ Posts:
 * [Promise in layman language](https://layik.github.io/jspromise).
 * [AnyDomain in layman language](https://layik.github.io/anydomain).
 
+
+Presentations:
+-
+* [LeedsJS](https://layik.github.io/presentations/leedsjs/slides.html) (27th November 2019)
