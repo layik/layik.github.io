@@ -1,0 +1,77 @@
+---
+title: "JavaSript has eaten Data Visualization, too."
+abstract: "Visual analytics plays a key role in carrying out research. At Leeds Institute for Data Analytics I find myself writing JavaScript (React) directly than going through R or Python to visualize data-sets I work with. Data Visualization is an essential if not the end product of data analytics. I have been writing React code for three years. Prior to that it was Java, Python and Objective C mostly for Android and iOS. My current project is an eAtlas web application for the Alan Turing Institute, which is written in React to visualize geospatial data-sets. It is based on a framework I have been working on which relies on R and React."
+author: L Hama
+date: '`r Sys.Date()`'
+output: revealjs::revealjs_presentation
+reveal_options:
+      slideNumber: true
+bibliography: refs.bib
+---
+
+## JavaScript
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Software is eating the world. And JavaScript is eating software<sub style="font-size:0.5em">incldues data vis</sub>. <br><br>Example # 572639: You can now use JavaScript functions in Excel. <a href="https://t.co/x2sNkHv8FR">https://t.co/x2sNkHv8FR</a></p>&mdash; Quincy Larson (@ossia) <a href="https://twitter.com/ossia/status/993856509632303105?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+## Why JS (1)?
+
+<blockquote style="margin:auto" class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Think of JavaScript as a Dante-like figure, moving from the Netscape rush-job dynamic language hell of the &#39;90s to paradise. Programming Language Theory is Virgil. I won&#39;t make more analogies that put real people in circles of hell (but I could!). Anyway, no: JS is not the devil.</p>&mdash; BrendanEich (@BrendanEich) <a href="https://twitter.com/BrendanEich/status/1124292439358025728?ref_src=twsrc%5Etfw">3 May 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+
+## Why JS (2)?
+- Web GL (power of the GPU and the CPU)
+- Machine Learning (TensorFlow.js - Google)
+- Scientific/information visualization (google IEEE VIS 2019 - IEEE)
+- Development (VS Code - Microsoft, Atom - github)
+- ReactJS (Facebook), Angular (Google/Microsoft) etc.
+- ReactNative (smartphone apps transpiled)
+
+## Web mapping
+<img src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg"/>
+
+## JS
+```{js}
+document.write("<p style='color:orange'>Hello World</p>");
+```
+
+
+## JS 
+<p class="box"></p>
+
+
+## JS 
+<style>
+.box {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    width: 80%;  /* create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.box:before,
+.box:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.box:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.box:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
+</style>
+
+

@@ -1,0 +1,62 @@
+---
+title: "Geographic data analysis and geo web applications with R and ReactJS"
+author: "Layik Hama"
+date: "`r Sys.Date()`"
+output:
+  revealjs::revealjs_presentation:
+    theme: league
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+      style: style.css
+
+---
+
+## Introduction
+
+<img src="https://user-images.githubusercontent.com/408568/52061758-f80cef80-2566-11e9-9a0c-d9db6aa044a9.png" width="40%" style="float: right"/>
+
+- R as the "data science" language 
+- R as the backend
+- R package plumber and ReactJS
+- Enter geoplumber
+
+---
+
+## R for analysing data
+
+- Why R? 
+- "A second strong motivation for using R is its ability to interoperate with many other languages. Algorithms that have been written in another language seldom need to be reimplemented for use in R. Typically one need merely write a small amount of interface code and the routines can be accessed from within R (...). This approach also helps to ensure maximal code reuse." 
+
+---
+
+## R as the backend
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Usage_share_of_web_servers_%28Source_Netcraft%29.svg" width="60%" style="float: center"/>
+
+- Few R packages, as we said, using other "system" libraries enable "http servers".
+- HTTP requests (mainly GET and POST) with or without "web servers"
+
+---
+
+## R package plumber and ReactJS
+- R package plumber is inspired by Python Flask: https://www.rplumber.io
+- ReactJS is Facebook's JS library that powers Facebook frontend.
+- Match made in Leeds? 
+
+---
+
+## Angular/React/VueJS
+
+![](arv.png) 
+https://star-history.t9t.io/#facebook/react&angular/angular&VueJS/vue
+---
+
+## geoplumber
+
+---
+## References
+- Gentleman, Robert. R programming for bioinformatics. Chapman and Hall/CRC, 2008
+
+- Grinberg, Miguel. Flask web development: developing web applications with python. " O'Reilly Media, Inc.", 2018.
+

@@ -1,0 +1,88 @@
+
+```{r pkgs, echo=FALSE, eval=TRUE, results='hide'}
+dir_name = "/tmp/gisruk19"
+packages = c("plumber", "clipr", "remotes", 
+             "dplyr", "geojsonsf", "future")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())),repos='http://cran.us.r-project.org')
+  remotes::install_github(c("ropensci/stats19", "ATFutures/geoplumber"))
+  lapply(packages, library, character.only = TRUE)
+  print(getwd())
+}
+```
+```{r gp_create, echo=TRUE, eval=FALSE}
+dir_name = "/tmp/gisruk19"
+library(geoplumber)
+gp_create(dir_name)
+
+# show directory and files within the app
+setwd(dir_name)
+
+# 
+list.files()
+list.dirs(recursive = F)
+
+# run without building
+gp_plumb()
+# build then run
+gp_build()
+gp_plumb()
+
+```
+
+```{r get_stats19, echo=TRUE, results='hide', message=FALSE}
+library(stats19)
+accidents = stats19::get_stats19(year = 2017, ask = FALSE)
+accidents = dplyr::sample_n(accidents, 500)
+accidents = stats19::format_sf(accidents, lonlat = TRUE)
+class(accidents)
+plot(accidents[, "police_force"])
+```
+```{r classes}
+accidents_geojson = geojsonsf::sf_geojson(accidents)
+class(accidents_geojson)
+library(leaflet)
+library(magrittr)
+leaflet() %>%  setView(lat = 52.5, lng = -1, zoom = 6) %>% 
+  addTiles() %>% 
+  addGeoJSON(accidents_geojson)
+```
+For example, to geneate an end-point that returns an R object which contains JSON data in a parameter called `accidents_geojson`, we could write a function like this and add into a `geoplumber` app's `R/plumber.R` file:
+
+```{r gp_endoint_from_clip, echo=FALSE, eval=TRUE}
+if(clipr::clipr_available()) {
+  clipped = clipr::read_clip()
+  clipr::write_clip('
+    #\' @get /api/stats19
+    all_geojson <- function(res){
+      res$headers$`Content-type` = "application/json"
+      res$body <- accidents_geojson
+      res
+    }
+  ')
+  setwd(dir_name)
+  geoplumber::gp_endpoint_from_clip()
+  # restore
+  clipr::write_clip(clipped)
+}
+```
+
+```{r gp_endpoint, eval=FALSE}
+#' @get /api/stats19                             # 1
+all_geojson <- function(res){                    # 2
+  res$headers$`Content-type` = "application/json"# 3
+  res$body <- accidents_geojson                  # 4
+  res
+}
+# copy above, run
+# geoplumber::gp_endpoint_from_clip() 
+# to add it into your geoplumber app
+```
+
+```{r gp_sf2, eval=FALSE}
+geoplumber::gp_sf(accidents, 
+                  props_list = 
+                    list(accident_severity = unique(accidents$accident_severity)))
+```
+
+If you then visit `http://localhost:8000` on your broswer, it should give you something like Figure 2.
