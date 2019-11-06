@@ -25,14 +25,19 @@ bibliography: refs.bib
 - ReactJS (Facebook), Angular (Google/Microsoft) etc.
 - ReactNative (smartphone apps transpiled)
 
-## Web mapping
-<img src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg"/>
+## Web mapping (Xerox)
+<img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
+
+## Web mapping (now)
+<img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
+
+## Turing eATlas
+<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/66118004-44646f80-e5cd-11e9-98fa-c319c9b42bf3.png" alt="Turing eAtlas screenshot" />
 
 ## JS
 ```{js}
 document.write("<p style='color:orange'>Hello World</p>");
 ```
-
 
 ## JS 
 <p class="box"></p>
