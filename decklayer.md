@@ -14,10 +14,9 @@ From the [documentations](https://tgorkin.github.io/docs):
 
 The magic really happens with the layers. Therefore, if you are reading this blogpost to solve an issue whilst writing your custom layer, then you are in the right place. It is not an introduciton as the [documentation](https://tgorkin.github.io/docs) is there for that reason.
 
-Subclassing a layer is best when,as the docs state, to change something but if you want your own shape, own variables to change the shape then custom layer is the way to go.
+Subclassing a layer is best when,as the docs state, to change something but if you want your own shape, own variables to change the shape then custom layer is the way to go. And to get there, we first need to dissect a layer, from my point of view, better than the docs or other guides you may have come across.
 
-And to get there, we first need to dissect a layer, from my point of view, better than the docs or other guides you may have come across.
-
+An overvview of how the different libraries stack up is shown in the image below:
 <img src="https://user-images.githubusercontent.com/408568/83644072-c4056c80-a5a8-11ea-815c-ce3e40f5663f.jpg" width="100%"/>
 
 ### WebGL
@@ -208,3 +207,27 @@ MyLayer.defaultProps = defaultProps;
 ```
 
 <img width="100%" alt="wp bar vis deckgl layer" src="https://user-images.githubusercontent.com/408568/83650639-7a208480-a5b0-11ea-8a44-39d0dac0c31c.png" />
+
+### Events on<Event>
+We are in a WebGL environment, how do we propagate events up and down the stack? It is not easy. The DeckGL team has done it via colour coding or hooks such as `DECKGL_FILTER_COLOR`. This was not so clear in the [documentations](https://deck.gl/#/documentation/developer-guide/writing-custom-layers/picking) for me either. Therefore I had to seek help from the Slack Group and especially [Xiaoji](http://www.xiaoji-chen.com). The mechanism of customising what is passed through the hiararchy of the layers, is well documented but not the shader level hook registrations.
+
+In the above chunk, there is a `geometry` object declared in DeckGL which is one of the parameters passed to the filter. This is all ignoring the important `gl_Position` and `gl_FragColor` parameters in the shader functions.
+
+```glsl
+const vertexShader = `
+  attribute vec3 positions;
+  attribute vec3 instancePositions;
+  ....
+  ....
+  DECKGL_FILTER_COLOR(vColor, geometry);
+  }`;
+
+const fragmentShader = `
+  precision highp float;
+  ....
+  ...
+  DECKGL_FILTER_COLOR(gl_FragColor, geometry);
+  }`;
+```
+I assume `DECKGL_FILTER_COLOR` [calls](https://tgorkin.github.io/docs/developer-guide/custom-layers/picking) the underlying luma.gl function, from [lumag.gl docs](https://luma.gl/docs/api-reference/shadertools/core-shader-modules)
+> It is strongly recommended that picking_filterPickingColor is called last in a fragment shader, as the picking color (returned when picking is enabled) must not be modified in any way (and alpha must remain 1) or picking results will not be correct.
