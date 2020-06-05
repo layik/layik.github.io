@@ -7,10 +7,13 @@ permalink: /decklayer.html
 ## Custom layer code
 For those who do not want to read all this, find the sample layer code here and hidden below:
 
+
 <details>
 <summary>Custom Layer</summary>
+<p>
 
 ```js
+
 import {Layer, project32, picking} from '@deck.gl/core';
 import GL from '@luma.gl/constants';
 import {Model, Geometry} from '@luma.gl/core';
@@ -101,20 +104,6 @@ const defaultProps = {
 };
 
 export default class BarLayer extends Layer {
-  // getPickingInfo(params) {
-  //   const info = super.getPickingInfo(params);
-  //   const {index} = info;
-  //   const {data} = this.props;
-
-  //   if (data[0] && data[0].__source) {
-  //     // data is wrapped
-  //     info.object = data.find(d => d.__source.index === index);
-  //   }
-  //   // console.log(info);
-    
-  //   return info;
-  // }
-  
   getShaders() {
     return super.getShaders({vs, fs, modules: [project32, picking]});
   }
@@ -210,9 +199,12 @@ export default class BarLayer extends Layer {
 
 BarLayer.layerName = 'BarLayer';
 BarLayer.defaultProps = defaultProps;
+
 ```
 
-</details>  
+<p>
+</details>
+
 
 ## Intro to this read
 I am hoping that if not code examples, then clarifications of how different JavaScript libraries have been brought together to build DeckGL layers would help you make progress through what was a daunting task for me.
