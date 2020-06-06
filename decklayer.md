@@ -4,15 +4,15 @@ permalink: /decklayer.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
-## Custom layer code
-For those who do not want to read all this, find the sample layer code here and hidden below:
+### Result
+For those who do not want to read all this, find the sample layer code [here](https://codepen.io/layik/pen/XWXrVbO?editors=0011) and hidden below:
 
 
 // TODO in collapsible
 
 
 ## Intro to this read
-I am hoping that if not code examples, then clarifications of how different JavaScript libraries have been brought together to build DeckGL layers would help you make progress through what was a daunting task for me.
+I am hoping that if not code examples, then clarifications of how different JavaScript libraries have been brought together to build DeckGL layers would help you make progress through what was a daunting task for me. There is a technical dive [presentation](https://docs.google.com/presentation/d/1qtXUQzMuIa8NYIKUa1RKfSwvgpeccY-wrPrYqsb_8rE/edit#slide=id.g7db7fb98fb_0_45) by amazing [Xiaoji Chen](http://www.xiaoji-chen.com), which is great to read. I will be stealing some slides from her work.
 
 ## What is DeckGL?
 
@@ -33,6 +33,11 @@ What you need to know and what most of the docs in DeckGL is not sign posted is 
 
 #### Vertx/Fragment shaders
 I will not write more than this paragraph on shaders but you need to spend quite a bit of time time getting your head around shaders. This is where the actual magic happens and everythign is wrapped around these two concepts. The two functions are C/C++ like functions in GLSL (Graphics Library Shading Language) language without which you may not even be able to subclass layers.
+
+<img width="100%" alt="Screenshot 2020-06-04 at 19 46 01" src="https://user-images.githubusercontent.com/408568/83942137-cb1abd80-a7e8-11ea-99c3-422d3d4d8b97.png">
+
+Slide credit: Xiaoji Chen Deep dive [presentation](https://docs.google.com/presentation/d/1qtXUQzMuIa8NYIKUa1RKfSwvgpeccY-wrPrYqsb_8rE).
+
 
 ### luma.gl
 
