@@ -8,8 +8,10 @@ reveal_options:
       slideNumber: true
 bibliography: refs.bib
 ---
-##
-Under Construction.
+
+## Intro
+- Alan Turing Institute and Leeds Institute for Data Analytics
+- Team: Dr Nik Lomax, Dr Roger Beecham and me.
 
 ## JavaScript
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Software is eating the world. And JavaScript is eating software<sub style="font-size:0.5em">incldues data vis</sub>. <br><br>Example # 572639: You can now use JavaScript functions in Excel. <a href="https://t.co/x2sNkHv8FR">https://t.co/x2sNkHv8FR</a></p>&mdash; Quincy Larson (@ossia) <a href="https://twitter.com/ossia/status/993856509632303105?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -33,19 +35,39 @@ Under Construction.
 ## Web mapping (now)
 <img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
 
+## Web mapping (leading libraries)
+<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/69232911-cf042c80-0b83-11ea-9631-d322f5510b26.png" alt="web mapping libraries" />
+
+## Web mapping (MapboxGL)
+<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/69232910-cf042c80-0b83-11ea-9320-1051bbc874b2.png" alt="web mapping with mapbox" />
+
+## Data vis
+
+- IEEVIS 2019 in Vancouver best paper tech stack? Yep, the web.
+
+<img style="max-height:640px" src="https://visflow.org/assets/img/highlight-selection.d60f4d6f.png" alt = "IEEEVIS best paper"/>
+
 ## Turing eATlas
 <img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/66118004-44646f80-e5cd-11e9-98fa-c319c9b42bf3.png" alt="Turing eAtlas screenshot" />
 
-## JS
-```{js}
-document.write("<p style='color:orange'>Hello World</p>");
-```
+## Techstack
+- WebGL powering Uber's DeckGL
+- Uber's baseweb.design to manage HTML
+- Uber's React-vis powering the charts/graphs (D3)
 
+## Aim?
+- Dissecting geospatial datasets.
+  
 ## JS 
-<p class="box"></p>
+<p class="box">Thank you</p>
 
+## Questions? 
 
-## JS 
+Links:
+
+- flowsense: https://visflow.org/demo/
+- github.com/layik/eAtlas
+
 <style>
 .box {
     border-radius: 3px;
@@ -53,7 +75,7 @@ document.write("<p style='color:orange'>Hello World</p>");
     font-style: italic;
     text-align: center;
     padding: 1rem 1.2rem;
-    width: 80%;  /* create space for the quotes */
+    /* width: 80%;   create space for the quotes */
     color: #4a4a4a;
     margin: 1rem auto 2rem;
     color: #4a4a4a;
@@ -80,5 +102,3 @@ document.write("<p style='color:orange'>Hello World</p>");
     left: 100%;  
 }
 </style>
-
-

@@ -1,7 +1,10 @@
 Posts:
 - 
+* Latest - [DeckGL custom layer](https://layik.github.io/decklayer)
 
-* Latest - [ElectronJS - accessing local file system](https://layik.github.io/electronjsfiles).
+* [GitHub Actions](https://layik.github.io/ghactions).
+
+* [ElectronJS - accessing local file system](https://layik.github.io/electronjsfiles).
 * [iOS keyboard extension height on iPhone X](https://layik.github.io/iOSkb).
 * [Importing JSX into HTML](https://layik.github.io/htmljsx).
 * [Share code between R and Node/JS](https://layik.github.io/sharedjs).
