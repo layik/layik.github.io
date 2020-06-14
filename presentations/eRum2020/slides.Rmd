@@ -1,0 +1,66 @@
+---
+title: "Building Turing Geovisualization Engine with R"
+abstract: ""
+author: L Hama
+date: '`r Sys.Date()`'
+output: revealjs::revealjs_presentation
+reveal_options:
+      slideNumber: true
+# bibliography: refs.bib
+---
+## Intro
+
+## Why R
+
+## 
+
+## Web mapping (Xerox)
+<img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
+
+## Web mapping (now)
+<img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
+
+## Turing eATlas
+<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/66118004-44646f80-e5cd-11e9-98fa-c319c9b42bf3.png" alt="Turing eAtlas screenshot" />
+
+
+## Web visualization vs VTK? 
+<p class="box">Thank you</p>
+
+
+<style>
+.box {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    /* width: 80%;   create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.box:before,
+.box:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.box:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.box:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
+</style>
+
+
