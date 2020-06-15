@@ -9,7 +9,8 @@ reveal_options:
 bibliography: refs.bib
 # <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
 ---
-## Intro
+
+# Intro
 
 * Institutions: Leeds Institute for Data Analytics & Turing Institute
 
@@ -21,7 +22,7 @@ bibliography: refs.bib
 
 * More geo-visualization than research engineering or engineering research.
 
-## Talk Overview
+# Talk Overview
 < image >
 
 * Data visualization which means graphics which means using CPU and/or GPU
@@ -33,7 +34,7 @@ bibliography: refs.bib
 
 The story of a Graphics Processing Unit (GPU)
 
-## Why R
+# Why R
 * One of two choices (Python which I would have prefered) both being Open Source
   * Being Open Source not so fancy any more?
 * Colleagues who use R around University of Leeds.
@@ -41,34 +42,71 @@ The story of a Graphics Processing Unit (GPU)
 * That also means a great set of tools
 * You might have better reasons.
 
-## Graphics R v Web
+# Graphics R v Web
 <!-- <img width="100%" alt="Technical dive into DeckGL" src="https://user-images.githubusercontent.com/408568/84666316-d8d2f000-af18-11ea-8265-5a0de47acedd.png"> -->
 <img width="100%" alt="GPU/CPU Graphics" src="https://user-images.githubusercontent.com/408568/84667760-ad510500-af1a-11ea-8c8e-8df1052b54ce.png">
 
 ## Graphics R v Web (2)
 <img width="100%" alt="Web Tech, Python and R" src="https://user-images.githubusercontent.com/408568/84671151-ebe8be80-af1e-11ea-9e93-e542bdacb1de.png">
 
-## R graphics
-<img width="100%" alt="Mastering Software Development in R" src="https://user-images.githubusercontent.com/408568/84434534-1ccba980-ac28-11ea-8140-0f0ca96903e4.png">[@meinicke2017mastering]
+# R graphics
 
-## Web mapping (Xerox)
+<img style="align:right;" width="60%" alt="Mastering Software Development in R" src="https://user-images.githubusercontent.com/408568/84434534-1ccba980-ac28-11ea-8140-0f0ca96903e4.png">
+
+Screenshot from [@meinicke2017mastering]
+
+* `library(help = "grDevices")`, `x11()`, `quartz()` etc
+* <a href="https://www.stat.auckland.ac.nz/~paul/useR2015-grid/grid-slides.html">grid</a> package is base R.
+
+# R web applications
+<img width="80%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
+<img width="20%" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
+
+# Web mapping (Xerox)
 <img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
 
 ## Web mapping (now)
 <img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
 
-## R web applications
-<img width="80%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
-<img width="20%" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
+## Web mapping (now)
+<img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
 
-## Turing Geo-Visualization Engine (TGVE or eAtlas)
+# Turing Geo-Visualization Engine (TGVE or eAtlas)
 <img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/84672680-bba21f80-af20-11ea-938c-32ffd1cd7b21.png" alt="Turing eAtlas screenshot" />
 
+## R & React (JavaScript)
+```{r}
+library(geoplumber)
+# view a dataset such as the `traffic` sf object bundled 
+t <- gp_map(geoplumber::traffic, browse_map = FALSE,
+            height = "320px", width = "90%")
+# use includeHTML for markdown
+htmltools::includeHTML(t)
+```
 
-## Web visualization vs VTK? 
+## R & React (JavaScript)
+```{r, eval=FALSE}
+p <- "~/code/geoplumber/my-app/"
+ow <- setwd(p)
+r <- gp_explore()
+setwd(ow)
+i <- webshot::webshot("geo", "explore.png")
+knitr::include_graphics(i)
+r$kill()
+```
+
+Turing Geo-visualization Engine in `geoplumber`:
+<img width="70%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
 
 
-## Thank you
+## R & React (JavaScript)
+* Micorsoft <a href="https://sanddance.js.org/app/"> SandDance </a>
+* Uber kepler.gl
+
+<img width="70%" alt="MS SandDance" src="https://user-images.githubusercontent.com/408568/84713385-c1205980-af62-11ea-90e4-23f56ed58722.png">
+
+
+# Thank you
 <p class="box">Thank you</p>
 
 
