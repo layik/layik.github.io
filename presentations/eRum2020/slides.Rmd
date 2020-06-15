@@ -6,9 +6,31 @@ date: '`r Sys.Date()`'
 output: revealjs::revealjs_presentation
 reveal_options:
       slideNumber: true
-# bibliography: refs.bib
+bibliography: refs.bib
 ---
 ## Intro
+
+* Institutions: Leeds Institute for Data Analytics & Turing Institute
+
+* Project: Dr. Nik Lomax and Dr. Roger Beecham
+
+* Research Theme: Urban Analytics, Sir Alan Wilson and Prof Mark Birkin.
+
+* May 2019 - Oct 2020
+
+* More geo-visualization than research engineering or engineering research.
+
+## Talk Overview
+The story of a Graphics Processing Unit (GPU)
+<image>
+
+* Ubiquitous [@lyytinen2002ubiquitous]
+
+* Interactive [@benyon2014designing]
+
+  * design, *technology*, people, activities
+
+* R doing what it does (best?): data analysis
 
 ## Why R
 

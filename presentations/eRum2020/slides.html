@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="L Hama" />
-  <meta name="dcterms.date" content="2020-06-10" />
+  <meta name="dcterms.date" content="2020-06-15" />
   <title>Building Turing Geovisualization Engine with R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1762,6 +1762,19 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 </head>
 <body>
   <div class="reveal">
@@ -1770,11 +1783,30 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Building Turing Geovisualization Engine with R</h1>
     <h2 class="author">L Hama</h2>
-    <h3 class="date">2020-06-10</h3>
+    <h3 class="date">2020-06-15</h3>
 </section>
 
 <section id="intro" class="slide level2">
 <h2>Intro</h2>
+<ul>
+<li><p>Institutions: Leeds Institute for Data Analytics &amp; Turing Institute</p></li>
+<li><p>Project: Dr. Nik Lomax and Dr. Roger Beecham</p></li>
+<li><p>Research Theme: Urban Analytics, Sir Alan Wilson and Prof Mark Birkin.</p></li>
+<li><p>May 2019 - Oct 2020</p></li>
+<li><p>More geo-visualization than research engineering or engineering research.</p></li>
+</ul>
+</section>
+<section id="talk-overview" class="slide level2">
+<h2>Talk Overview</h2>
+<p>The story of a Graphics Processing Unit (GPU) <image></p>
+<ul>
+<li><p>Ubiquitous <span class="citation" data-cites="lyytinen2002ubiquitous">(Lyytinen and Yoo 2002)</span></p></li>
+<li><p>Interactive <span class="citation" data-cites="benyon2014designing">(Benyon 2014)</span></p>
+<ul>
+<li>design, <em>technology</em>, people, activities</li>
+</ul></li>
+<li><p>R doing what it does (best?): data analysis</p></li>
+</ul>
 </section>
 <section id="why-r" class="slide level2">
 <h2>Why R</h2>
@@ -1833,6 +1865,14 @@ Thank you
     left: 100%;  
 }
 </style>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-benyon2014designing">
+<p>Benyon, David. 2014. “Designing Interactive Systems: A Comprehensive Guide to Hci, Ux and Interaction Design.”</p>
+</div>
+<div id="ref-lyytinen2002ubiquitous">
+<p>Lyytinen, Kalle, and Youngjin Yoo. 2002. “Ubiquitous Computing.” <em>Communications of the ACM</em> 45 (12): 63–96.</p>
+</div>
+</div>
 </section>
     </div>
   </div>
