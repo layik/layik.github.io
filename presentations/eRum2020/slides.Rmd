@@ -7,6 +7,7 @@ output: revealjs::revealjs_presentation
 reveal_options:
       slideNumber: true
 bibliography: refs.bib
+# <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
 ---
 ## Intro
 
@@ -21,20 +22,34 @@ bibliography: refs.bib
 * More geo-visualization than research engineering or engineering research.
 
 ## Talk Overview
-The story of a Graphics Processing Unit (GPU)
-<image>
+< image >
 
-* Ubiquitous [@lyytinen2002ubiquitous]
-
-* Interactive [@benyon2014designing]
-
-  * design, *technology*, people, activities
-
+* Data visualization which means graphics which means using CPU and/or GPU
+  * Ubiquitous [@lyytinen2002ubiquitous]
+  * Interactive [@benyon2014designing]
+    * design, *technology*, people, activities
 * R doing what it does (best?): data analysis
+* Turing Geo-visualization Engine (TGVE)
+
+The story of a Graphics Processing Unit (GPU)
 
 ## Why R
+* One of two choices (Python which I would have prefered) both being Open Source
+  * Being Open Source not so fancy any more?
+* Colleagues who use R around University of Leeds.
+* Focus on Grammar of Graphics [@wilkinson2005guides] and other academic excellence such as ggplot2 [@wickham2016ggplot2]
+* That also means a great set of tools
+* You might have better reasons.
 
-## 
+## Graphics R v Web
+<!-- <img width="100%" alt="Technical dive into DeckGL" src="https://user-images.githubusercontent.com/408568/84666316-d8d2f000-af18-11ea-8265-5a0de47acedd.png"> -->
+<img width="100%" alt="GPU/CPU Graphics" src="https://user-images.githubusercontent.com/408568/84667760-ad510500-af1a-11ea-8c8e-8df1052b54ce.png">
+
+## Graphics R v Web (2)
+<img width="100%" alt="Web Tech, Python and R" src="https://user-images.githubusercontent.com/408568/84671151-ebe8be80-af1e-11ea-9e93-e542bdacb1de.png">
+
+## R graphics
+<img width="100%" alt="Mastering Software Development in R" src="https://user-images.githubusercontent.com/408568/84434534-1ccba980-ac28-11ea-8140-0f0ca96903e4.png">[@meinicke2017mastering]
 
 ## Web mapping (Xerox)
 <img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
@@ -42,11 +57,18 @@ The story of a Graphics Processing Unit (GPU)
 ## Web mapping (now)
 <img style="max-height:640px" src="https://i.stack.imgur.com/JBs6V.png" alt="web mapping libraries" />
 
-## Turing eATlas
-<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/66118004-44646f80-e5cd-11e9-98fa-c319c9b42bf3.png" alt="Turing eAtlas screenshot" />
+## R web applications
+<img width="80%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
+<img width="20%" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
+
+## Turing Geo-Visualization Engine (TGVE or eAtlas)
+<img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/84672680-bba21f80-af20-11ea-938c-32ffd1cd7b21.png" alt="Turing eAtlas screenshot" />
 
 
 ## Web visualization vs VTK? 
+
+
+## Thank you
 <p class="box">Thank you</p>
 
 
