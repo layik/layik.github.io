@@ -95,8 +95,9 @@ knitr::include_graphics(i)
 r$kill()
 ```
 
+## R & React (TGVE)
 Turing Geo-visualization Engine in `geoplumber`:
-<img width="70%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
+<img width="90%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
 
 
 ## R & React (JavaScript)
@@ -105,6 +106,10 @@ Turing Geo-visualization Engine in `geoplumber`:
 
 <img width="70%" alt="MS SandDance" src="https://user-images.githubusercontent.com/408568/84713385-c1205980-af62-11ea-90e4-23f56ed58722.png">
 
+# Conclusion
+* TGVE is not quite in R, in the sense that we cannot have interactivity and ubiquitous R support
+* R should do what it does best and likewise JavaScript
+* We should not be writing HTML via R 
 
 # Thank you
 <p class="box">Thank you</p>
