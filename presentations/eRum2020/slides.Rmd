@@ -4,13 +4,11 @@ abstract: ""
 author: L Hama
 date: '`r Sys.Date()`'
 output: revealjs::revealjs_presentation
-reveal_options:
-      slideNumber: true
 bibliography: refs.bib
 # <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
 ---
 
-# Intro
+## Intro
 
 * Institutions: Leeds Institute for Data Analytics & Turing Institute
 
@@ -34,6 +32,9 @@ bibliography: refs.bib
 
 The story of a Graphics Processing Unit (GPU)
 
+# What is an eAtlas?
+<img width="100%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
+
 # Why R
 * One of two choices (Python which I would have prefered) both being Open Source
   * Being Open Source not so fancy any more?
@@ -49,14 +50,30 @@ The story of a Graphics Processing Unit (GPU)
 ## Graphics R v Web (2)
 <img width="100%" alt="Web Tech, Python and R" src="https://user-images.githubusercontent.com/408568/84671151-ebe8be80-af1e-11ea-9e93-e542bdacb1de.png">
 
-# R graphics
+# Graphics in R
 
-<img style="align:right;" width="60%" alt="Mastering Software Development in R" src="https://user-images.githubusercontent.com/408568/84434534-1ccba980-ac28-11ea-8140-0f0ca96903e4.png">
+<div class="container">
+
+<div class="col">
+
+* R functions: 
+  * library(help = "grDevices")
+  * x11() 
+  * quartz() 
+  * etc in [@hiebeler2015r]
+* <a href="https://www.stat.auckland.ac.nz/~paul/useR2015-grid/grid-slides.html">grid</a> package is base R.
+
+</div>
+
+<div class="col">
+
+<img alt="Mastering Software Development in R" src="https://user-images.githubusercontent.com/408568/84434534-1ccba980-ac28-11ea-8140-0f0ca96903e4.png">
 
 Screenshot from [@meinicke2017mastering]
 
-* `library(help = "grDevices")`, `x11()`, `quartz()` etc
-* <a href="https://www.stat.auckland.ac.nz/~paul/useR2015-grid/grid-slides.html">grid</a> package is base R.
+</div>
+
+</div>
 
 # R web applications
 <img width="80%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
@@ -74,8 +91,14 @@ Screenshot from [@meinicke2017mastering]
 # Turing Geo-Visualization Engine (TGVE or eAtlas)
 <img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/84672680-bba21f80-af20-11ea-938c-32ffd1cd7b21.png" alt="Turing eAtlas screenshot" />
 
-## R & React (JavaScript)
+
+## R & React
+React is a JavaScript library which generates "HTML + CSS"
+![languagesOnScholar](https://user-images.githubusercontent.com/408568/84771509-7c7fd700-afd1-11ea-9983-b62676558f54.png)
+
+## R & React (geo)
 ```{r}
+# `geoplumber` is still not on CRAN!
 library(geoplumber)
 # view a dataset such as the `traffic` sf object bundled 
 t <- gp_map(geoplumber::traffic, browse_map = FALSE,
@@ -86,25 +109,36 @@ htmltools::includeHTML(t)
 
 ## R & React (JavaScript)
 ```{r, eval=FALSE}
+# p <- tolower(file.path(tempdir(), "gp"))
+# gp_build()
 p <- "~/code/geoplumber/my-app/"
 ow <- setwd(p)
 r <- gp_explore()
-setwd(ow)
-i <- webshot::webshot("geo", "explore.png")
-knitr::include_graphics(i)
 r$kill()
+setwd(ow)
 ```
+* dynamic use of npm package used in geoplumber
+* R does NOT do "essential" UI, only pipeline work
+* Sweet spot of decoupling?
 
 ## R & React (TGVE)
 Turing Geo-visualization Engine in `geoplumber`:
 <img width="90%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
 
+## TGVE
+<img width="100%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
-## R & React (JavaScript)
+## Components of TGVE
+<img width="100%" alt="Turing TGVE" src="https://user-images.githubusercontent.com/408568/84770517-9ae4d300-afcf-11ea-87a6-5ce3ce8a29e9.png">
+
+## More R & React
 * Micorsoft <a href="https://sanddance.js.org/app/"> SandDance </a>
 * Uber kepler.gl
 
 <img width="70%" alt="MS SandDance" src="https://user-images.githubusercontent.com/408568/84713385-c1205980-af62-11ea-90e4-23f56ed58722.png">
+
+## The world of vis
+<img width="100%" alt="IEEEVIS 2019" src="https://user-images.githubusercontent.com/408568/84774217-696f0600-afd5-11ea-97a4-0789fd9fe324.png">
 
 # Conclusion
 * TGVE is not quite in R, in the sense that we cannot have interactivity and ubiquitous R support
@@ -112,9 +146,12 @@ Turing Geo-visualization Engine in `geoplumber`:
 * We should not be writing HTML via R 
 
 # Thank you
-<p class="box">Thank you</p>
 
+* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
+* repo home: www.github.com/layik/eAtlas
+* COVID19 showcase www.geoplumber.com
 
+# References
 <style>
 .box {
     border-radius: 3px;
@@ -147,6 +184,14 @@ Turing Geo-visualization Engine in `geoplumber`:
     content: "\f10e";
     margin-left: 13px;
     left: 100%;  
+}
+
+.container{
+    display: flex;
+}
+.col{
+    max-width:50%;
+    flex: 1;
 }
 </style>
 
