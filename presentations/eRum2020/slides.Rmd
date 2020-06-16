@@ -26,16 +26,21 @@ bibliography: refs.bib
 * More geo-visualization than research engineering or engineering research.
 
 # Talk Overview
-< image >
 
+<div class="container">
+<div class="col">
+A damaged Graphics Processing Unit (GPU)
+![104290923_2519668941677516_7302972911295968679_n](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
+</div>
+<div class="col">
 * Data visualization which means graphics which means using CPU and/or GPU
   * Ubiquitous [@lyytinen2002ubiquitous]
   * Interactive [@benyon2014designing]
     * design, *technology*, people, activities
 * R doing what it does (best?): data analysis
 * Turing Geo-visualization Engine (TGVE)
-
-The story of a Graphics Processing Unit (GPU)
+</div>
+</div>
 
 # What is an eAtlas?
 <img width="90%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
@@ -179,6 +184,8 @@ Heavily customised code base of the project source code.
 * www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
 * repo home: www.github.com/layik/eAtlas
 * COVID19 showcase www.geoplumber.com
+
+<img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/84832513-4f5d1400-b025-11ea-908e-401316e6552e.png">
 
 # References
 <style>
