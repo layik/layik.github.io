@@ -87,6 +87,10 @@ Screenshot from [@meinicke2017mastering]
 
 </div>
 
+# R & React
+React is a JavaScript library which generates "HTML + CSS"
+![languagesOnScholar](https://user-images.githubusercontent.com/408568/84771509-7c7fd700-afd1-11ea-9983-b62676558f54.png)
+
 # R web applications
 <img width="90%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
 <img style="position:fixed; bottom:25vh; right:30px;" width="100px" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
@@ -102,11 +106,6 @@ Screenshot from [@meinicke2017mastering]
 
 # Turing Geo-Visualization Engine (TGVE or eAtlas)
 <img style="max-height:640px" src="https://user-images.githubusercontent.com/408568/84672680-bba21f80-af20-11ea-938c-32ffd1cd7b21.png" alt="Turing eAtlas screenshot" />
-
-
-## R & React
-React is a JavaScript library which generates "HTML + CSS"
-![languagesOnScholar](https://user-images.githubusercontent.com/408568/84771509-7c7fd700-afd1-11ea-9983-b62676558f54.png)
 
 ## R & React (geo)
 ```{r}
@@ -139,6 +138,9 @@ Turing Geo-visualization Engine in `geoplumber`:
 ## TGVE
 <img width="90%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
+* npm package: https://www.npmjs.com/package/eatlas
+* more packages soon.
+
 ## Components of TGVE
 <img width="90%" alt="Turing TGVE" src="https://user-images.githubusercontent.com/408568/84770517-9ae4d300-afcf-11ea-87a6-5ce3ce8a29e9.png">
 
@@ -159,6 +161,12 @@ Slides from Uber Engineering DeckGL tea: shorturl.at/anKR5
 # The world of vis
 <img width="90%" alt="IEEEVIS 2019" src="https://user-images.githubusercontent.com/408568/84774217-696f0600-afd5-11ea-97a4-0789fd9fe324.png">
 
+
+# COVID19 application
+<img width="46%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798748-39cef680-aff3-11ea-87cf-c4d0cd9e09d3.png">
+<img width="48%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798767-3f2c4100-aff3-11ea-9b1d-17f34a66beb0.png">
+
+Heavily customised code base of the project source code.
 
 # Conclusion
 * TGVE is powered by R although rendering is routed via web technologies.
