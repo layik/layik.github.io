@@ -3,7 +3,12 @@ title: "Building Turing Geovisualization Engine with R"
 abstract: ""
 author: L Hama
 date: '`r Sys.Date()`'
-output: revealjs::revealjs_presentation
+output:
+  revealjs::revealjs_presentation:
+    theme: night
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
 bibliography: refs.bib
 # <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
 ---
@@ -33,10 +38,15 @@ bibliography: refs.bib
 The story of a Graphics Processing Unit (GPU)
 
 # What is an eAtlas?
-<img width="100%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
+<img width="90%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
+
+* Feature extraction? Beautiful pictures?
+* Data exploration/interrogation to draw insights
+* Combining different datasets
+* Decision making and public engagement tool
 
 # Why R
-* One of two choices (Python which I would have prefered) both being Open Source
+* One of two choices (Python which I would have preferred) both being Open Source
   * Being Open Source not so fancy any more?
 * Colleagues who use R around University of Leeds.
 * Focus on Grammar of Graphics [@wilkinson2005guides] and other academic excellence such as ggplot2 [@wickham2016ggplot2]
@@ -44,11 +54,11 @@ The story of a Graphics Processing Unit (GPU)
 * You might have better reasons.
 
 # Graphics R v Web
-<!-- <img width="100%" alt="Technical dive into DeckGL" src="https://user-images.githubusercontent.com/408568/84666316-d8d2f000-af18-11ea-8265-5a0de47acedd.png"> -->
-<img width="100%" alt="GPU/CPU Graphics" src="https://user-images.githubusercontent.com/408568/84667760-ad510500-af1a-11ea-8c8e-8df1052b54ce.png">
+<!-- <img width="90%" alt="Technical dive into DeckGL" src="https://user-images.githubusercontent.com/408568/84666316-d8d2f000-af18-11ea-8265-5a0de47acedd.png"> -->
+<img width="90%" alt="GPU/CPU Graphics" src="https://user-images.githubusercontent.com/408568/84667760-ad510500-af1a-11ea-8c8e-8df1052b54ce.png">
 
 ## Graphics R v Web (2)
-<img width="100%" alt="Web Tech, Python and R" src="https://user-images.githubusercontent.com/408568/84671151-ebe8be80-af1e-11ea-9e93-e542bdacb1de.png">
+<img width="90%" alt="Web Tech, Python and R" src="https://user-images.githubusercontent.com/408568/84671151-ebe8be80-af1e-11ea-9e93-e542bdacb1de.png">
 
 # Graphics in R
 
@@ -58,10 +68,12 @@ The story of a Graphics Processing Unit (GPU)
 
 * R functions: 
   * library(help = "grDevices")
-  * x11() 
-  * quartz() 
-  * etc in [@hiebeler2015r]
+  * `x11()`
+  * `quartz()`
+  * etc from [@hiebeler2015r]
 * <a href="https://www.stat.auckland.ac.nz/~paul/useR2015-grid/grid-slides.html">grid</a> package is base R.
+* Not interactive
+* Not as widely available as the browser.
 
 </div>
 
@@ -76,8 +88,8 @@ Screenshot from [@meinicke2017mastering]
 </div>
 
 # R web applications
-<img width="80%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
-<img width="20%" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
+<img width="90%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
+<img style="position:fixed; bottom:25vh; right:30px;" width="100px" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
 
 # Web mapping (Xerox)
 <img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
@@ -117,7 +129,6 @@ r <- gp_explore()
 r$kill()
 setwd(ow)
 ```
-* dynamic use of npm package used in geoplumber
 * R does NOT do "essential" UI, only pipeline work
 * Sweet spot of decoupling?
 
@@ -126,24 +137,34 @@ Turing Geo-visualization Engine in `geoplumber`:
 <img width="90%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
 
 ## TGVE
-<img width="100%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
+<img width="90%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
 ## Components of TGVE
-<img width="100%" alt="Turing TGVE" src="https://user-images.githubusercontent.com/408568/84770517-9ae4d300-afcf-11ea-87a6-5ce3ce8a29e9.png">
+<img width="90%" alt="Turing TGVE" src="https://user-images.githubusercontent.com/408568/84770517-9ae4d300-afcf-11ea-87a6-5ce3ce8a29e9.png">
 
-## More R & React
+## Front-end: nder the hood
+<img width="45%" alt="Minimise CPU time" src="https://user-images.githubusercontent.com/408568/84788038-94158a80-afe6-11ea-89a0-91983c6973b4.png">
+<img width="45%" alt="rendering pipeline" src="https://user-images.githubusercontent.com/408568/84788059-9a0b6b80-afe6-11ea-849d-1f9c90820323.png">
+<br/>
+<img width="45%" alt="cpu gpu comparison" src="https://user-images.githubusercontent.com/408568/84788620-3a619000-afe7-11ea-81e6-42dd47a42cac.png">
+<img width="45%" alt="reactive model" src="https://user-images.githubusercontent.com/408568/84788623-3afa2680-afe7-11ea-8cd8-735e21f2e17f.png">
+Slides from Uber Engineering DeckGL tea: shorturl.at/anKR5
+
+# More R & React
 * Micorsoft <a href="https://sanddance.js.org/app/"> SandDance </a>
 * Uber kepler.gl
 
 <img width="70%" alt="MS SandDance" src="https://user-images.githubusercontent.com/408568/84713385-c1205980-af62-11ea-90e4-23f56ed58722.png">
 
-## The world of vis
-<img width="100%" alt="IEEEVIS 2019" src="https://user-images.githubusercontent.com/408568/84774217-696f0600-afd5-11ea-97a4-0789fd9fe324.png">
+# The world of vis
+<img width="90%" alt="IEEEVIS 2019" src="https://user-images.githubusercontent.com/408568/84774217-696f0600-afd5-11ea-97a4-0789fd9fe324.png">
+
 
 # Conclusion
-* TGVE is not quite in R, in the sense that we cannot have interactivity and ubiquitous R support
-* R should do what it does best and likewise JavaScript
-* We should not be writing HTML via R 
+* TGVE is powered by R although rendering is routed via web technologies.
+* R does what it does best and so does JS
+* The full stack of technologies is there to develop a scalable engine to visualize geospatial data
+* R already has the required wrapper packages to take this further to a 
 
 # Thank you
 
