@@ -1,7 +1,8 @@
 ---
-title: "Building Turing Geovisualization Engine with R"
+title: "Powering Turing Geovisualization Engine with R"
+subtitle: "eRum 2020"
 abstract: ""
-author: L Hama
+author: Layik Hama
 date: '`r Sys.Date()`'
 output:
   revealjs::revealjs_presentation:
@@ -11,7 +12,10 @@ output:
       previewLinks: true
 bibliography: refs.bib
 # <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
+#    <br/>    
+#    <br/>
 ---
+
 
 ## Intro
 
@@ -94,11 +98,18 @@ Screenshot from [@meinicke2017mastering]
 
 # R & React
 React is a JavaScript library which generates "HTML + CSS"
-![languagesOnScholar](https://user-images.githubusercontent.com/408568/84771509-7c7fd700-afd1-11ea-9983-b62676558f54.png)
+<img alt="languages on scholar" width="45%" src="https://user-images.githubusercontent.com/408568/84771509-7c7fd700-afd1-11ea-9983-b62676558f54.png">
+<img width="45%" alt="languages on stackoverflow" src="https://user-images.githubusercontent.com/408568/84944928-7592ba80-b0de-11ea-83ea-a6f200045b58.png">
 
 # R web applications
 <img width="90%" alt="Shiny v rPlumber" src="https://user-images.githubusercontent.com/408568/84671509-60236200-af1f-11ea-9963-3d10cc1b9ba8.png">
 <img style="position:fixed; bottom:25vh; right:30px;" width="100px" alt="Shiny v rPlumber" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Libuv.svg/220px-Libuv.svg.png">
+
+<!-- An rgl device at its core is a real-time 3D engine written in C++ 
+https://cran.r-project.org/web/packages/rgl/README -->
+
+<!-- rayshader uses C++ but no mention of OpenGL directory though it imports rgl
+https://github.com/tylermorganwall/rayshader/blob/master/DESCRIPTION#L19-->
 
 # Web mapping (Xerox)
 <img style="max-height:640px" src="http://www.nic.funet.fi/index/FUNET/history/internet/en/xeroxmap.jpg" alt="xerox map on netscape"/>
@@ -136,6 +147,40 @@ setwd(ow)
 * R does NOT do "essential" UI, only pipeline work
 * Sweet spot of decoupling?
 
+## R & React (code)
+
+<div class="container">
+<div class="col">
+```{r, eval=FALSE}
+# add component
+  parent <- add_lines(
+    parent,   # target
+    "<Route", # pattern
+    c(        # what
+      # <Route exact path="/" component={
+      paste0('<Route exact path="/explore" component={'),
+      paste0('() => <Eatlas defaultURL="http://localhost:8000', endpoint,'"/>'),
+      '}/>'
+    )
+  )
+# finally write before building
+  write(parent, "src/App.js")
+  # build & serve
+  if(run) {
+    # TODO: if already installed skip
+    gp_install_npm_package(tolower(component.name))
+    if(build) {
+      # TODO: gp_build is not made for this or refactor it
+      gp_build()
+    }
+    ...
+```
+</div>
+<div class="col">
+<img width="100%" alt="Alex - shiny code" src="https://user-images.githubusercontent.com/408568/84947537-454d1b00-b0e2-11ea-825d-f0766679cf4e.png">
+</div>
+</div>
+
 ## R & React (TGVE)
 Turing Geo-visualization Engine in `geoplumber`:
 <img width="90%" alt="gp_explore" src="https://user-images.githubusercontent.com/408568/84713119-3c354000-af62-11ea-908d-793572e13495.png">
@@ -149,7 +194,7 @@ Turing Geo-visualization Engine in `geoplumber`:
 ## Components of TGVE
 <img width="90%" alt="Turing TGVE" src="https://user-images.githubusercontent.com/408568/84770517-9ae4d300-afcf-11ea-87a6-5ce3ce8a29e9.png">
 
-## Front-end: nder the hood
+## Front-end: under the hood
 <img width="45%" alt="Minimise CPU time" src="https://user-images.githubusercontent.com/408568/84788038-94158a80-afe6-11ea-89a0-91983c6973b4.png">
 <img width="45%" alt="rendering pipeline" src="https://user-images.githubusercontent.com/408568/84788059-9a0b6b80-afe6-11ea-849d-1f9c90820323.png">
 <br/>
@@ -177,7 +222,8 @@ Heavily customised code base of the project source code.
 * TGVE is powered by R although rendering is routed via web technologies.
 * R does what it does best and so does JS
 * The full stack of technologies is there to develop a scalable engine to visualize geospatial data
-* R already has the required wrapper packages to take this further to a 
+* R already has the required wrapper packages to take this further to another level (think `skimr`)
+* Send the instructions to browser only once, subsequently just wire the data.
 
 # Thank you
 
