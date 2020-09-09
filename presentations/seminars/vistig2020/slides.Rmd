@@ -151,8 +151,9 @@ Slides from Uber Engineering DeckGL tea: shorturl.at/anKR5
 Heavily customised code base of the project source code.
 
 # Conclusion
-* TGVE is powered by R + React.
-* R already has the required wrapper packages to take this further to another level (think `skimr`)
+* TGVE is an open source scalable geovisualization tool.
+* Workflow for data science environment (modular build).
+* R already has the required wrapper packages to assist analysis and visualization (`skimr`)
 * Send the instructions to browser only once, subsequently just wire the data.
 
 # Thank you
