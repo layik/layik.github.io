@@ -1,5 +1,5 @@
 ---
-permalink: /articles/bash.html
+permalink: /bash.html
 ---
 [Home](https://layik.github.io) | About | Current
 <hr/>

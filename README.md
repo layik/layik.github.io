@@ -2,7 +2,7 @@ Posts:
 - 
 * Latest - [DeckGL custom layer](https://layik.github.io/decklayer)
 
-* [Bash](https://layik.github.io/bash)
+* [Bashing data](https://layik.github.io/bash)
 
 * [GitHub Actions](https://layik.github.io/ghactions).
 
