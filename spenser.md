@@ -98,8 +98,12 @@ E02001738,1422050,1119
 Now we can subset the rows with one column: `csv[SAEY == 1122050,]`. I actually experimented with this both as a string and inter/numeric on Python and R Data Table and R Data Table beats Python by half time in the numeric form on the same machine of course. In the string form, the R Data Table is still faster but by a minor margin.
 
 Here is a real result of the server using this command:
-`curl -o /dev/null -s -w %{time_total}\\n  http://spenser.geoplumber.com/api/spenser`
+
+```sh
+curl -o /dev/null -s -w %{time_total}\\n  http://spenser.geoplumber.com/api/spenser
+
 0.321342
+```
 
 The distance was from Leeds, UK to somewhre in Germany with server spec being:
 
