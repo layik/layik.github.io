@@ -25,6 +25,7 @@ PID,Area,Sex,Age,Ethnicity
 7,E02001738,1,1,2
 8,E02001738,1,1,2
 ```
+Combining 12,928 files resulted in 675,447,329 rows of data like above. Processing the files could not be done on 16GB machine.
 
 The task involved heavy processing on a 64GB machine without knowing what the final output would be like. So it was a leap into the dark in any case but the task itself was not easy to process in R, and although I have not tested it, I doubt it would be orders of magnitude faster in Python.
 
