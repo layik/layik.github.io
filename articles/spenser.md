@@ -25,6 +25,7 @@ PID,Area,Sex,Age,Ethnicity
 7,E02001738,1,1,2
 8,E02001738,1,1,2
 ```
+Combining 12,928 files resulted in 675,447,329 rows of data like above. Processing the files could not be done on 16GB machine.
 
 The task involved heavy processing on a 64GB machine without knowing what the final output would be like. So it was a leap into the dark in any case but the task itself was not easy to process in R, and although I have not tested it, I doubt it would be orders of magnitude faster in Python.
 
@@ -41,7 +42,7 @@ csv$Year = 2010
 # count them
 spenser = count(spenser, vars = names(spenser))
 ```
-This simple operation was taking days. R being multithreaded dividing the dataset into chunks was of no immediate benefit either. It looked like we would need a super computer to do this. After this step, we then had to squash the age values (1 to 70+) to some age range like (1-12 => 1, 13-17 => 2 etc...) and count those and the current counts again to get a final count of each row.
+This simple operation was taking days. R NOT being multithreaded dividing the dataset into chunks was of no immediate benefit either. It looked like we would need a super computer to do this. After this step, we then had to squash the age values (1 to 70+) to some age range like (1-12 => 1, 13-17 => 2 etc...) and count those and the current counts again to get a final count of each row.
 
 
 Then came R Data Table package. Instead of reading with `read.csv` I used the blazing fast `fread` and though `.N` would be faster I still kept the bit of `dplyr` in there and suddenly within about 12 hours on the 64GB machine, I could collapse about 40GB of data into 1.2GB of plain CSV. So the above chunk would look like:
