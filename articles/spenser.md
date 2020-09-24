@@ -7,7 +7,7 @@ permalink: /spenser.html
 
 # Crunching tens of GBs of CSV
 
-<img src="https://user-images.githubusercontent.com/408568/92616820-95d5ae00-f2b6-11ea-8ccc-6d448d61ced5.png" alt="spenser screenshot" width="100%">
+<img src="https://user-images.githubusercontent.com/408568/94144989-c8140d80-fe69-11ea-80ff-99e1de9cbc84.png" alt="spenser screenshot" width="100%">
 
 [SPENSER](https://lida.leeds.ac.uk/research-projects/spenser-synthetic-population-estimation-and-scenario-projection-model/) output is some ~90GB of CSVs. How do we query it to feed into the eAtlas?
 
@@ -86,6 +86,7 @@ So it would take more than 10 seconds to search through those columns even using
 `csv[Age == 1 && Sex == 1 && Ethnicity === 2 && Year == 2050,]`
 
 ## More encoding
+
 I then experimented with searching one column and obviously that was much faster. Therefore, I combined all the columns (Sex, Age, Ethnicity and Year) into one value and tested again. So the data looked looks like this in its final form:
 ```sh
 Area,SAEY,tot
@@ -122,3 +123,5 @@ L1i cache:           32K
 L2 cache:            4096K
 L3 cache:            16384K
 ```
+
+The front-end is managed by [eAtlas](https://github.com/layik/eAtlas) where about ~51mb geometry file is downloaded from GitHub only the first time the app is loaded. As the user updates the map with new data fetched from the server from the data table mentioned, eAtlas updates the map using the amazing DeckGL/Mapbox libraries.
