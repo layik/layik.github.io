@@ -1,5 +1,6 @@
 Code Sharing and Reproducible Research
 ================
+L Hama
 2020-09-25
 
   - [Code sharing for
@@ -30,6 +31,12 @@ Who does this? *Biostatistics*
 > articles with an “R.” (Peng 2011)
 
 ### Code sharing for reproducibility
+
+Version Control System (Wikipedia
+\[entry\]\](<https://en.wikipedia.org/wiki/Version_control>)) is the
+subject name for tracking source code versioning and also to collaborate
+remotely. Git is just one of few but perhaps the best. One of the two
+major contributions from Linus Torvalds.
 
 There is not as far as I know a convention or established method.
 www.sourceforge.net to dump source code or in the case of theses, maybe
@@ -68,8 +75,8 @@ data <- rnorm(100)
 summary(data)
 ```
 
-    ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    ## -2.369489 -0.578861 -0.005077  0.022014  0.777002  2.273746
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -2.27160 -0.60509  0.08370  0.09897  0.80347  3.08339
 
 ``` r
 hist(data)

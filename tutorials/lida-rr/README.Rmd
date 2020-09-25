@@ -1,6 +1,7 @@
 ---
 title: "Code Sharing and Reproducible Research"
 date: "`r Sys.Date()`"
+author: L Hama
 output: 
   github_document:
     toc: true
@@ -26,7 +27,13 @@ Who does this? *Biostatistics*
 
 > The policy was implemented in July 2009, and as of July 2011, 21 of 125 articles have been published with a kite-mark, including five articles with an “R.” [@Peng1226]
 
+
+
+
 ### Code sharing for reproducibility
+
+Version Control System (Wikipedia [entry]](https://en.wikipedia.org/wiki/Version_control)) is the subject name for tracking source code versioning and also to collaborate remotely. Git is just one of few but perhaps the best. One of the two major contributions from Linus Torvalds.
+
 There is not as far as I know a convention or established method. www.sourceforge.net to dump source code or in the case of theses, maybe submit zip files.
 
 
