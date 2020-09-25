@@ -11,6 +11,8 @@ Why?
 
 > The replication of scientific findings using independent investigators ... the standard by which scientific claims are evaluated. [@peng2009reproducible]
 
+I think there is also the "Open Source" ethos of work involved as well as the scientific method. Without the underlying tools being open source, it would be rather difficult to reproduce the results 100%.
+
 Who does this? *Biostatistics*
 
 > The policy was implemented in July 2009, and as of July 2011, 21 of 125 articles have been published with a kite-mark, including five articles with an “R.” [@Peng1226]
@@ -22,6 +24,18 @@ There is not as far as I know a convention or established method. www.sourceforg
 ### Environment based
 The tools and techniques to share code is based on the language. In this context the two major languages as you know are Python and R (or R and Python). 
 
-In Python an interactive document which works in browsers and supports Julia, Python and R is called "Jupyter" from those names. Though it also can support [quite](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) a lot of other languages using what is called Jupyter "kernel"s.
+In Python, an interactive document which works in browsers and supports Julia, Python and R is called "Jupyter" from those names. Though it also can support [quite](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) a lot of other languages using what is called Jupyter "kernel"s.
+
+In R, [Rmarkdown](https://github.com/rstudio/rmarkdown) is the widely used package and document format of generating "interactive" (note quite like Jupyter) to generate documents that can be "rendered" and reproduce the research carried out.
+
+This very README file itself, is a reproducible document. The following screenshot is from MS Visual Studio Code Rmd rendered and previewed simultaneously. Also, sent to the GH pages of my personal account.
+<img width="100%" alt="VS code RMD rendering and previewing" src="https://user-images.githubusercontent.com/408568/94319467-993d8a80-ff82-11ea-9a65-0909fca6fa3f.png">
+
+
+### Automation and Continous Integration
+Why?
+> Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible.[@fowler2006continuous]
+
+There is an emerging picture here, as we more and more integrate computation into our lives and specifically into scientific research we also integrate computing tools and techniques into our workflow.
 
 ### References
