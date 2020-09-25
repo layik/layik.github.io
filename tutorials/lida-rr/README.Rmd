@@ -3,6 +3,12 @@ output: github_document
 bibliography: refs.bib
 ---
 
+```{r opts, echo = FALSE}
+knitr::opts_chunk$set(
+  fig.path = "images/"
+)
+```
+
 ### Code Sharing and Reproducible Research
 
 This is a 30 minutes interactive session on MS Teams at [LIDA](https://lida.leeds.ac.uk) where I am based.This README is there to help attendees find resources discussed and others who land here.

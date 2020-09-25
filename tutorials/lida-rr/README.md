@@ -59,14 +59,14 @@ data <- rnorm(100)
 summary(data)
 ```
 
-    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ## -2.3890 -0.4718  0.1562  0.1635  0.8526  3.5081
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -2.23026 -0.51837  0.02724  0.04763  0.77895  2.11176
 
 ``` r
 hist(data)
 ```
 
-![test](README_files/figure-gfm/cocalc-1.png)
+![test](images/cocalc-1.png)
 
 This very README file itself, is a reproducible document. The following
 screenshot is from MS Visual Studio Code Rmd rendered and previewed
