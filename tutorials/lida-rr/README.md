@@ -38,10 +38,35 @@ can support
 [quite](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) a lot
 of other languages using what is called Jupyter “kernel”s.
 
+I just want to play with one: - try Google’s Colab (need gmail account)
+<http://colab.research.google.com/#create=true> - Kaggle:
+<https://www.kaggle.com/notebooks> - many more\!
+
 In R, [Rmarkdown](https://github.com/rstudio/rmarkdown) is the widely
 used package and document format of generating “interactive” (note quite
 like Jupyter) to generate documents that can be “rendered” and reproduce
 the research carried out.
+
+  - CoCalc
+    [here](https://cocalc.com/projects/ec4696eb-d91a-4d9a-bf21-90ce5f03914b/files/Welcome%20to%20CoCalc.ipynb?session=default)
+
+<img width="100%" alt="CoCalc" src="https://user-images.githubusercontent.com/408568/94320872-f8e96500-ff85-11ea-8d7e-9d2d4c611dc5.png">
+
+Generate the same here in rmarkdown:
+
+``` r
+data <- rnorm(100)
+summary(data)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ## -2.3890 -0.4718  0.1562  0.1635  0.8526  3.5081
+
+``` r
+hist(data)
+```
+
+![test](README_files/figure-gfm/cocalc-1.png)
 
 This very README file itself, is a reproducible document. The following
 screenshot is from MS Visual Studio Code Rmd rendered and previewed
@@ -50,14 +75,44 @@ simultaneously. Also, sent to the GH pages of my personal account.
 
 ### Automation and Continous Integration
 
-Why? \> Each integration is verified by an automated build (including
-test) to detect integration errors as quickly as possible.(Fowler and
-Foemmel 2006)
+Why?
+
+> Each integration is verified by an automated build (including test) to
+> detect integration errors as quickly as possible.(Fowler and Foemmel
+> 2006)
 
 There is an emerging picture here, as we more and more integrate
 computation into our lives and specifically into scientific research we
 also integrate computing tools and techniques into our workflow.
 
+GitHub, GitLab, BitBucket and others include tools to run build tasks.
+Travis is perhaps the best known platform for running build tasks with
+Jenkins being a leading open source tool that can do what Travis does.
+
+Once code/research output has been generated and pushed by collaborating
+individuals/teams, it is critical to findout if there are any errors.
+This is the job of “continous integration” (CI).
+
+So for example writing almost any package in any programming language is
+supported by Travis and more cently GH actions.
+
+### Publishing
+
+There are great tools which assist with self publishing just like this
+very RMD (md) document which is hosted on github.io for free as it is a
+public repo. Thanks to tools like
+[Jekyll](https://github.com/jekyll/jekyll) and
+[Hugo](https://github.com/gohugoio/hugo), all kinds of content can be
+published including under own “domain names” such as www.layik.me (does
+not exist)
+
+So here is a list of awesomes for data science, code shareing, CI and
+more:
+
+  - [data science](https://github.com/academic/awesome-datascience)
+  - jupyter
+  - rmarkdown
+  - 
 ### References
 
 <div id="refs" class="references hanging-indent">
