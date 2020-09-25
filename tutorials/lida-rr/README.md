@@ -1,6 +1,14 @@
 
 ### Code Sharing and Reproducible Research
 
+Jump to:
+
+  - [Environments](#envs)
+
+  - [CI](#ci)
+
+  - [References](#refs)
+
 This is a 30 minutes interactive session on MS Teams at
 [LIDA](https://lida.leeds.ac.uk) where I am based.This README is there
 to help attendees find resources discussed and others who land here.
@@ -26,7 +34,7 @@ There is not as far as I know a convention or established method.
 www.sourceforge.net to dump source code or in the case of theses, maybe
 submit zip files.
 
-### Environment based
+### <a name="envs"></a>Environment based
 
 The tools and techniques to share code is based on the language. In this
 context the two major languages as you know are Python and R (or R and
@@ -60,7 +68,7 @@ summary(data)
 ```
 
     ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-    ## -2.23026 -0.51837  0.02724  0.04763  0.77895  2.11176
+    ## -2.39212 -0.80011  0.05232  0.04478  0.77049  2.77336
 
 ``` r
 hist(data)
@@ -73,7 +81,7 @@ screenshot is from MS Visual Studio Code Rmd rendered and previewed
 simultaneously. Also, sent to the GH pages of my personal account.
 <img width="100%" alt="VS code RMD rendering and previewing" src="https://user-images.githubusercontent.com/408568/94319467-993d8a80-ff82-11ea-9a65-0909fca6fa3f.png">
 
-### Automation and Continous Integration
+### <a name="ci"></a> Automation and Continous Integration
 
 Why?
 
@@ -113,7 +121,7 @@ more:
   - jupyter
   - rmarkdown
   - 
-### References
+### <a name="refs"></a>References
 
 <div id="refs" class="references hanging-indent">
 

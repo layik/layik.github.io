@@ -11,6 +11,14 @@ knitr::opts_chunk$set(
 
 ### Code Sharing and Reproducible Research
 
+Jump to:
+
+* [Environments](#envs)
+
+* [CI](#ci)
+
+* [References](#refs)
+
 This is a 30 minutes interactive session on MS Teams at [LIDA](https://lida.leeds.ac.uk) where I am based.This README is there to help attendees find resources discussed and others who land here.
 
 Why?
@@ -27,7 +35,7 @@ Who does this? *Biostatistics*
 There is not as far as I know a convention or established method. www.sourceforge.net to dump source code or in the case of theses, maybe submit zip files.
 
 
-### Environment based
+### <a name="envs"></a>Environment based 
 The tools and techniques to share code is based on the language. In this context the two major languages as you know are Python and R (or R and Python). 
 
 In Python, an interactive document which works in browsers and supports Julia, Python and R is called "Jupyter" from those names. Though it also can support [quite](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) a lot of other languages using what is called Jupyter "kernel"s.
@@ -55,7 +63,7 @@ This very README file itself, is a reproducible document. The following screensh
 <img width="100%" alt="VS code RMD rendering and previewing" src="https://user-images.githubusercontent.com/408568/94319467-993d8a80-ff82-11ea-9a65-0909fca6fa3f.png">
 
 
-### Automation and Continous Integration
+### <a name="ci"></a> Automation and Continous Integration
 
 Why?
 
@@ -79,4 +87,4 @@ So here is a list of awesomes for data science, code shareing, CI and more:
 * rmarkdown
 * 
 
-### References
+### <a name="refs"></a>References
