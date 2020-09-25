@@ -1,5 +1,5 @@
 
-##### Code Sharing and Reproducible Research
+### Code Sharing and Reproducible Research
 
 This is a 30 minutes interactive session on MS Teams at
 [LIDA](https://lida.leeds.ac.uk) where I am based.This README is there
@@ -16,13 +16,13 @@ Who does this? *Biostatistics*
 > 125 articles have been published with a kite-mark, including five
 > articles with an “R.” (Peng 2011)
 
-##### Code sharing for reproducibility
+### Code sharing for reproducibility
 
 There is not as far as I know a convention or established method.
 www.sourceforge.net to dump source code or in the case of theses, maybe
 submit zip files.
 
-##### Environment based
+### Environment based
 
 The tools and techniques to share code is based on the language. In this
 context the two major languages as you know are Python and R (or R and
@@ -34,7 +34,7 @@ can support
 [quite](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) a lot
 of other languages using what is called Jupyter “kernel”s.
 
-##### References
+### References
 
 <div id="refs" class="references hanging-indent">
 
