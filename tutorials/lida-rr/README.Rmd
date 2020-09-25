@@ -32,7 +32,7 @@ Who does this? *Biostatistics*
 
 ### Code sharing for reproducibility
 
-Version Control System (Wikipedia [entry]](https://en.wikipedia.org/wiki/Version_control)) is the subject name for tracking source code versioning and also to collaborate remotely. Git is just one of few but perhaps the best. One of the two major contributions from Linus Torvalds.
+Version Control System (Wikipedia [entry](https://en.wikipedia.org/wiki/Version_control)) is the subject name for tracking source code versioning and also to collaborate remotely. Git is just one of few but perhaps the best. One of the two major contributions from Linus Torvalds.
 
 There is not as far as I know a convention or established method. www.sourceforge.net to dump source code or in the case of theses, maybe submit zip files.
 

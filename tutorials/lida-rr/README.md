@@ -33,8 +33,8 @@ Who does this? *Biostatistics*
 ### Code sharing for reproducibility
 
 Version Control System (Wikipedia
-\[entry\]\](<https://en.wikipedia.org/wiki/Version_control>)) is the
-subject name for tracking source code versioning and also to collaborate
+[entry](https://en.wikipedia.org/wiki/Version_control)) is the subject
+name for tracking source code versioning and also to collaborate
 remotely. Git is just one of few but perhaps the best. One of the two
 major contributions from Linus Torvalds.
 
@@ -76,7 +76,7 @@ summary(data)
 ```
 
     ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-    ## -2.27160 -0.60509  0.08370  0.09897  0.80347  3.08339
+    ## -2.52203 -0.67266 -0.02564  0.02615  0.73887  2.58667
 
 ``` r
 hist(data)
