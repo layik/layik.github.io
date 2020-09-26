@@ -1,7 +1,7 @@
 Code Sharing and Reproducible Research
 ================
 L Hama
-2020-09-25
+2020-09-26
 
   - [Code sharing for
     reproducibility](#code-sharing-for-reproducibility)
@@ -38,9 +38,14 @@ name for tracking source code versioning and also to collaborate
 remotely. Git is just one of few but perhaps the best. One of the two
 major contributions from Linus Torvalds.
 
-There is not as far as I know a convention or established method.
-www.sourceforge.net to dump source code or in the case of theses, maybe
-submit zip files.
+Git is a great tool if not the standard tool for sharing code. However,
+as far as I know, there is not a convention or established method for
+formatting or structuring our research outputs. Whilst writing this I
+came across [this
+effort](http://drivendata.github.io/cookiecutter-data-science/) and I
+think they know what I am talking about. Before code sharing platforms I
+think people may have used www.sourceforge.net to dump source code or in
+the case of theses, maybe submit zip files.
 
 ### Environment based
 
@@ -75,8 +80,8 @@ data <- rnorm(100)
 summary(data)
 ```
 
-    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-    ## -2.52203 -0.67266 -0.02564  0.02615  0.73887  2.58667
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ## -2.7205 -0.5416  0.2695  0.1690  0.8481  2.4289
 
 ``` r
 hist(data)
