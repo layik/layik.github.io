@@ -84,9 +84,9 @@ There are great tools which assist with self publishing just like this very RMD 
 
 So here is a list of awesomes for data science, code shareing, CI and more:
 
+* [git](https://github.com/dictcp/awesome-git)
 * [data science](https://github.com/academic/awesome-datascience)
-* jupyter
-* rmarkdown
-* 
+* [jupyter](https://github.com/markusschanta/awesome-jupyter)
+* [rmarkdown](https://github.com/harryprince/awesome-rmarkdown) not as extensive, there is [awesome R](https://github.com/qinwf/awesome-R)
 
 ### References

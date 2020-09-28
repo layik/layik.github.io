@@ -1,7 +1,7 @@
 Code Sharing and Reproducible Research
 ================
 L Hama
-2020-09-26
+2020-09-28
 
   - [Code sharing for
     reproducibility](#code-sharing-for-reproducibility)
@@ -80,8 +80,8 @@ data <- rnorm(100)
 summary(data)
 ```
 
-    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ## -2.7205 -0.5416  0.2695  0.1690  0.8481  2.4289
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -2.16924 -0.57869  0.03119  0.04727  0.82075  2.24188
 
 ``` r
 hist(data)
@@ -130,10 +130,12 @@ not exist)
 So here is a list of awesomes for data science, code shareing, CI and
 more:
 
+  - [git](https://github.com/dictcp/awesome-git)
   - [data science](https://github.com/academic/awesome-datascience)
-  - jupyter
-  - rmarkdown
-  - 
+  - [jupyter](https://github.com/markusschanta/awesome-jupyter)
+  - [rmarkdown](https://github.com/harryprince/awesome-rmarkdown) not as
+    extensive, there is [awesome R](https://github.com/qinwf/awesome-R)
+
 ### References
 
 <div id="refs" class="references hanging-indent">
