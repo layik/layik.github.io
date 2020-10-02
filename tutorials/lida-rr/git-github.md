@@ -5,6 +5,7 @@ L Hama
 
   - [Introduction](#introduction)
   - [Hands on](#hands-on)
+  - [GitHub](#github)
   - [Awesomeness](#awesomeness)
   - [References](#references)
 
@@ -128,6 +129,33 @@ git push # error message?
   - added file(s) to it
   - can check history of the “commits”
   - can add remote repositories
+
+### GitHub
+
+There is a great interactive GitHub [guides](https://guides.github.com)
+pages.
+
+#### README
+
+The `index` file of GitHub. Just open a repository and compare what you
+see on the landing with the file `README.md`
+
+#### GH pages
+
+<https://USER.github.io/repo>
+
+A repo with `USER.github.io` will translate to: <https://USER.github.io>
+for example `layik.github.io` actually points to:
+<https://github.com/layik/layik.github.io>
+
+Worth mentioning R packages: \* `packagedown` \* `bookdown` \*
+`devtools::install_github` \* `covr`?
+
+#### DOI
+
+Checkout this short
+[tutorial](https://guides.github.com/activities/citable-code/) to get
+one on the repo.
 
 Do we have more time?
 
