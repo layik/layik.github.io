@@ -8,6 +8,9 @@ L Hama
   - [Awesomeness](#awesomeness)
   - [References](#references)
 
+Workshop date: 5th October 2020 Estimate time: One hour Location: MS
+Teams
+
 ### Introduction
 
 Official [docs](https://git-scm.com):
