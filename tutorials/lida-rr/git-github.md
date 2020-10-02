@@ -6,6 +6,7 @@ L Hama
   - [Introduction](#introduction)
   - [Hands on](#hands-on)
   - [Awesomeness](#awesomeness)
+  - [References](#references)
 
 ### Introduction
 
@@ -29,6 +30,10 @@ But this part is important:
 > store the file again, just a link to the previous identical file it
 > has already stored. Git thinks about its data more like a `stream of
 > snapshots`.
+
+Visualized:
+<img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="git visualized" max-width="100%">
+Image from (Chacon and Straub 2014)
 
 ### Hands on
 
@@ -99,6 +104,10 @@ git remote -v
 # git remote add ...
 ```
 
+Creating a repo on
+[github](https://guides.github.com/activities/hello-world/)?
+<img src="https://guides.github.com/activities/hello-world/create-new-repo.png" alt="create repo on github" width="100%">
+
 Lets be brave and send the current commits to the remote.
 
 ``` sh
@@ -128,10 +137,26 @@ Do we have more time?
 
 Read the
 [rest](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
-of the section in the book. 3.2 Basic Branching and Merging 3.3 Branch
-Management 3.4 Branching Workflows 3.5 Remote Branches 3.6 Rebasing 3.7
-Summary
+of the section in the book. 3.2 Basic Branching and Merging
+
+Create a branch on
+[GitHub](https://guides.github.com/activities/hello-world/)?
+<img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="100%">
+3.3 Branch Management 3.4 Branching Workflows 3.5 Remote Branches 3.6
+~~Rebasing~~ 3.7 Summary
 
 ### Awesomeness
 
   - [GitHub Official](https://guides.github.com)
+
+### References
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-progit">
+
+Chacon, Scott, and Ben Straub. 2014. *Pro Git*. Springer Nature.
+
+</div>
+
+</div>
