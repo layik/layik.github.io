@@ -1,0 +1,123 @@
+---
+title: "Git/GitHub workshop"
+date: "`r Sys.Date()`"
+author: L Hama
+output: 
+  github_document:
+    toc: true
+    toc_depth: 3
+bibliography: refs.bib
+---
+
+### Introduction
+Official [docs](https://git-scm.com):
+
+> Git is a [free and open source](https://git-scm.com/about/free-and-open-source) distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+You can [find](https://git-scm.com/book/en/v2) the "Pro Git" book from Scott Chacon and Ben Straub free to read.
+
+But this part is important:
+
+> Git thinks of its data more like a series of `snapshots` of a `miniature filesystem`. With Git, every time you `commit`, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that `snapshot`. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. Git thinks about its data more like a `stream of snapshots`.
+
+### Hands on
+Let us run this session with each of you doing at least one or more commands and the rest of us will follow/lead/watch.
+
+I just copied the titles of the section two of the book here but we will do it our way:
+
+2. Git Basics
+2.1 Getting a Git Repository
+
+Creating on our machine
+```sh
+mkdir repo # anywhere on your machine
+git init # 
+git status
+```
+
+Or show us how you can do this using GitHub desktop? I found this [link](https://docs.github.com/en/free-pro-team@latest/desktop/installing-and-configuring-github-desktop/creating-your-first-repository-using-github-desktop) but never tried the application.
+
+Cloning from a remote?
+
+```sh
+git clone https://github.com/layik/eAtlas
+```
+
+2.2 Recording Changes to the Repository
+
+```sh
+# write some R code
+echo "print('Hello world')" >> hello-world.R
+git status
+git add *.R
+git status
+git commit -m "my first file added"
+git status
+```
+
+
+2.3 Viewing the Commit History
+
+```sh
+git log
+git log --oneline
+```
+
+2.4 Undoing Things
+
+```sh
+# edit the file hello-world.R
+git status
+# undo
+git checkout hello-world.R
+git status
+```
+
+2.5 Working with Remotes
+
+```sh
+git remote -v 
+# none?
+# time to create our first github repository!
+# www.github.com
+# new private repo or if brave enough make it public
+# come back and bring the instructions shown on github
+# git remote add ...
+
+```
+Lets be brave and send the current commits to the remote.
+
+```sh
+# try 
+git push # error message?
+```
+
+2.6 ~~Tagging~~
+
+2.7 ~~Git Aliases~~
+
+2.8 Summary
+
+* created our first repo on our machine
+* added file(s) to it
+* can check history of the "commits"
+* can add remote repositories
+
+Do we have more time?
+
+3. Git Branching
+
+3.1 Branches in a Nutshell
+
+> A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master.
+
+Read the [rest](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) of the section in the book.
+3.2 Basic Branching and Merging
+3.3 Branch Management
+3.4 Branching Workflows
+3.5 Remote Branches
+3.6 ~~Rebasing~~
+3.7 Summary
+
+### Awesomeness
+* [GitHub Official](https://guides.github.com)
