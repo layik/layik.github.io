@@ -148,7 +148,8 @@ Read the [rest](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutsh
 3.2 Basic Branching and Merging
 
 Create a branch on [GitHub](https://guides.github.com/activities/hello-world/)?
-<img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="100%">
+<img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="50%">
+
 3.3 Branch Management
 3.4 Branching Workflows
 3.5 Remote Branches

@@ -21,7 +21,7 @@ Presentations:
 
 Tutorials:
 -
-* [Git & GitHub](https://layik.github.io/tutorials/lida-rr/git-github)
+* [Beginner Git & GitHub](https://layik.github.io/tutorials/lida-rr/git-github)
 
 ##### Note
 This readme.md file serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)

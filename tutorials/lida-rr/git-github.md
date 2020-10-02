@@ -1,7 +1,7 @@
 Git/GitHub workshop
 ================
 L Hama
-2020-10-02
+2020-10-03
 
   - [Introduction](#introduction)
   - [Hands on](#hands-on)
@@ -172,7 +172,8 @@ of the section in the book. 3.2 Basic Branching and Merging
 
 Create a branch on
 [GitHub](https://guides.github.com/activities/hello-world/)?
-<img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="100%">
+<img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="50%">
+
 3.3 Branch Management 3.4 Branching Workflows 3.5 Remote Branches 3.6
 ~~Rebasing~~ 3.7 Summary
 
