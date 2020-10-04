@@ -9,6 +9,7 @@ L Hama
   - [GitHub](#github)
   - [Branch](#branch)
   - [Conflict resolution](#conflict-resolution)
+  - [Beginner advice](#beginner-advice)
   - [Awesomeness](#awesomeness)
   - [References](#references)
 
@@ -330,6 +331,24 @@ git merge master
 Lets inspect the tiny file and see what git has done to it. Open the
 file in your favourite editor. Remove the parts that you feel should or
 should not stay. Commit your changes.
+
+### Beginner advice
+
+  - Do not commit large files into git. Chances are, they need to live
+    somewhere else. What is a large file? Anything larger than 1mb?
+    Video? Audio? PDFs? etc.
+
+  - Work with a remote origin. If you keep working on your local machine
+    you may not see the benefit of git and reproduciblity of your
+    code/workflows.
+
+  - Commit frequently. There is no small commit, every commit is a
+    snapshot of your current work which you may want to come back to.
+
+  - Always leave your working directory in a functioning state. If you
+    have some breaking changes you can always use `git stash` to keep it
+    hidden and once you are ready to make some changes you can bring
+    them back alive using `git stash pop`.
 
 ### Awesomeness
 
