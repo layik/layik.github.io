@@ -30,7 +30,7 @@ Tutorials:
 This readme.md file serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)
 
 
-This microblog is created without much Jekyll. Jekyll powers `gh-pages` therefore will all I can to add minimal meta-code in here. Here is the header in article "about.md"
+This microblog is created without much Jekyll. Jekyll powers `gh-pages`, will do my best to keep minimal meta-code in here. You too can create your blog this way. Here is the header in article "about.md". 
 ```yml
 ---
 permalink: /bash.html
