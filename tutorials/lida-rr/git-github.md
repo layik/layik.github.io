@@ -4,6 +4,7 @@ L Hama
 2020-10-04
 
   - [Introduction](#introduction)
+  - [Terminal](#terminal)
   - [Hands on](#hands-on)
   - [GitHub](#github)
   - [Branch](#branch)
@@ -15,6 +16,8 @@ Workshop date: 5th October 2020 Estimate time: One hour Location: MS
 Teams
 
 ### Introduction
+
+Git is *really* easy to learn.
 
 Official [docs](https://git-scm.com):
 
@@ -40,6 +43,22 @@ But this part is important:
 Visualized:
 <img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="git visualized" max-width="100%">
 Image from (Chacon and Straub 2014)
+
+### Terminal
+
+I am happy to spend some time convincing you to use the terminal to do
+this instead of using any GUI. Therefore, this tutorial assumes you have
+access to a Unix (Linux or macOS) or Windows 10 PowerShell with git
+installed.
+
+For those of you on Windows please look at
+[this](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) or
+[this
+guide](https://www.atlassian.com/git/tutorials/install-git#windows) to
+get git on your machine installed.
+
+I think those of you who use Unix can easily install it on your machines
+if not installed already when the OS was installed.
 
 ### Hands on
 
