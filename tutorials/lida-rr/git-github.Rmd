@@ -237,7 +237,39 @@ git checkout --track origin/<name>
 * Branching is the essence of collaborating and managing source code.
 * The method of collaborating is via remote location(s)
 * All this enables Continous Integration or Continous Delivery
-* Automation is the ultimate goal!
+* Automation is the ultimate goal.
+
+### Conflict resolution
+
+So what looks really scary is when you have been writing some code/R/Python workflow and a colleague eits the same line that you edit and when you try to merge your work you come across a conflict.
+
+Git does help you get of this and there are various variables which you can use in your commands to automatically solve which version should be commited into the current branch.
+
+So lets do this: on the master branch add one line to the `hello-world.R` file.
+
+```sh
+git checkout master
+echo "# another comment line" >> hello-world.R
+git status
+git commit -am "prep for conflict"
+```
+
+And then on the <name> branch we can do the same but with a different comment (feel free to see if the same line would cause a conflict).
+
+```sh
+git checkout <name>
+echo "# a different comment line" >> hello-world.R
+git status
+git commit -am "prep on branch for conflict"
+```
+
+and now you can try and merge `master` by:
+```sh
+git merge master
+# fail?
+```
+
+Lets inspect the tiny file and see what git has done to it. Open the file in your favourite editor. Remove the parts that you feel should or should not stay. Commit your changes.
 
 ### Awesomeness
 * [GitHub Official](https://guides.github.com)
