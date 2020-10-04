@@ -1,6 +1,8 @@
 Posts:
 - 
-* Latest - [DeckGL custom layer](https://layik.github.io/decklayer)
+* Latest - [SPENSER data science showcase](https://layik.github.io/spenser)
+
+* [DeckGL custom layer](https://layik.github.io/decklayer)
 
 * [Bashing data](https://layik.github.io/bash)
 
@@ -23,10 +25,25 @@ Tutorials:
 -
 * [Beginner Git & GitHub](https://layik.github.io/tutorials/lida-rr/git-github)
 
-##### Note
+--
+##### About this repo
 This readme.md file serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)
 
 
-A microblog without much Jekyll. Jekyll powers `gh-pages`, so will do my best to keep content readable to humans and machines.
+This microblog is created without much Jekyll. Jekyll powers `gh-pages` therefore will all I can to add minimal meta-code in here. Here is the header in article "about.md"
+```yml
+---
+permalink: /bash.html
+---
+```
+And simple MD/HTML menu:
+
+```md
+[Home](https://layik.github.io) | About | Current
+<hr/>
+```
+
+Each MD (Markdown) file is pure and only contains a header YML config for Jekyll to find the URL and nothign else. If there is a counterpart Rmd (R Markdown) file, naturally it builds the Markdown.
+
 
 ![Image from PixaBay](/images/pixabay.png)
