@@ -1,11 +1,12 @@
 Git/GitHub workshop
 ================
 L Hama
-2020-10-03
+2020-10-04
 
   - [Introduction](#introduction)
   - [Hands on](#hands-on)
   - [GitHub](#github)
+  - [Branch](#branch)
   - [Awesomeness](#awesomeness)
   - [References](#references)
 
@@ -157,7 +158,7 @@ Checkout this short
 [tutorial](https://guides.github.com/activities/citable-code/) to get
 one on the repo.
 
-Do we have more time?
+### Branch
 
 3.  Git Branching
 
@@ -170,12 +171,104 @@ Read the
 [rest](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 of the section in the book. 3.2 Basic Branching and Merging
 
+``` sh
+# branch or no branch, you can always branch
+git branch <name>
+git checkout <name>
+# combine those two 
+git checkout -b <name>
+git branch 
+git status
+```
+
+Lets edit `hello-world.R`
+
+``` sh
+# this will append the comment to the file
+echo "# some R comment" >> hello-world.R
+# or just
+vim hello-world.R 
+# and add some changes
+git status
+# a for all staged
+# m for message required for commits
+git commit -am "added oneline comment to hello-world.R"
+```
+
+Or something or change somethign on your branch:
+
+``` sh
+echo "File to merge" >> fix.txt
+git status
+git add fix.txt
+git status
+git commit -am "add fix.txt file to branch <name>"
+```
+
+Go back to master just to see one or both of those changes
+
+``` sh
+git status
+git merge <name>
+# voila!
+```
+
 Create a branch on
-[GitHub](https://guides.github.com/activities/hello-world/)?
+[GitHub](https://guides.github.com/activities/hello-world/)? (not
+recommended :))
 <img src="https://guides.github.com/activities/hello-world/readme-edits.gif" alt="gif create branch on githu" width="50%">
 
-3.3 Branch Management 3.4 Branching Workflows 3.5 Remote Branches 3.6
-~~Rebasing~~ 3.7 Summary
+3.3 Branch Management A whole section from the book which is great.
+Picks for this one hour tutorial:
+
+``` sh
+git branch
+# notice the asterisk
+git branch -v 
+# productive!
+```
+
+When working with github and you want to create your first PR (pull
+request):
+
+``` sh
+git push origin <name>
+# just created a branch called <name> on remote go check.
+```
+
+Delete locally and remotely?
+
+``` sh
+git branch -D <name>
+# did that work?
+git branch
+# now this beauty
+git push origin --delete <name>
+```
+
+3.4 ~~Branching Workflows~~ You will want to read
+[this](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+in future and no doubt will probably have your own way of doing things.
+
+3.5 Remote Branches
+
+In this section just want to highlight “branch tracking”: Your colleague
+just created a branch and you want to edit something and send it back to
+them.
+
+``` sh
+git checkout --track origin/<name>
+```
+
+3.6 ~~Rebasing~~
+
+3.7 Summary
+
+  - Got an idea about the character called “branch” in “Trolls”?
+  - Branching is the essence of collaborating and managing source code.
+  - The method of collaborating is via remote location(s)
+  - All this enables Continous Integration or Continous Delivery
+  - Automation is the ultimate goal\!
 
 ### Awesomeness
 
