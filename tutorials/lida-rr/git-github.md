@@ -1,10 +1,10 @@
 Git/GitHub workshop
 ================
 L Hama
-2020-10-04
+2020-10-05
 
   - [Introduction](#introduction)
-  - [Terminal](#terminal)
+  - [Prerequisites](#prerequisites)
   - [Hands on](#hands-on)
   - [GitHub](#github)
   - [Branch](#branch)
@@ -46,7 +46,9 @@ Visualized:
 <img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="git visualized" max-width="100%">
 Image from (Chacon and Straub 2014)
 
-### Terminal
+### Prerequisites
+
+#### Terminal
 
 I am happy to spend some time convincing you to use the terminal to do
 this instead of using any GUI. Therefore, this tutorial assumes you have
@@ -61,6 +63,11 @@ get git on your machine installed.
 
 I think those of you who use Unix can easily install it on your machines
 if not installed already when the OS was installed.
+
+#### No terminal? No git?
+
+There are terminal simulators with git command support to play with. One
+of these is this one: <https://www.katacoda.com/courses/git>
 
 ### Hands on
 

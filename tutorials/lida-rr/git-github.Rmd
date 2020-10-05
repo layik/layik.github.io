@@ -31,12 +31,18 @@ Visualized:
 <img src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="git visualized" max-width="100%">
 Image from [@progit]
 
-### Terminal 
+### Prerequisites
+
+#### Terminal 
 I am happy to spend some time convincing you to use the terminal to do this instead of using any GUI. Therefore, this tutorial assumes you have access to a Unix (Linux or macOS) or Windows 10 PowerShell with git installed.
 
 For those of you on Windows please look at [this](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) or [this guide](https://www.atlassian.com/git/tutorials/install-git#windows) to get git on your machine installed.
 
 I think those of you who use Unix can easily install it on your machines if not installed already when the OS was installed. 
+
+#### No terminal? No git?
+There are terminal simulators with git command support to play with. One of these is this one:
+https://www.katacoda.com/courses/git
 
 ### Hands on
 Let us run this session with each of you doing at least one or more commands and the rest of us will follow/lead/watch.
