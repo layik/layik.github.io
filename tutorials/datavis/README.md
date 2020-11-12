@@ -6,6 +6,7 @@ L Hama
   - [Introduction](#introduction)
   - [Why R?](#why-r)
   - [Reading List](#reading-list)
+  - [Watching List](#watching-list)
   - [References](#references)
 
 ## Introduction
@@ -24,6 +25,13 @@ plot(iris[,1:4])
   - ggplot2: elegant graphics for data analysis (Book) (Wickham 2016)
   - The eyes have it: a task by data type taxonomy for information
     visualizations (Shneiderman 1996)
+  - IEEVIS publications and annual conference.
+
+## Watching List
+
+![bar vis](README_files/bar.png) - John Stasko: he Value of
+Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
+<https://vimeo.com/98986594>
 
 ## References
 

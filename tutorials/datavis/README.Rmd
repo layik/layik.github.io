@@ -21,5 +21,10 @@ plot(iris[,1:4])
 - Visualization analysis and design (Book) [@munzner2014visualization]
 - ggplot2: elegant graphics for data analysis (Book) [@ggplo2]
 - The eyes have it: a task by data type taxonomy for information visualizations [@shneiderman1996eyes]
+- IEEVIS publications and annual conference.
+
+## Watching List
+![bar vis](README_files/bar.png)
+- John Stasko: he Value of Visualization…and Why Interaction Matters, Eurovis Capstone Talk. https://vimeo.com/98986594
 
 ## References
