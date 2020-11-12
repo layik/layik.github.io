@@ -22,6 +22,8 @@ plot(iris[,1:4])
 
   - Visualization analysis and design (Book) (Munzner 2014)
   - ggplot2: elegant graphics for data analysis (Book) (Wickham 2016)
+  - The eyes have it: a task by data type taxonomy for information
+    visualizations (Shneiderman 1996)
 
 ## References
 
@@ -30,6 +32,14 @@ plot(iris[,1:4])
 <div id="ref-munzner2014visualization">
 
 Munzner, Tamara. 2014. *Visualization Analysis and Design*. CRC press.
+
+</div>
+
+<div id="ref-shneiderman1996eyes">
+
+Shneiderman, Ben. 1996. “The Eyes Have It: A Task by Data Type Taxonomy
+for Information Visualizations.” In *Proceedings 1996 Ieee Symposium on
+Visual Languages*, 336–43. IEEE.
 
 </div>
 
