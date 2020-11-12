@@ -1,0 +1,25 @@
+---
+title: "Data visualization"
+date: "`r Sys.Date()`"
+author: L Hama
+output: 
+  github_document:
+    toc: true
+    toc_depth: 3
+bibliography: refs.bib
+---
+
+## Introduction
+
+## Why R?
+```{r plot-iris}
+plot(iris[,1:4])
+```
+
+
+## Reading List
+- Visualization analysis and design (Book) [@munzner2014visualization]
+- ggplot2: elegant graphics for data analysis (Book) [@ggplo2]
+- The eyes have it: a task by data type taxonomy for information visualizations [@shneiderman1996eyes]
+
+## References
