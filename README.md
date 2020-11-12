@@ -31,6 +31,9 @@ This readme.md file serves both Layik's GitHub Pages and the [Repo](https://gith
 
 
 This microblog is created without much Jekyll. Jekyll powers `gh-pages`, will do my best to keep minimal meta-code in here. You too can create your blog this way. Here is the header in article "about.md". 
+
+Each MD (Markdown) file is pure and only contains a header YML config for Jekyll to find the URL and nothign else. If there is a counterpart Rmd (R Markdown) file, naturally it builds the Markdown.
+
 ```yml
 ---
 permalink: /bash.html
@@ -42,8 +45,5 @@ And simple MD/HTML menu:
 [Home](https://layik.github.io) | About | Current
 <hr/>
 ```
-
-Each MD (Markdown) file is pure and only contains a header YML config for Jekyll to find the URL and nothign else. If there is a counterpart Rmd (R Markdown) file, naturally it builds the Markdown.
-
 
 ![Image from PixaBay](/images/pixabay.png)
