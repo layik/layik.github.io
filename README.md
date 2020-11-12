@@ -24,6 +24,7 @@ Presentations:
 Tutorials:
 -
 * [Beginner Git & GitHub](https://layik.github.io/tutorials/lida-rr/git-github)
+* [Data Visualization](https://layik.github.io/tutorials/datavis)
 
 --
 ##### About this repo
