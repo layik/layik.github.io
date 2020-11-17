@@ -1,15 +1,24 @@
 Data visualization
 ================
 L Hama
-2020-11-12
+2020-11-17
 
   - [Introduction](#introduction)
   - [Why R?](#why-r)
   - [Reading List](#reading-list)
   - [Watching List](#watching-list)
+  - [More?](#more)
   - [References](#references)
 
 ## Introduction
+
+This session will be focused on the tools and techniques more than the
+foundations and theoretical body of work on scientific/information
+visualization. And as we have only two hours, we will be spending maybe
+just minutes pointing to and referring you to the reading list below.
+Therefore we will spend the session discussion choices, libraries and of
+course examples of generating visualizations using R and R based wrapper
+packages for your projects and wider research outputs.
 
 ## Why R?
 
@@ -33,9 +42,14 @@ plot(iris[,1:4])
 Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 <https://vimeo.com/98986594>
 
+## More?
+
+  - See Roger’s workshop materials on
+    [github](http://www.roger-beecham.com/GEOG5042-data-visualization/index.html).
+
 ## References
 
-<div id="refs" class="references hanging-indent">
+<div id="refs" class="references">
 
 <div id="ref-munzner2014visualization">
 
