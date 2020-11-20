@@ -9,6 +9,7 @@ L Hama
       - [ggplot2](#ggplot2)
   - [JS (web)](#js-web)
   - [Real data](#real-data)
+  - [](#section)
   - [Watching List](#watching-list)
   - [More?](#more)
   - [References](#references)
@@ -35,9 +36,23 @@ be warned\!
 
 ## Why R?
 
+Feel free to go Python, I hope you will find nothing dogmatic
+for/against R. I think we discussed this in the Git/GitHub session but
+just in case.
+
+  - graphics is native
+  - data is native
+  - statistics is native
+
+We have everything we need:
+
 ``` r
 plot(iris[,1:4])
 ```
+
+If you need datasets, remember one of the base packages in R is called
+`datasets`. You can discover the datasets in it in your own time (tip:
+try `library(help = "datasets")`).
 
 ### BaseR
 
@@ -54,7 +69,7 @@ rownames(installed.packages(priority="base"))
 # stats, graphics etc
 ```
 
-This is actually not the most basic R barplot but OK we accept it:
+This is actually not the most basic R bar plot but OK we accept it:
 
 ``` r
 # create dummy data
@@ -166,13 +181,15 @@ plot.
 
 ``` r
 library(plotly)
-p = plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 # p
 ```
 
 ## Real data
 
-Dataset - US Elections
+Would be good to have a look at some real messy data if we have time or
+at least show code what is needed before we arrive at generating graphs.
+\#\#\# US elections Dataset - US Elections
 (<span class="citeproc-not-found" data-reference-id="VN42MVDX_2017">**???**</span>)
 
 ``` r
@@ -228,6 +245,8 @@ p = ggplot(dw, aes(x = factor(year), y = percent,
                                "republican" = "red"))
 # p
 ```
+
+## 
 
 Real work here at UoL
 <https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R>

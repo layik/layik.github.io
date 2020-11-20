@@ -19,9 +19,18 @@ I think we all agree that:
 - as bonus, you could even get an audience moving with changing bars to tree maps, watch [John Stasko](https://en.wikipedia.org/wiki/John_Stasko)'s EuroVis capstone [talk](https://vimeo.com/98986594) if you have time to find out why. But be warned!
 
 ## Why R?
+Feel free to go Python, I hope you will find nothing dogmatic for/against R. I think we discussed this in the Git/GitHub session but just in case.
+
+- graphics is native
+- data is native
+- statistics is native
+
+We have everything we need:
 ```{r plot-iris, eval=FALSE}
 plot(iris[,1:4])
 ```
+
+If you need datasets, remember one of the base packages in R is called `datasets`. You can discover the datasets in it in your own time (tip: try `library(help = "datasets")`). 
 
 ### BaseR
 ```{r showbaser}
@@ -30,7 +39,7 @@ rownames(installed.packages(priority="base"))
 # stats, graphics etc
 ```
 
-This is actually not the most basic R barplot but OK we accept it:
+This is actually not the most basic R bar plot but OK we accept it:
 ```{r basicbarplot}
 # create dummy data
 d = data.frame(
@@ -46,7 +55,45 @@ d = data.frame(
 # barplot(iris[1:10,1], names=iris[1:10,5])
 ```
 
+In base R, what I like is that there is no wrapper functions and just like other functions in base R, you get what you see:
 
+```{r baser-xy}
+set.seed(12)
+# a boring example
+height = sample(50:100, 10)
+weight = sample(50:100, 10) 
+# plot(height,weight)
+# barplot(height, names = height)
+
+```
+
+and for histograms:
+```{r base-hist}
+set.seed(12)
+n <- 100
+x <- rchisq(n = n, df = 3) # n number, df = degrees of freedom
+# hist(x = x, freq = FALSE, xlim = c(0, 15))
+# lines(x = density(x = x), col = "red")
+```
+
+Scatter plots
+There is great support for visualizing data in base R, lets try some custom scatter plot:
+
+
+Saving as files
+```{r basepdf, eval=FALSE}
+# pdf
+
+pdf("~/Downloads/Sepal vs Petal Length in Iris.pdf")
+
+plot(iris$Sepal.Length, iris$Petal.Length,
+     col = iris$Species,
+     main = "Sepal vs Petal Length in Iris", 
+     xlab = "Sepal.Length",
+     ylab = "Petal.Length")
+
+dev.off()
+```
 
 ### ggplot2
 
@@ -121,12 +168,14 @@ So I will pick `plotly` although I fancy Bokeh more for this section. Shall we t
 
 ```{r plotlybox, eval=FALSE}
 library(plotly)
-p = plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 # p
 ```
 
 
 ## Real data
+Would be good to have a look at some real messy data if we have time or at least show code what is needed before we arrive at generating graphs. 
+### US elections
 Dataset - US Elections [@VN42MVDX_2017]
 ```{r, message=FALSE}
 # get your csv from this link as we cannot link directly to the file
@@ -182,6 +231,7 @@ p = ggplot(dw, aes(x = factor(year), y = percent,
 # p
 ```
 
+##
 Real work here at UoL
 https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R
 
