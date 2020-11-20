@@ -76,6 +76,8 @@ x <- rchisq(n = n, df = 3) # n number, df = degrees of freedom
 # lines(x = density(x = x), col = "red")
 ```
 
+Sometimes it is useful to show error bars on graphs. To do this, we need to calculate standard deviations, I believe Excel or PSPP (alternative to SPSS) can do it from the column given. Though, this is where we leave it to the `ggplot2` to do the heavy lifting rather than doing it in base R.
+
 Scatter plots
 There is great support for visualizing data in base R, lets try some custom scatter plot:
 
@@ -148,6 +150,27 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 # ggsave("multiplot.pdf", ml)
 
 ```
+
+The error bars?
+```{r ggplot2errorbars}
+library(ggplot2)
+library(dplyr)
+# first we need a summary
+iris.sum = iris %>% 
+  group_by(Species) %>% # group
+  summarise(mean_PL = mean(Petal.Length),  # Petal.Length mean for bars
+            sd_PL = sd(Petal.Length), # Petal.Length sd
+            n_PL = n(),  # just keeping the number of each group
+            SE_PL = sd(Petal.Length)/sqrt(n())) # R gives us the SE too
+
+p = ggplot(iris.sum, aes(Species, mean_PL)) + 
+                   geom_col() +  
+                   geom_errorbar(aes(ymin = mean_PL - sd_PL, ymax = mean_PL + sd_PL),
+                                 width=0.2) +
+  labs(y="Petal length (cm) ± s.d.", x = "Species") + theme_classic()
+# p
+```
+
 
 #### Boxplots
 I have great memories of Box plots, the reason is the type of studies I did during my PhD and maybe something special about Box plots in general too. For some reason someone has written an R package using Shiny and got themselves a space in "Correspondence" section in Nature [@spitzer2014boxplotr], I do think that is en overstatement though.

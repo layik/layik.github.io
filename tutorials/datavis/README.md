@@ -86,6 +86,53 @@ d = data.frame(
 # barplot(iris[1:10,1], names=iris[1:10,5])
 ```
 
+In base R, what I like is that there is no wrapper functions and just
+like other functions in base R, you get what you see:
+
+``` r
+set.seed(12)
+# a boring example
+height = sample(50:100, 10)
+weight = sample(50:100, 10) 
+# plot(height,weight)
+# barplot(height, names = height)
+```
+
+and for histograms:
+
+``` r
+set.seed(12)
+n <- 100
+x <- rchisq(n = n, df = 3) # n number, df = degrees of freedom
+# hist(x = x, freq = FALSE, xlim = c(0, 15))
+# lines(x = density(x = x), col = "red")
+```
+
+Sometimes it is useful to show error bars on graphs. To do this, we need
+to calculate standard deviations, I believe Excel or PSPP (alternative
+to SPSS) can do it from the column given. Though, this is where we leave
+it to the `ggplot2` to do the heavy lifting rather than doing it in base
+R.
+
+Scatter plots There is great support for visualizing data in base R,
+lets try some custom scatter plot:
+
+Saving as files
+
+``` r
+# pdf
+
+pdf("~/Downloads/Sepal vs Petal Length in Iris.pdf")
+
+plot(iris$Sepal.Length, iris$Petal.Length,
+     col = iris$Species,
+     main = "Sepal vs Petal Length in Iris", 
+     xlab = "Sepal.Length",
+     ylab = "Petal.Length")
+
+dev.off()
+```
+
 ### ggplot2
 
 Lets start similarly with the most basic barplot:
@@ -147,6 +194,49 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 # plots
 # marrangeGrob(plots, nrow=2,ncol=2)
 # ggsave("multiplot.pdf", ml)
+```
+
+The error bars?
+
+``` r
+library(ggplot2)
+library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following object is masked from 'package:gridExtra':
+    ## 
+    ##     combine
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+# first we need a summary
+iris.sum = iris %>% 
+  group_by(Species) %>% # group
+  summarise(mean_PL = mean(Petal.Length),  # Petal.Length mean for bars
+            sd_PL = sd(Petal.Length), # Petal.Length sd
+            n_PL = n(),  # just keeping the number of each group
+            SE_PL = sd(Petal.Length)/sqrt(n())) # R gives us the SE too
+```
+
+    ## `summarise()` ungrouping output (override with `.groups` argument)
+
+``` r
+p = ggplot(iris.sum, aes(Species, mean_PL)) + 
+                   geom_col() +  
+                   geom_errorbar(aes(ymin = mean_PL - sd_PL, ymax = mean_PL + sd_PL),
+                                 width=0.2) +
+  labs(y="Petal length (cm) ± s.d.", x = "Species") + theme_classic()
+# p
 ```
 
 #### Boxplots
