@@ -1,14 +1,15 @@
 Data visualization
 ================
 L Hama
-2020-11-19
+2020-11-20
 
   - [Introduction](#introduction)
   - [Why R?](#why-r)
       - [BaseR](#baser)
       - [ggplot2](#ggplot2)
-      - [JS (web)](#js-web)
-  - [Reading List](#reading-list)
+      - [Boxplots](#boxplots)
+  - [JS (web)](#js-web)
+  - [Real data](#real-data)
   - [Watching List](#watching-list)
   - [More?](#more)
   - [References](#references)
@@ -31,7 +32,50 @@ plot(iris[,1:4])
 
 ### BaseR
 
+``` r
+rownames(installed.packages(priority="base"))
+```
+
+    ##  [1] "base"      "compiler"  "datasets"  "graphics"  "grDevices" "grid"     
+    ##  [7] "methods"   "parallel"  "splines"   "stats"     "stats4"    "tcltk"    
+    ## [13] "tools"     "utils"
+
+``` r
+# rownames(installed.packages(priority="recommended"))
+# stats, graphics etc
+```
+
+This is actually not the most basic R barplot but OK we accept it:
+
+``` r
+# create dummy data
+d = data.frame(
+  name=letters[1:5],
+  value=sample(seq(4,15),5)
+)
+# barplot(height=d$value, names=d$name)
+# this is the most basic R barplot
+# barplot(height=d$value)
+# or
+# barplot(iris[1:10,1])
+# with names
+# barplot(iris[1:10,1], names=iris[1:10,5])
+```
+
 ### ggplot2
+
+Lets start similarly with the most basic barplot:
+
+``` r
+library(ggplot2)
+# p = ggplot(data = iris[1:10,], aes(x = Species, y = Sepal.Length)) +
+#   geom_bar(stat='identity')
+p = ggplot(diamonds, aes(cut)) +
+  geom_bar(fill = "#0073C2FF")
+p
+```
+
+![](README_files/figure-gfm/geombar-1.png)<!-- -->
 
     ggplot(data = <DATA>) + 
       <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
@@ -72,6 +116,27 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 # marrangeGrob(plots, nrow=2,ncol=2)
 # ggsave("multiplot.pdf", ml)
 ```
+
+### Boxplots
+
+I have great memories of Box plots, the reason is the type of studies I
+did during my PhD and maybe something special about Box plots in general
+too. For some reason someone has written an R package using Shiny and
+got themselves a space in “Correspondence” section in Nature (Spitzer et
+al. 2014), I do think that is en overstatement though.
+
+``` r
+p = ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot(width = 0.4, fill = "white") +
+  geom_jitter(aes(color = Species), 
+              width = 0.1, size = 1) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800", "#E7B8AF")) 
+# p
+```
+
+## JS (web)
+
+## Real data
 
 Dataset - US Elections
 (<span class="citeproc-not-found" data-reference-id="VN42MVDX_2017">**???**</span>)
@@ -134,18 +199,12 @@ Real work here at UoL
 <https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R>
 
 <https://github.com/saferactive/saferactive/blob/9760a0b4d0ea3b9572432c81cc549cfed689351d/code/dft-aadf-descriptive.R>
-
-### JS (web)
-
-## Reading List
-
-  - R for Data Science by H Wickham & G Grolemund Data Visualization
-    [chapter](https://r4ds.had.co.nz/data-visualisation.html)
-  - Visualization analysis and design (Book) (Munzner 2014)
-  - ggplot2: elegant graphics for data analysis (Book) (Wickham 2016)
-  - The eyes have it: a task by data type taxonomy for information
-    visualizations (Shneiderman 1996)
-  - IEEVIS publications and conference.
+\#\# Reading List - R for Data Science by H Wickham & G Grolemund Data
+Visualization [chapter](https://r4ds.had.co.nz/data-visualisation.html)
+- Visualization analysis and design (Book) (Munzner 2014) - ggplot2:
+elegant graphics for data analysis (Book) (Wickham 2016) - The eyes have
+it: a task by data type taxonomy for information visualizations
+(Shneiderman 1996) - IEEVIS publications and conference.
 
 ## Watching List
 
@@ -173,6 +232,14 @@ Munzner, Tamara. 2014. *Visualization Analysis and Design*. CRC press.
 Shneiderman, Ben. 1996. “The Eyes Have It: A Task by Data Type Taxonomy
 for Information Visualizations.” In *Proceedings 1996 Ieee Symposium on
 Visual Languages*, 336–43. IEEE.
+
+</div>
+
+<div id="ref-spitzer2014boxplotr">
+
+Spitzer, Michaela, Jan Wildenhain, Juri Rappsilber, and Mike Tyers.
+2014. “BoxPlotR: A Web Tool for Generation of Box Plots.” *Nature
+Methods* 11 (2): 121.
 
 </div>
 

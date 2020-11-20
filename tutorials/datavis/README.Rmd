@@ -9,7 +9,7 @@ output:
 bibliography: refs.bib
 ---
 
-## Introduction
+## Intro + Setup
 
 This session will be focused on the tools and techniques more than the foundations and theoretical body of work on scientific/information visualization. And as we have only two hours, we will be spending maybe just minutes pointing to and referring you to the reading list below. Therefore we will spend the session discussion choices, libraries and of course examples of generating visualizations using R and R based wrapper packages for your projects and wider research outputs.
 
@@ -19,13 +19,48 @@ plot(iris[,1:4])
 ```
 
 ### BaseR
+```{r showbaser}
+rownames(installed.packages(priority="base"))
+# rownames(installed.packages(priority="recommended"))
+# stats, graphics etc
+```
+
+This is actually not the most basic R barplot but OK we accept it:
+```{r basicbarplot}
+# create dummy data
+d = data.frame(
+  name=letters[1:5],
+  value=sample(seq(4,15),5)
+)
+# barplot(height=d$value, names=d$name)
+# this is the most basic R barplot
+# barplot(height=d$value)
+# or
+# barplot(iris[1:10,1])
+# with names
+# barplot(iris[1:10,1], names=iris[1:10,5])
+```
+
+
 
 ### ggplot2
+
+Lets start similarly with the most basic barplot:
+```{r geombar}
+library(ggplot2)
+# p = ggplot(data = iris[1:10,], aes(x = Species, y = Sepal.Length)) +
+#   geom_bar(stat='identity')
+p = ggplot(diamonds, aes(cut)) +
+  geom_bar(fill = "#0073C2FF")
+p
+```
 
 ```
 ggplot(data = <DATA>) + 
   <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
 ```
+
+
 ```{r init}
 library(ggplot2)
 p = ggplot(mpg, aes(displ, hwy, colour = class)) + 
@@ -59,7 +94,31 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 
 ```
 
+### Boxplots
+I have great memories of Box plots, the reason is the type of studies I did during my PhD and maybe something special about Box plots in general too. For some reason someone has written an R package using Shiny and got themselves a space in "Correspondence" section in Nature [@spitzer2014boxplotr], I do think that is en overstatement though.
 
+```{r boxplotiris}
+p = ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot(width = 0.4, fill = "white") +
+  geom_jitter(aes(color = Species), 
+              width = 0.1, size = 1) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800", "#E7B8AF")) 
+# p
+```
+
+## JS (web) 
+I use React as my JS library (framework if you like) and the package I borrowed from Uber Eng is called ReactVis and that is what I use direclty. But in R, prominent and stable ones are "plotly" and I should mention Python's mighty Bokeh. The latter has of course an [interface](https://hafen.github.io/rbokeh/articles/rbokeh.html) in R called `rbokeh`.
+
+So I will pick `plotly` although I fancy Bokeh more for this section. Shall we try a Box plot? Just because they too like to start with Box plot.
+
+```{r plotlybox}
+library(plotly)
+p = plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p
+```
+
+
+## Real data
 Dataset - US Elections [@VN42MVDX_2017]
 ```{r, message=FALSE}
 # get your csv from this link as we cannot link directly to the file
@@ -119,9 +178,6 @@ Real work here at UoL
 https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R
 
 https://github.com/saferactive/saferactive/blob/9760a0b4d0ea3b9572432c81cc549cfed689351d/code/dft-aadf-descriptive.R
-
-### JS (web) 
-
 ## Reading List
 - R for Data Science by H Wickham & G Grolemund Data Visualization [chapter](https://r4ds.had.co.nz/data-visualisation.html)
 - Visualization analysis and design (Book) [@munzner2014visualization]
