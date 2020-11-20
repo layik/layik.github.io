@@ -3,26 +3,35 @@ Data visualization
 L Hama
 2020-11-20
 
-  - [Introduction](#introduction)
+  - [Intro + Setup](#intro-setup)
   - [Why R?](#why-r)
       - [BaseR](#baser)
       - [ggplot2](#ggplot2)
-      - [Boxplots](#boxplots)
   - [JS (web)](#js-web)
   - [Real data](#real-data)
   - [Watching List](#watching-list)
   - [More?](#more)
   - [References](#references)
 
-## Introduction
+## Intro + Setup
 
-This session will be focused on the tools and techniques more than the
-foundations and theoretical body of work on scientific/information
-visualization. And as we have only two hours, we will be spending maybe
-just minutes pointing to and referring you to the reading list below.
-Therefore we will spend the session discussion choices, libraries and of
-course examples of generating visualizations using R and R based wrapper
-packages for your projects and wider research outputs.
+This is a beginner session, if you feel you know the basics, jump to the
+reading list for something more useful. And it is focused on the tools
+and techniques more than the foundations and theoretical body of work on
+scientific/information visualization. Also, as we have only two hours,
+we will be spending maybe just minutes pointing to and referring you to
+the reading list below. Therefore we will spend the session discussion
+choices, libraries and of course examples of generating visualizations
+using R and R based wrapper packages for your projects and wider
+research work.
+
+I think we all agree that: - it would be hard to do any data analysis
+without charts - even more difficult to communicate it without
+visualizing them - as bonus, you could even get an audience moving with
+changing bars to tree maps, watch [John
+Stasko](https://en.wikipedia.org/wiki/John_Stasko)’s EuroVis capstone
+[talk](https://vimeo.com/98986594) if you have time to find out why. But
+be warned\!
 
 ## Why R?
 
@@ -72,13 +81,21 @@ library(ggplot2)
 #   geom_bar(stat='identity')
 p = ggplot(diamonds, aes(cut)) +
   geom_bar(fill = "#0073C2FF")
-p
+# p
 ```
-
-![](README_files/figure-gfm/geombar-1.png)<!-- -->
 
     ggplot(data = <DATA>) + 
       <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+
+Remember this session should not be about `ggplot2`, otherwise I have
+missed my point. Having said that, the above needs some clarification: -
+`data` is your data, work with columns, keep your rows for your “lines”
+- `GEOM_FUNCTION` is a
+[variety](https://ggplot2.tidyverse.org/reference/), examples are
+`geom_bar`, `geom_histogram` - crucailly the `mapping` variable is the
+crucial function
+[`aes`](https://ggplot2.tidyverse.org/reference/aes.html) or the fancy
+`Construct aesthetic mappings` expression.
 
 ``` r
 library(ggplot2)
@@ -117,7 +134,7 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 # ggsave("multiplot.pdf", ml)
 ```
 
-### Boxplots
+#### Boxplots
 
 I have great memories of Box plots, the reason is the type of studies I
 did during my PhD and maybe something special about Box plots in general
@@ -135,6 +152,23 @@ p = ggplot(iris, aes(x = Species, y = Sepal.Length)) +
 ```
 
 ## JS (web)
+
+I use React as my JS library (framework if you like) and the package I
+borrowed from Uber Eng is called ReactVis and that is what I use
+direclty. But in R, prominent and stable ones are “plotly” and I should
+mention Python’s mighty Bokeh. The latter has of course an
+[interface](https://hafen.github.io/rbokeh/articles/rbokeh.html) in R
+called `rbokeh`.
+
+So I will pick `plotly` although I fancy Bokeh more for this section.
+Shall we try a Box plot? Just because they too like to start with Box
+plot.
+
+``` r
+library(plotly)
+p = plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+# p
+```
 
 ## Real data
 
@@ -208,7 +242,7 @@ it: a task by data type taxonomy for information visualizations
 
 ## Watching List
 
-![bar vis](README_files/bar.png) - John Stasko: he Value of
+![bar vis](README_files/bar.png) - John Stasko: The Value of
 Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 <https://vimeo.com/98986594>
 

@@ -11,7 +11,12 @@ bibliography: refs.bib
 
 ## Intro + Setup
 
-This session will be focused on the tools and techniques more than the foundations and theoretical body of work on scientific/information visualization. And as we have only two hours, we will be spending maybe just minutes pointing to and referring you to the reading list below. Therefore we will spend the session discussion choices, libraries and of course examples of generating visualizations using R and R based wrapper packages for your projects and wider research outputs.
+This is a beginner session, if you feel you know the basics, jump to the reading list for something more useful. And it is focused on the tools and techniques more than the foundations and theoretical body of work on scientific/information visualization. Also, as we have only two hours, we will be spending maybe just minutes pointing to and referring you to the reading list below. Therefore we will spend the session discussion choices, libraries and of course examples of generating visualizations using R and R based wrapper packages for your projects and wider research work.
+
+I think we all agree that:
+- it would be hard to do any data analysis without charts
+- even more difficult to communicate it without visualizing them
+- as bonus, you could even get an audience moving with changing bars to tree maps, watch [John Stasko](https://en.wikipedia.org/wiki/John_Stasko)'s EuroVis capstone [talk](https://vimeo.com/98986594) if you have time to find out why. But be warned!
 
 ## Why R?
 ```{r plot-iris, eval=FALSE}
@@ -52,14 +57,17 @@ library(ggplot2)
 #   geom_bar(stat='identity')
 p = ggplot(diamonds, aes(cut)) +
   geom_bar(fill = "#0073C2FF")
-p
+# p
 ```
 
 ```
 ggplot(data = <DATA>) + 
   <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
 ```
-
+Remember this session should not be about `ggplot2`, otherwise I have missed my point. Having said that, the above needs some clarification:
+- `data` is your data, work with columns, keep your rows for your "lines"
+- `GEOM_FUNCTION` is a [variety](https://ggplot2.tidyverse.org/reference/), examples are `geom_bar`, `geom_histogram`
+- crucailly the `mapping` variable is the crucial function [`aes`](https://ggplot2.tidyverse.org/reference/aes.html) or the fancy `Construct aesthetic mappings` expression.
 
 ```{r init}
 library(ggplot2)
@@ -94,7 +102,7 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 
 ```
 
-### Boxplots
+#### Boxplots
 I have great memories of Box plots, the reason is the type of studies I did during my PhD and maybe something special about Box plots in general too. For some reason someone has written an R package using Shiny and got themselves a space in "Correspondence" section in Nature [@spitzer2014boxplotr], I do think that is en overstatement though.
 
 ```{r boxplotiris}
@@ -111,10 +119,10 @@ I use React as my JS library (framework if you like) and the package I borrowed 
 
 So I will pick `plotly` although I fancy Bokeh more for this section. Shall we try a Box plot? Just because they too like to start with Box plot.
 
-```{r plotlybox}
+```{r plotlybox, eval=FALSE}
 library(plotly)
 p = plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
-p
+# p
 ```
 
 
@@ -187,7 +195,7 @@ https://github.com/saferactive/saferactive/blob/9760a0b4d0ea3b9572432c81cc549cfe
 
 ## Watching List
 ![bar vis](README_files/bar.png)
-- John Stasko: he Value of Visualization…and Why Interaction Matters, Eurovis Capstone Talk. https://vimeo.com/98986594
+- John Stasko: The Value of Visualization…and Why Interaction Matters, Eurovis Capstone Talk. https://vimeo.com/98986594
 
 ## More?
 - See Roger's workshop materials on [github](http://www.roger-beecham.com/GEOG5042-data-visualization/index.html).
