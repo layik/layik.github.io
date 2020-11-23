@@ -201,9 +201,11 @@ p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 
 ## Real data
 Would be good to have a look at some real messy data if we have time or at least show code what is needed before we arrive at generating graphs. 
+
 ### US elections
+
 Dataset - US Elections [@VN42MVDX_2017]
-```{r, message=FALSE}
+```{r, message=FALSE, eval=FALSE}
 # get your csv from this link as we cannot link directly to the file
 # https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX
 d = read.csv("~/Desktop/data/us-elections/1976-2016-president.csv")
@@ -257,17 +259,16 @@ p = ggplot(dw, aes(x = factor(year), y = percent,
 # p
 ```
 
-### STATS19
+### UK Road Saftey
 
 This is an example from work we have done for `stats19` R package. We download accident data from DfT, do some joining and then plot a line with a smooth function:
 
-```{r stats19}
+```{r stats19, eval=FALSE}
 library(stats19)
 library(dplyr)
 crashes = get_stats19(year = 2017, type = "accident", ask = FALSE)
 casualties = get_stats19(year = 2017, type = "casualties", ask = FALSE)
-wy = filter(sf::st_drop_geometry(police_boundaries), pfa16nm == "West Yorkshire")
-crashes_wy = crashes[wy, ]
+crashes_wy = crashes[crashes$police_force == "West Yorkshire", ]
 sel = casualties$accident_index %in% crashes_wy$accident_index
 casualties_wy = casualties[sel, ]
 cas_types = casualties_wy %>% 
@@ -289,9 +290,11 @@ crashes_dates = cj %>%
     passenger = sum(`Car occupant`)
     ) %>% 
   tidyr::gather(mode, casualties, -date)
-ggplot(crashes_dates, aes(date, casualties)) +
+# finally
+p = ggplot(crashes_dates, aes(date, casualties)) +
   geom_smooth(aes(colour = mode), method = "loess") +
   ylab("Casualties per day")
+# p
 ```
 
 

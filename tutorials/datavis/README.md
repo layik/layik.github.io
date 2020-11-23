@@ -1,7 +1,7 @@
 Data visualization
 ================
 L Hama
-2020-11-21
+2020-11-23
 
   - [Intro + Setup](#intro-setup)
   - [Why R?](#why-r)
@@ -9,7 +9,8 @@ L Hama
       - [ggplot2](#ggplot2)
   - [JS (web)](#js-web)
   - [Real data](#real-data)
-  - [](#section)
+      - [US elections](#us-elections)
+      - [UK Road Saftey](#uk-road-saftey)
   - [Watching List](#watching-list)
   - [More?](#more)
   - [References](#references)
@@ -34,7 +35,7 @@ Stasko](https://en.wikipedia.org/wiki/John_Stasko)’s EuroVis capstone
 [talk](https://vimeo.com/98986594) if you have time to find out why. But
 be warned\!
 
-I think we all know the sad effect of “the curve”: ![flatten the
+I think we all know the sad effect of “flatten the curve”: ![flatten the
 curve](https://ichef.bbci.co.uk/images/ic/1200x675/p08nwkjh.jpg)
 
 ## Why R?
@@ -55,7 +56,8 @@ plot(iris[,1:4])
 
 If you need datasets, remember one of the base packages in R is called
 `datasets`. You can discover the datasets in it in your own time (tip:
-try `library(help = "datasets")`).
+try `library(help =
+    "datasets")`).
 
 ### BaseR
 
@@ -282,7 +284,10 @@ p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 
 Would be good to have a look at some real messy data if we have time or
 at least show code what is needed before we arrive at generating graphs.
-\#\#\# US elections Dataset - US Elections
+
+### US elections
+
+Dataset - US Elections
 (<span class="citeproc-not-found" data-reference-id="VN42MVDX_2017">**???**</span>)
 
 ``` r
@@ -339,7 +344,45 @@ p = ggplot(dw, aes(x = factor(year), y = percent,
 # p
 ```
 
-## 
+### UK Road Saftey
+
+This is an example from work we have done for `stats19` R package. We
+download accident data from DfT, do some joining and then plot a line
+with a smooth function:
+
+``` r
+library(stats19)
+library(dplyr)
+crashes = get_stats19(year = 2017, type = "accident", ask = FALSE)
+casualties = get_stats19(year = 2017, type = "casualties", ask = FALSE)
+crashes_wy = crashes[crashes$police_force == "West Yorkshire", ]
+sel = casualties$accident_index %in% crashes_wy$accident_index
+casualties_wy = casualties[sel, ]
+cas_types = casualties_wy %>% 
+  select(accident_index, casualty_type) %>% 
+  mutate(n = 1) %>% 
+  group_by(accident_index, casualty_type) %>% 
+  summarise(n = sum(n)) %>% 
+  tidyr::spread(casualty_type, n, fill = 0) 
+cas_types$Total = rowSums(cas_types[-1])
+cj = left_join(crashes_wy, cas_types, by = "accident_index")
+# then group by dates
+library(ggplot2)
+crashes_dates = cj %>% 
+  st_set_geometry(NULL) %>% 
+  group_by(date) %>% 
+  summarise(
+    walking = sum(Pedestrian),
+    cycling = sum(Cyclist),
+    passenger = sum(`Car occupant`)
+    ) %>% 
+  tidyr::gather(mode, casualties, -date)
+# finally
+p = ggplot(crashes_dates, aes(date, casualties)) +
+  geom_smooth(aes(colour = mode), method = "loess") +
+  ylab("Casualties per day")
+# p
+```
 
 Real work here at UoL
 <https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R>
@@ -365,7 +408,7 @@ Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 
 ## References
 
-<div id="refs" class="references hanging-indent">
+<div id="refs" class="references">
 
 <div id="ref-munzner2014visualization">
 
