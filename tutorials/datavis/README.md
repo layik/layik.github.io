@@ -39,6 +39,21 @@ be warned\!
 I think we all know the sad effect of “flatten the curve”: ![flatten the
 curve](https://ichef.bbci.co.uk/images/ic/1200x675/p08nwkjh.jpg)
 
+Getting started:
+
+> Creating a visualization requires a number of nuanced judgments. One
+> must determine which questions to ask, identify the appropriate data,
+> and select effective visual encodings to map data values to graphical
+> features such as position, size, shape, and color.
+
+\~(Heer, Bostock, and Ogievetsky 2010)
+
+So:
+
+  - ask a question
+  - prepare the data
+  - generate a chart
+
 ## Why R?
 
 Feel free to go Python, I hope you will find nothing dogmatic
@@ -422,6 +437,14 @@ Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 ## References
 
 <div id="refs" class="references">
+
+<div id="ref-heer2010tour">
+
+Heer, Jeffrey, Michael Bostock, and Vadim Ogievetsky. 2010. “A Tour
+Through the Visualization Zoo.” *Communications of the ACM* 53 (6):
+59–67.
+
+</div>
 
 <div id="ref-munzner2014visualization">
 

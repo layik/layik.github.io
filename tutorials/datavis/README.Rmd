@@ -21,6 +21,18 @@ I think we all agree that:
 I think we all know the sad effect of "flatten the curve":
 ![flatten the curve](https://ichef.bbci.co.uk/images/ic/1200x675/p08nwkjh.jpg)
 
+Getting started:
+
+> Creating a visualization requires a number of nuanced judgments. One must determine which questions to ask, identify the appropriate data, and select effective visual encodings to map data values to graphical features such as position, size, shape, and color. 
+
+~[@heer2010tour] 
+
+So:
+
+* ask a question
+* prepare the data
+* generate a chart
+
 ## Why R?
 Feel free to go Python, I hope you will find nothing dogmatic for/against R. I think we discussed this in the Git/GitHub session but just in case.
 
