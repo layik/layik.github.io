@@ -11,6 +11,7 @@ L Hama
   - [Real data](#real-data)
       - [US elections](#us-elections)
       - [UK Road Saftey](#uk-road-saftey)
+  - [Reading List](#reading-list)
   - [Watching List](#watching-list)
   - [More?](#more)
   - [References](#references)
@@ -384,16 +385,28 @@ p = ggplot(crashes_dates, aes(date, casualties)) +
 # p
 ```
 
-Real work here at UoL
-<https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R>
+If you like to know how visualization is used in every day work, feel
+free t6o discover these scrips which are part of our “SaferActive”
+project by our colleagues who are looking at finding patterns in change
+of road safety based on road safety interventions and cycling uptake in
+the UK.
 
-<https://github.com/saferactive/saferactive/blob/9760a0b4d0ea3b9572432c81cc549cfed689351d/code/dft-aadf-descriptive.R>
-\#\# Reading List - R for Data Science by H Wickham & G Grolemund Data
-Visualization [chapter](https://r4ds.had.co.nz/data-visualisation.html)
-- Visualization analysis and design (Book) (Munzner 2014) - ggplot2:
-elegant graphics for data analysis (Book) (Wickham 2016) - The eyes have
-it: a task by data type taxonomy for information visualizations
-(Shneiderman 1996) - IEEVIS publications and conference.
+  - Trends in Local Authorities
+    [example](https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R)
+
+  - Another
+    [example](https://github.com/saferactive/saferactive/blob/9760a0b4d0ea3b9572432c81cc549cfed689351d/code/dft-aadf-descriptive.R)
+    from the same project.
+
+## Reading List
+
+  - R for Data Science by H Wickham & G Grolemund Data Visualization
+    [chapter](https://r4ds.had.co.nz/data-visualisation.html)
+  - Visualization analysis and design (Book) (Munzner 2014)
+  - ggplot2: elegant graphics for data analysis (Book) (Wickham 2016)
+  - The eyes have it: a task by data type taxonomy for information
+    visualizations (Shneiderman 1996)
+  - IEEVIS publications and conference.
 
 ## Watching List
 
