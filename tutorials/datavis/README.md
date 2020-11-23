@@ -156,6 +156,8 @@ dev.off()
 
 ### ggplot2
 
+#### Hello Bar Chart
+
 Lets start similarly with the most basic barplot:
 
 ``` r
@@ -166,6 +168,8 @@ p = ggplot(diamonds, aes(cut)) +
   geom_bar(fill = "#0073C2FF")
 # p
 ```
+
+#### ggplot2 formula
 
     ggplot(data = <DATA>) + 
       <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
@@ -179,6 +183,8 @@ missed my point. Having said that, the above needs some clarification: -
 crucial function
 [`aes`](https://ggplot2.tidyverse.org/reference/aes.html) or the fancy
 `Construct aesthetic mappings` expression.
+
+#### Scatter plot
 
 ``` r
 library(ggplot2)
@@ -217,7 +223,62 @@ plots = lapply(list("lm", "gam", "glm"), function(x){
 # ggsave("multiplot.pdf", ml)
 ```
 
-The error bars?
+#### Distribution
+
+To overcome the overlapping points in the above scatter plots, we can
+use another function from `ggplot` check these examples from
+[here](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html):
+
+``` r
+library(ggplot2)
+theme_set(theme_classic()) # play with these? theme_bw()
+
+# Histogram on a Categorical variable
+p = ggplot(mpg, aes(manufacturer))
+p = p + geom_bar(aes(fill=class), width = 0.5) + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6)) + 
+  labs(title="Histogram on Categorical Variable", 
+       subtitle="Manufacturer across Vehicle Classes") 
+# p
+```
+
+How about a density plot?
+
+``` r
+library(ggplot2)
+theme_set(theme_classic())
+
+# Plot
+p = ggplot(mpg, aes(cty))
+p = p + geom_density(aes(fill=factor(cyl)), alpha=0.8) + 
+    labs(title="Title: Density plot", 
+         subtitle="Subtitle: City Mileage Grouped by Number of cylinders",
+         caption="Caption: Source: mpg",
+         x="City Mileage",
+         fill="# Cylinders")
+# p
+```
+
+Boxplots I have great memories of Box plots, the reason is the type of
+studies I did during my PhD and maybe something special about Box plots
+in general too. For some reason someone has written an R package using
+Shiny and got themselves a space in “Correspondence” section in Nature
+(Spitzer et al. 2014), I do think that is en overstatement though.
+
+``` r
+p = ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot(width = 0.4, fill = "white") +
+  geom_jitter(aes(color = Species), 
+              width = 0.1, size = 1) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800", "#E7B8AF")) 
+# p
+```
+
+#### Bars with errors
+
+Rather than doing “fancy” visualization, as researchers we might
+actually need scientific information embedded in our work. So I think it
+is worth adding an example of bars with errors (staandard deviation?).
 
 ``` r
 library(ggplot2)
@@ -257,23 +318,6 @@ p = ggplot(iris.sum, aes(Species, mean_PL)) +
                    geom_errorbar(aes(ymin = mean_PL - sd_PL, ymax = mean_PL + sd_PL),
                                  width=0.2) +
   labs(y="Petal length (cm) ± s.d.", x = "Species") + theme_classic()
-# p
-```
-
-#### Boxplots
-
-I have great memories of Box plots, the reason is the type of studies I
-did during my PhD and maybe something special about Box plots in general
-too. For some reason someone has written an R package using Shiny and
-got themselves a space in “Correspondence” section in Nature (Spitzer et
-al. 2014), I do think that is en overstatement though.
-
-``` r
-p = ggplot(iris, aes(x = Species, y = Sepal.Length)) +
-  geom_boxplot(width = 0.4, fill = "white") +
-  geom_jitter(aes(color = Species), 
-              width = 0.1, size = 1) +
-  scale_color_manual(values = c("#00AFBB", "#E7B800", "#E7B8AF")) 
 # p
 ```
 
