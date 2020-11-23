@@ -1,7 +1,7 @@
 Data visualization
 ================
 L Hama
-2020-11-20
+2020-11-21
 
   - [Intro + Setup](#intro-setup)
   - [Why R?](#why-r)
@@ -33,6 +33,9 @@ changing bars to tree maps, watch [John
 Stasko](https://en.wikipedia.org/wiki/John_Stasko)’s EuroVis capstone
 [talk](https://vimeo.com/98986594) if you have time to find out why. But
 be warned\!
+
+I think we all know the sad effect of “the curve”: ![flatten the
+curve](https://ichef.bbci.co.uk/images/ic/1200x675/p08nwkjh.jpg)
 
 ## Why R?
 

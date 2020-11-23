@@ -18,6 +18,9 @@ I think we all agree that:
 - even more difficult to communicate it without visualizing them
 - as bonus, you could even get an audience moving with changing bars to tree maps, watch [John Stasko](https://en.wikipedia.org/wiki/John_Stasko)'s EuroVis capstone [talk](https://vimeo.com/98986594) if you have time to find out why. But be warned!
 
+I think we all know the sad effect of "flatten the curve":
+![flatten the curve](https://ichef.bbci.co.uk/images/ic/1200x675/p08nwkjh.jpg)
+
 ## Why R?
 Feel free to go Python, I hope you will find nothing dogmatic for/against R. I think we discussed this in the Git/GitHub session but just in case.
 
@@ -254,7 +257,44 @@ p = ggplot(dw, aes(x = factor(year), y = percent,
 # p
 ```
 
-##
+### STATS19
+
+This is an example from work we have done for `stats19` R package. We download accident data from DfT, do some joining and then plot a line with a smooth function:
+
+```{r stats19}
+library(stats19)
+library(dplyr)
+crashes = get_stats19(year = 2017, type = "accident", ask = FALSE)
+casualties = get_stats19(year = 2017, type = "casualties", ask = FALSE)
+wy = filter(sf::st_drop_geometry(police_boundaries), pfa16nm == "West Yorkshire")
+crashes_wy = crashes[wy, ]
+sel = casualties$accident_index %in% crashes_wy$accident_index
+casualties_wy = casualties[sel, ]
+cas_types = casualties_wy %>% 
+  select(accident_index, casualty_type) %>% 
+  mutate(n = 1) %>% 
+  group_by(accident_index, casualty_type) %>% 
+  summarise(n = sum(n)) %>% 
+  tidyr::spread(casualty_type, n, fill = 0) 
+cas_types$Total = rowSums(cas_types[-1])
+cj = left_join(crashes_wy, cas_types, by = "accident_index")
+# then group by dates
+library(ggplot2)
+crashes_dates = cj %>% 
+  st_set_geometry(NULL) %>% 
+  group_by(date) %>% 
+  summarise(
+    walking = sum(Pedestrian),
+    cycling = sum(Cyclist),
+    passenger = sum(`Car occupant`)
+    ) %>% 
+  tidyr::gather(mode, casualties, -date)
+ggplot(crashes_dates, aes(date, casualties)) +
+  geom_smooth(aes(colour = mode), method = "loess") +
+  ylab("Casualties per day")
+```
+
+
 Real work here at UoL
 https://github.com/saferactive/saferactive/blob/ca234078eba91a81f4bb79d0e46d7f67ad0460ca/code/la_trends.R
 
