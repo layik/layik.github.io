@@ -8,6 +8,9 @@ output:
     toc_depth: 3
 bibliography: refs.bib
 ---
+```{r include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
 
 ## Intro + Setup
 
@@ -85,8 +88,8 @@ weight = sample(50:100, 10)
 and for histograms:
 ```{r base-hist}
 set.seed(12)
-n <- 100
-x <- rchisq(n = n, df = 3) # n number, df = degrees of freedom
+n = 100
+x = rchisq(n = n, df = 3) # n number, df = degrees of freedom
 # hist(x = x, freq = FALSE, xlim = c(0, 15))
 # lines(x = density(x = x), col = "red")
 ```
@@ -255,7 +258,7 @@ p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 #### ggplot + plotly
 This is where the R community work gets interesting and great. Run this or just have a look:
 
-```{r plotlyggplot, message=FALSE}
+```{r plotlyggplot}
 library(plotly)
 # same as before
 d = ggplot(diamonds, aes(cut)) +
@@ -274,6 +277,55 @@ fig = ggplotly(p)
 # fig
 ```
 
+#### plotly geospatial
+Please feel free to ignore this example, I have included it for those of you who might be battling with `tmap` or similar package or would want to have something interactive in their web pages. Credit: the example is copied form `plotly` docs [here](https://plotly.com/r/choropleth-maps/):
+
+```{r plotlychoro}
+library(plotly)
+library(rjson)
+
+url = 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties = rjson::fromJSON(file=url)
+url2= "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df = read.csv(url2, colClasses=c(fips="character"))
+g = list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+fig = plot_ly()
+fig = fig %>% add_trace( # this is smart in my opinion
+    type="choropleth",
+    geojson=counties,
+    locations=df$fips,
+    z=df$unemp,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=12,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+fig = fig %>% colorbar(title = "Unemployment Rate (%)")
+fig = fig %>% layout(title = "2016 US Unemployment by County")
+fig = fig %>% layout(geo = g)
+
+# fig # <= is slow so bear with it.
+```
+
+### Bokeh mention
+Just to show that you do have loads of options and you should not feel pushed to learn a particular method of doing your visualization, we can see how `Bokeh` generates box plots:
+
+```{r bokeh}
+# install.packages("rbokeh")
+# data below
+library(rbokeh)
+p = figure(ylab = "Sepal.Length") %>%
+  ly_boxplot(Species, Sepal.Length, data = iris, color = "black")
+# p
+```
+
 
 ## Real data
 Would be good to have a look at some real messy data if we have time or at least show code what is needed before we arrive at generating graphs. 
@@ -281,7 +333,7 @@ Would be good to have a look at some real messy data if we have time or at least
 ### US elections
 
 Dataset - US Elections [@VN42MVDX_2017]
-```{r, message=FALSE, eval=FALSE}
+```{r, eval=FALSE}
 # get your csv from this link as we cannot link directly to the file
 # https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX
 d = read.csv("~/Desktop/data/us-elections/1976-2016-president.csv")

@@ -123,8 +123,8 @@ and for histograms:
 
 ``` r
 set.seed(12)
-n <- 100
-x <- rchisq(n = n, df = 3) # n number, df = degrees of freedom
+n = 100
+x = rchisq(n = n, df = 3) # n number, df = degrees of freedom
 # hist(x = x, freq = FALSE, xlim = c(0, 15))
 # lines(x = density(x = x), col = "red")
 ```
@@ -283,24 +283,6 @@ is worth adding an example of bars with errors (staandard deviation?).
 ``` r
 library(ggplot2)
 library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following object is masked from 'package:gridExtra':
-    ## 
-    ##     combine
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 # first we need a summary
 iris.sum = iris %>% 
   group_by(Species) %>% # group
@@ -308,11 +290,7 @@ iris.sum = iris %>%
             sd_PL = sd(Petal.Length), # Petal.Length sd
             n_PL = n(),  # just keeping the number of each group
             SE_PL = sd(Petal.Length)/sqrt(n())) # R gives us the SE too
-```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
-``` r
 p = ggplot(iris.sum, aes(Species, mean_PL)) + 
                    geom_col() +  
                    geom_errorbar(aes(ymin = mean_PL - sd_PL, ymax = mean_PL + sd_PL),
@@ -362,14 +340,50 @@ And sometimes it is useful to be able to hover over a stacked plot:
 ``` r
 p = ggplot(diamonds, aes(price, fill = cut)) +
   geom_histogram(binwidth = 500) # bin is 30 by default
-p
-```
-
-![](README_files/figure-gfm/pltlyggstack-1.png)<!-- -->
-
-``` r
+# p
 fig = ggplotly(p)
 # fig
+```
+
+#### plotly geospatial
+
+Please feel free to ignore this example, I have included it for those of
+you who might be battling with `tmap` or similar package or would want
+to have something interactive in their web pages. Credit: the example is
+copied form `plotly` docs [here](https://plotly.com/r/choropleth-maps/):
+
+``` r
+library(plotly)
+library(rjson)
+
+url = 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties = rjson::fromJSON(file=url)
+url2= "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df = read.csv(url2, colClasses=c(fips="character"))
+g = list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+fig = plot_ly()
+fig = fig %>% add_trace( # this is smart in my opinion
+    type="choropleth",
+    geojson=counties,
+    locations=df$fips,
+    z=df$unemp,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=12,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+fig = fig %>% colorbar(title = "Unemployment Rate (%)")
+fig = fig %>% layout(title = "2016 US Unemployment by County")
+fig = fig %>% layout(geo = g)
+
+# fig # <= is slow so bear with it.
 ```
 
 ## Real data
