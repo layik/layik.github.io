@@ -1,13 +1,14 @@
 Data visualization
 ================
 L Hama
-2020-11-23
+2020-11-24
 
   - [Intro + Setup](#intro-setup)
   - [Why R?](#why-r)
       - [BaseR](#baser)
       - [ggplot2](#ggplot2)
   - [JS (web)](#js-web)
+      - [Plotly](#plotly)
   - [Real data](#real-data)
       - [US elections](#us-elections)
       - [UK Road Saftey](#uk-road-saftey)
@@ -72,8 +73,7 @@ plot(iris[,1:4])
 
 If you need datasets, remember one of the base packages in R is called
 `datasets`. You can discover the datasets in it in your own time (tip:
-try `library(help =
-    "datasets")`).
+try `library(help = "datasets")`).
 
 ### BaseR
 
@@ -330,6 +330,8 @@ mention Python’s mighty Bokeh. The latter has of course an
 [interface](https://hafen.github.io/rbokeh/articles/rbokeh.html) in R
 called `rbokeh`.
 
+### Plotly
+
 So I will pick `plotly` although I fancy Bokeh more for this section.
 Shall we try a Box plot? Just because they too like to start with Box
 plot.
@@ -338,6 +340,36 @@ plot.
 library(plotly)
 p = plot_ly(iris, x = ~Sepal.Length, color = ~Species, type = "box")
 # p
+```
+
+#### ggplot + plotly
+
+This is where the R community work gets interesting and great. Run this
+or just have a look:
+
+``` r
+library(plotly)
+# same as before
+d = ggplot(diamonds, aes(cut)) +
+  geom_bar(fill = "#0073C2FF", width=1)
+# p
+fig = ggplotly(p)
+# fig
+```
+
+And sometimes it is useful to be able to hover over a stacked plot:
+
+``` r
+p = ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500) # bin is 30 by default
+p
+```
+
+![](README_files/figure-gfm/pltlyggstack-1.png)<!-- -->
+
+``` r
+fig = ggplotly(p)
+# fig
 ```
 
 ## Real data
@@ -480,7 +512,7 @@ Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 
 ## References
 
-<div id="refs" class="references">
+<div id="refs" class="references hanging-indent">
 
 <div id="ref-heer2010tour">
 
