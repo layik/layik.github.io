@@ -165,6 +165,18 @@ plot(iris$Sepal.Length, iris$Petal.Length,
 dev.off()
 ```
 
+#### Boxplots in base R?
+
+It is actually possible, try `?boxplot`, following example is from the
+docs:
+
+``` r
+boxplot(count ~ spray, data = InsectSprays, col = "lightgray")
+# p <- recordPlot()
+# plot.new() ## clean up device
+# p # redraw
+```
+
 ### ggplot2
 
 #### Hello Bar Chart
@@ -270,8 +282,8 @@ p = p + geom_density(aes(fill=factor(cyl)), alpha=0.8) +
 # p
 ```
 
-Boxplots I have great memories of Box plots, the reason is the type of
-studies I did during my PhD and maybe something special about Box plots
+Boxplots I have great memories of Boxplots, the reason is the type of
+studies I did during my PhD and maybe something special about Boxplots
 in general too. For some reason someone has written an R package using
 Shiny and got themselves a space in “Correspondence” section in Nature
 (Spitzer et al. 2014), I do think that is en overstatement though.
@@ -322,8 +334,8 @@ called `rbokeh`.
 ### Plotly
 
 So I will pick `plotly` although I fancy Bokeh more for this section.
-Shall we try a Box plot? Just because they too like to start with Box
-plot.
+Shall we try a Boxplot? Just because they too like to start with
+Boxplot.
 
 ``` r
 library(plotly)
@@ -401,7 +413,7 @@ fig = fig %>% layout(geo = g)
 
 Just to show that you do have loads of options and you should not feel
 pushed to learn a particular method of doing your visualization, we can
-see how `Bokeh` generates box plots:
+see how `Bokeh` generates boxplots:
 
 ``` r
 # install.packages("rbokeh")
