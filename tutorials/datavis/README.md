@@ -177,6 +177,15 @@ boxplot(count ~ spray, data = InsectSprays, col = "lightgray")
 # p # redraw
 ```
 
+For more but short section on the base R plotting functions, have a read
+[here](https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html)
+if reading list below is too much.
+
+Finally, there is great support for arranging your plots, margins and
+more to rely only on base R if all you do is black and white scientific
+work. As shown above, you can save them as `png` or `pdf`s to attach to
+your ground breaking publications.
+
 ### ggplot2
 
 #### Hello Bar Chart
