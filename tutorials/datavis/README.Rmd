@@ -36,6 +36,9 @@ So:
 * prepare the data
 * generate a chart
 
+### Required R libraries
+These are the list of libraries we will be using in this short session: `ggplot2, grdiExtra, dplyr, plotly, rjson, rbokeh, stats19`. Packages `gridExtra`, `rbokeh` and `stats19` are not necessary really. You might end up just using `plotly` or `ggplot2` for all your work. Having said that as data scientists you would endup (Python or R) doing a lot of package/library management in your work flows.
+
 ## Why R?
 Feel free to go Python, I hope you will find nothing dogmatic for/against R. I think we discussed this in the Git/GitHub session but just in case.
 

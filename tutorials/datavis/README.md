@@ -1,14 +1,16 @@
 Data visualization
 ================
 L Hama
-2020-11-24
+2020-11-27
 
   - [Intro + Setup](#intro-setup)
+      - [Required R libraries](#required-r-libraries)
   - [Why R?](#why-r)
       - [BaseR](#baser)
       - [ggplot2](#ggplot2)
   - [JS (web)](#js-web)
       - [Plotly](#plotly)
+      - [Bokeh mention](#bokeh-mention)
   - [Real data](#real-data)
       - [US elections](#us-elections)
       - [UK Road Saftey](#uk-road-saftey)
@@ -54,6 +56,15 @@ So:
   - ask a question
   - prepare the data
   - generate a chart
+
+### Required R libraries
+
+These are the list of libraries we will be using in this short session:
+`ggplot2, grdiExtra, dplyr, plotly, rjson, rbokeh, stats19`. Packages
+`gridExtra`, `rbokeh` and `stats19` are not necessary really. You might
+end up just using `plotly` or `ggplot2` for all your work. Having said
+that as data scientists you would endup (Python or R) doing a lot of
+package/library management in your work flows.
 
 ## Why R?
 
@@ -384,6 +395,21 @@ fig = fig %>% layout(title = "2016 US Unemployment by County")
 fig = fig %>% layout(geo = g)
 
 # fig # <= is slow so bear with it.
+```
+
+### Bokeh mention
+
+Just to show that you do have loads of options and you should not feel
+pushed to learn a particular method of doing your visualization, we can
+see how `Bokeh` generates box plots:
+
+``` r
+# install.packages("rbokeh")
+# data below
+library(rbokeh)
+p = figure(ylab = "Sepal.Length") %>%
+  ly_boxplot(Species, Sepal.Length, data = iris, color = "black")
+# p
 ```
 
 ## Real data
