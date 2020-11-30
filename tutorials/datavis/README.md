@@ -1,7 +1,7 @@
 Data visualization
 ================
 L Hama
-2020-11-27
+2020-11-30
 
   - [Intro + Setup](#intro-setup)
       - [Required R libraries](#required-r-libraries)
@@ -559,6 +559,7 @@ the UK.
   - The eyes have it: a task by data type taxonomy for information
     visualizations (Shneiderman 1996)
   - IEEVIS publications and conference.
+  - Geocompuation with R (Lovelace, Nowosad, and Muenchow 2019)
 
 ## Watching List
 
@@ -580,6 +581,13 @@ Visualization…and Why Interaction Matters, Eurovis Capstone Talk.
 Heer, Jeffrey, Michael Bostock, and Vadim Ogievetsky. 2010. “A Tour
 Through the Visualization Zoo.” *Communications of the ACM* 53 (6):
 59–67.
+
+</div>
+
+<div id="ref-geocompr">
+
+Lovelace, Robin, Jakub Nowosad, and Jannes Muenchow. 2019.
+*Geocomputation with R*. CRC Press.
 
 </div>
 

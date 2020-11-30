@@ -455,6 +455,7 @@ If you like to know how visualization is used in every day work, feel free t6o d
 - ggplot2: elegant graphics for data analysis (Book) [@ggplo2]
 - The eyes have it: a task by data type taxonomy for information visualizations [@shneiderman1996eyes]
 - IEEVIS publications and conference.
+- Geocompuation with R [@geocompr]
 
 ## Watching List
 ![bar vis](README_files/bar.png)
