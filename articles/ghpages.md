@@ -12,7 +12,7 @@ Therefore, there are few tricky bits about gh-pages itself and deploying a React
 In a nutshel, we need to make sure the ROOT URL of our deployment points to the `build` of the React app. So, here are the steps you need to take to deploy your app, or this is how the TGVE has been deployed.
 
 ## Setting up CI
-One of the recent goodies from GH is GH Actions. [This simple](https://github.com/layik/eAtlas/blob/master/.github/workflows/gh-pages.yml) `yml` file can get your React app (created using `react-scripts` or `create-react-app`) on a dedicated but orphan branch without messing with your other branches:
+One of the recent goodies from GH is GH [Actions](https://layik.github.io/ghactions). [This simple](https://github.com/layik/eAtlas/blob/master/.github/workflows/gh-pages.yml) `yml` file can get your React app (created using `react-scripts` or `create-react-app`) on a dedicated but orphan branch without messing with your other branches:
 
 ``` yml
 ... other setup
