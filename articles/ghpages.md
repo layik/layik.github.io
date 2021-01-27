@@ -6,7 +6,6 @@ permalink: /ghpages.html
 
 # Deploying a React app on GH pages
 
-## Content
 1. [Introduction](#introduction)
 2. [Setting up CI](#Setting-up-CI)
 3. [Setting up the React app itself](#Setting-up-the-React-app-itself)
