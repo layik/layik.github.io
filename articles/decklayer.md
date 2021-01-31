@@ -21,20 +21,20 @@ From the [documentations](https://tgorkin.github.io/docs):
 
 The magic really happens with the layers. Therefore, if you are reading this blogpost to solve an issue whilst writing your custom layer, then you are in the right place. It is not an introduciton as the [documentation](https://tgorkin.github.io/docs) is there for that reason.
 
-Subclassing a layer is best when,as the docs state, to change something but if you want your own shape, own variables to change the shape then custom layer is the way to go. And to get there, we first need to dissect a layer, from my point of view, better than the docs or other guides you may have come across.
+Subclassing a layer is best when, as the docs state, to change something but if you want your own shape, own variables to change the shape then custom layer is the way to go. And to get there, we first need to dissect a layer, from my point of view, better than the docs or other guides you may have come across.
 
 An overvview of how the different libraries stack up is shown in the image below:
 <img src="https://user-images.githubusercontent.com/408568/83644072-c4056c80-a5a8-11ea-815c-ce3e40f5663f.jpg" width="100%"/>
 
 ### WebGL
-At this point, if you have no idea what WebGL is or never had a got at it, I believe you should spend some time and find your own favouritee tutorial to at least draw a boring triangle. I am no good at watching tutorials especially code based chunks but if you like videos I think this one is an honest take.
+At this point, if you have no idea what WebGL is or never had a go at it, I believe you should spend some time and find your own favouritee tutorial to at least draw a boring triangle. I am no good at watching tutorials especially code based chunks but if you like videos I think [this one](https://youtu.be/kB0ZVUrI4Aw?t=2585) (timestamp on purpose) is an honest take.
 
 What you need to know and what most of the docs in DeckGL is not sign posted is which part of it does refer to WebGL and which parts refer to luma.gl (next). This was the source of most of my confusion which I must say stemmed from the fact that I did not want to learn all this to be able to draw a boring triangle layer on a slippy map using the DeckGL stack.
 
-#### Vertx/Fragment shaders
-I will not write more than this paragraph on shaders but you need to spend quite a bit of time time getting your head around shaders. This is where the actual magic happens and everythign is wrapped around these two concepts. The two functions are C/C++ like functions in GLSL (Graphics Library Shading Language) language without which you may not even be able to subclass layers.
+#### Vertex/Fragment shaders
+I will not write more than this paragraph on shaders but you need to spend quite a bit of time time getting your head around shaders. This is where the actual work happens and everythign is wrapped around these two concepts. The two functions are C/C++ like functions in GLSL (Graphics Library Shading Language) language without which you may not even be able to subclass layers.
 
-<img width="100%" alt="Screenshot 2020-06-04 at 19 46 01" src="https://user-images.githubusercontent.com/408568/83942137-cb1abd80-a7e8-11ea-99c3-422d3d4d8b97.png">
+<img width="100%" alt="Deep dive slide screenshot" src="https://user-images.githubusercontent.com/408568/83942137-cb1abd80-a7e8-11ea-99c3-422d3d4d8b97.png">
 
 Slide credit: Xiaoji Chen Deep dive [presentation](https://docs.google.com/presentation/d/1qtXUQzMuIa8NYIKUa1RKfSwvgpeccY-wrPrYqsb_8rE).
 
