@@ -4,7 +4,15 @@ permalink: /ghpages.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
-## Deploying a React app on GH pages
+# Deploying a React app on GH pages
+
+1. [Introduction](#introduction)
+2. [Setting up CI](#Setting-up-CI)
+3. [Setting up the React app itself](#Setting-up-the-React-app-itself)
+4. [Adding data](#Adding-data)
+5. [Adding social meta tags](#Adding-social-meta-tags)
+## Introduction
+
 GitHub is evolving rapidly and things change faster than many of us can keep up with it. One of the changes is github pages. For instance, it used to restrict developers to a particular folder say `docs` but nowadays we have a little more flexibilty (see below). 
 
 Therefore, there are few tricky bits about gh-pages itself and deploying a React app, or any simple React app that requires this blogpost. If the app in question has a backend like the example for this blog post (Turing Geovisualization Engine - TGVE), then we ignore the backend. Needless tosay, for now, though things might change quickly on GH, the backend is out of the question and we cannot have access to processes on GH servers.
@@ -12,7 +20,7 @@ Therefore, there are few tricky bits about gh-pages itself and deploying a React
 In a nutshel, we need to make sure the ROOT URL of our deployment points to the `build` of the React app. So, here are the steps you need to take to deploy your app, or this is how the TGVE has been deployed.
 
 ## Setting up CI
-One of the recent goodies from GH is GH Actions. [This simple](https://github.com/layik/eAtlas/blob/master/.github/workflows/gh-pages.yml) `yml` file can get your React app (created using `react-scripts` or `create-react-app`) on a dedicated but orphan branch without messing with your other branches:
+One of the recent goodies from GH is GH [Actions](https://layik.github.io/ghactions). [This simple](https://github.com/layik/eAtlas/blob/master/.github/workflows/gh-pages.yml) `yml` file can get your React app (created using `react-scripts` or `create-react-app`) on a dedicated but orphan branch without messing with your other branches:
 
 ``` yml
 ... other setup
@@ -79,6 +87,13 @@ class App extends Component {
 //..
 ```
 [Somewhere](https://create-react-app.dev/docs/deployment/) between `react-scripts` and `webpack` itself the `homepage` is translated to the `env` var of `PUBLIC_URL`. 
+
+## Adding data
+So far, we have deployed a web application on GitHub's servers and our backend in TGVE at least, as stated above, ignored. So where do we get data from given CORS? If you can whitelist the newly created GH pages on your own server, then adding it to your own source code is enough. In the case of eAtlas (TGVE) this needs more documentation to be adapted but as it stands it can take a URL from environmental variables per React apps as the default URL. 
+
+However, due to access control you might find yourself limited to what you can pull in. One option here is, of course, to include the data in the repo or pull the data during build which I did not like either. Currently, like Uber Engineers, I decided to pull data from a "data repository" and add it to the eAtlas, for example Vancouver real estate data.
+
+<img src="https://user-images.githubusercontent.com/408568/105985444-5eb03f80-6093-11eb-90f5-bb4f3d3e9090.png" width="100%">
 
 ## Adding social meta tags
 This is the easy but nowdays crucial part. So far, with setting up a repo like `npx create-react-app my-app` we do not get the tags that are needed. Feel free to find your own list of what tags you like to add but these are the ones I added to the `public/index.html` file of a standard React app.

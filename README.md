@@ -1,6 +1,8 @@
 Posts:
 - 
-* Latest - [SPENSER data science showcase](https://layik.github.io/spenser)
+* Latest - [Deploy a React app on gh-pages](https://layik.github.io/ghpages)
+
+* [SPENSER data science showcase](https://layik.github.io/spenser)
 
 * [DeckGL custom layer](https://layik.github.io/decklayer)
 
