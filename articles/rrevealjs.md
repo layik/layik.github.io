@@ -1,5 +1,5 @@
 ---
-permalink: /rreveal.html
+permalink: /rrevealjs.html
 ---
 [Home](https://layik.github.io) | About | Current
 <hr/>
