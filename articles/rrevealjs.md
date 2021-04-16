@@ -116,16 +116,16 @@ output: revealjs::revealjs_presentation
 
 ```
 
-Here we are, 4:58 seconds later and no need to go into the console anymore:
+Here we are, 4:58 seconds later and no need to go into the R console anymore:
 
 ```sh
-R -e "rmarkdown::render('hello.Rmd')"
+root@4d7869d6beda: R -e "rmarkdown::render('hello.Rmd')"
 ```
 
 Now then, did it work?
 
 ```sh
-grep "Drink wine" hello.html 
+root@4d7869d6beda: grep "Drink wine" hello.html 
 <li>Drink wine</li>
 ```
 
