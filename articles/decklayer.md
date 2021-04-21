@@ -27,7 +27,7 @@ An overvview of how the different libraries stack up is shown in the image below
 <img src="https://user-images.githubusercontent.com/408568/83644072-c4056c80-a5a8-11ea-815c-ce3e40f5663f.jpg" width="100%"/>
 
 ### WebGL
-At this point, if you have no idea what WebGL is or never had a go at it, I believe you should spend some time and find your own favouritee tutorial to at least draw a boring triangle. I am no good at watching tutorials especially code based chunks but if you like videos I think [this one](https://youtu.be/kB0ZVUrI4Aw?t=2585) (timestamp on purpose) is an honest take.
+At this point, if you have no idea what WebGL is or never had a go at it, I believe you should spend some time and find your own favouritee tutorial to at least draw a boring triangle. I am no good at watching tutorials especially code based chunks but if you like videos I think [this one](https://youtu.be/kB0ZVUrI4Aw?t=2585) (timestamp on purpose) is an honest take, and this [tutorial](https://webglfundamentals.org) is recommended too.
 
 What you need to know and what most of the docs in DeckGL is not sign posted is which part of it does refer to WebGL and which parts refer to luma.gl (next). This was the source of most of my confusion which I must say stemmed from the fact that I did not want to learn all this to be able to draw a boring triangle layer on a slippy map using the DeckGL stack.
 

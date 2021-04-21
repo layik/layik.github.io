@@ -1,0 +1,129 @@
+---
+title: "Using Turing Geovisualization Engine beta release"
+subtitle: "LIDA Seminars 2021"
+abstract: ""
+author: 
+  - L Hama
+  - R Beecham
+  - N Lomax
+date: '`r Sys.Date()`'
+output:
+  revealjs::revealjs_presentation:
+    theme: night
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+bibliography: refs.bib
+# <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
+#    <br/>    
+#    <br/>
+---
+
+
+## Intro
+
+* Research Project:
+
+# Talk Overview
+
+<div class="container">
+<div class="col">
+A damaged Graphics Processing Unit (GPU)
+![104290923_2519668941677516_7302972911295968679_n](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
+</div>
+<div class="col">
+* Brief outline of the project
+* Github pages + similar services
+* Use it!
+
+</div>
+</div>
+
+# What is an eAtlas?
+<img width="90%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
+
+* Feature extraction? Beautiful pictures?
+* Data exploration/interrogation to draw insights
+* Combining different datasets
+* Decision making and public engagement tool
+
+## TGVE
+<img width="90%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
+
+* npm package: https://www.npmjs.com/package/eatlas
+* more packages soon.
+
+# COVID19 application
+
+<!-- mind the diff in height as images are not equal sized -->
+<img width="41%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798748-39cef680-aff3-11ea-87cf-c4d0cd9e09d3.png">
+<img width="46%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798767-3f2c4100-aff3-11ea-9b1d-17f34a66beb0.png">
+
+Heavily customised code base of the project source code.
+
+# SPENSER showcase
+
+- Data Processing & Development pipeline
+- Production deployment (Docker container)
+- TGVE!
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/115556688-d5cb2d80-a2a8-11eb-8111-e2254d6cc559.png">
+
+# Let us do it
+- Clone the template
+- Get some data
+- Launch
+
+# Conclusion
+
+# Thank you
+
+* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
+* repo home: www.github.com/layik/eAtlas
+* COVID19 showcase www.geoplumber.com
+
+<img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/84832513-4f5d1400-b025-11ea-908e-401316e6552e.png">
+
+# References
+<style>
+.box {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    /* width: 80%;   create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.box:before,
+.box:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.box:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.box:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
+
+.container{
+    display: flex;
+}
+.col{
+    max-width:50%;
+    flex: 1;
+}
+</style>
