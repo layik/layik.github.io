@@ -27,7 +27,7 @@ Here is what you can learn from this post:
 4. Some fiddly parts of rollupjs that can generate a bundle.
 5. Testing the results of your efforts.
 
-So we can safely skip (1) without any less emphasis on its importance to remember. As for (2), I hope you can see from the TGVE case, it is better to include some of the dependencies. And then for (3), well I will leave you with that one to think about as there little we can do about it.
+So we can safely skip (1) without any less emphasis on its importance to remember. As for (2), I hope you can see from the TGVE case, it is better to include some of the dependencies. And then for (3), well I will leave you with that one to think about as there little we can do about it. For (4) and (5) we will take them one at a time, first let me have a go at (4).
 
 ## Please show me your rollup.config.js
 Now then, have a look at this `rollup.config.js` file and let us discuss each of the lines, feel free to just copy and paste it but honestly, that is not what you should be doing. Come back when you have time to read and relax, then you can run your rollup.
@@ -107,7 +107,11 @@ Let us go through these lines one at a time. The whole thing happens when one un
 
 2. Externals is your most important work. As stated above, to achieve your "single file" aim, one must start with the package dependencies and find out what is available as single file already. Everything else must be rolled up with your package. Needless to say, you can of course package ONLY your code and ask users to use the rolled up file in another npm package where dependencies can easily be met. That was my starting point.
 
-For instance, Uber's `baseweb` package, as of now, could not be located as a [scoped]() single file, therefore, if we need to roll up eAtlas we must not exclude them. In the above config, it is, this is done on purpose.
+For instance, Uber's `baseweb` package, as of now, could not be located as a [scoped]() single file, therefore, if we need to roll up eAtlas we must not exclude them. In the above config, it is, this is done on purpose. Hence the learning outcome number (2) above. 
+
+> Adding dependency list from your `package.json` may not be picked up by `rollup`. 
+
+This is because of the way npm packages can be defined. Again in the case of `baseui` or `baseweb` scoped packages, we import `baseui/button` but the dependency only says `baseui`. Therefore, rollup cannot detect them and that meant, I had to write a little script to get the list of the directories under `node_modules/baseui` to pass it to the object here. It is clipped for this article otherwise the list is "big".
 
 3. Some would be hesitant to say this, but if you have the right `plugin` then your source should be your entry not some `build` folder or something else.
 
