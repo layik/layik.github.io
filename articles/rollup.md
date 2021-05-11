@@ -4,7 +4,7 @@ permalink: /rollup.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
-# Rolling up React Component Library
+# Rolling up a React Component Library
 This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files.
 
 ## Who should read this?
@@ -163,7 +163,8 @@ Honestly, giving out a warning saying `You must explicitly say "babelHelpers: 'b
 ```
 We were building `cjs` right? That is the first plugin. The next one `scss` just wraps any css and places them in a file with the same name as the output adding `.css` to it. If during rollup the script comes across a plain `json` file, it will break and say please give me the instructions. That is also true for images. They will not be touched if you use this script and you would have to copy over images used in your React components. I know, how painful is that?
 
-13. Finally what we want to keep out and make sure are not rolled up with our code. Leave it out if you want to see a fat bundle.
+13. Finally what we want to keep out and make sure are not rolled up with our code. Leave it out if you want to see a fat bundle. Why have you suddenly done some more `concat`s you want to shout at me? You are right but no need to present a perfect article right?
+
 ```js
 {
   //...
