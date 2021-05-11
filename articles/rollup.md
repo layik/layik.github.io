@@ -5,18 +5,18 @@ permalink: /rollup.html
 <hr/>
 
 # Rolling up a React Component Library
-This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files.
+This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files using [`rollupjs`](https://rollupjs.org/guide/en/).
 
 ## Who should read this?
-If you are here looking to `rollup` your React component library or some other JS `library` then I hope it this will be useful or at least encouraging read. I learned what is in this article from efforts of trying to rollup a React component library namely: Turing Geovisualization Engine - TGVE or eAtlas for short.
+If you are here looking to [`rollup`](https://rollupjs.org/guide/en/) your React component library or some other JS `library` then I hope it this will be useful or at least encouraging read. I learned what is in this article from efforts of trying to rollup a React component library namely: [Turing Geovisualization Engine](https://github.com/layik/eAtlas/tree/npm) - TGVE or eAtlas for short.
 
 ## Do not ctrl + c this
 
-> First of all, remember that your project is going to be different to the TGVE and therefore, you would need to work out your requirements. 
+> First of all, remember that your project is going to be different to the [TGVE](https://github.com/layik/eAtlas/tree/npm) and therefore, you would need to work out your requirements. 
 
 This is the most important takeaway of this post and this is why I am writing this entry. There is no recipe to bundle your application just like X app unless your application is like X app.
 
-In that regard, a starter example will be useful of course but would be different. The fact that rollup is also "fiddly" to an extent but I found it much more straightforward than webpack, I hope becomes clear if you continue working on your `rollup.config.js` file.
+In that regard, a starter example will be useful of course but would be different. The fact that rollup is also "fiddly" to an extent but I found it much more straightforward than webpack, I hope becomes clear if you continue working on your [`rollup.config.js` file](https://rollupjs.org/guide/en/#configuration-files).
 
 ## What you will learn
 Here is what you can learn from this post:
@@ -24,7 +24,7 @@ Here is what you can learn from this post:
 1. Your project might be like no other and you *may* have unique requirements.
 2. A rollup script successfully bundling your app does not necessarily mean you can now just add a `<script>` tag to any HTML file and your library will now run as a standalone script. This depends entirely on your dependencies. If you do not have any dependencies, then it *should*.
 3. A fat standalone application is acceptable. Look at any RevealJS or similar presentation apps and you would agree that some 14MB file is not the end of the world.
-4. Some fiddly parts of rollupjs that can generate a bundle.
+4. Some fiddly parts of [rollupjs](https://rollupjs.org) that can generate a bundle.
 5. Testing the results of your efforts.
 
 So we can safely skip (1) without any less emphasis on its importance to remember. As for (2), I hope you can see from the TGVE case, it is better to include some of the dependencies. And then for (3), well I will leave you with that one to think about as there little we can do about it. For (4) and (5) we will take them one at a time, first let me have a go at (4).
