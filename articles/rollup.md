@@ -8,7 +8,7 @@ permalink: /rollup.html
 This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files using [`rollupjs`](https://rollupjs.org/guide/en/).
 
 ## Who should read this?
-If you are here looking to [`rollup`](https://rollupjs.org/guide/en/) your React component library or some other JS `library` then I hope it this will be useful or at least encouraging read. I learned what is in this article from efforts of trying to rollup a React component library namely: [Turing Geovisualization Engine](https://github.com/layik/eAtlas/tree/npm) - TGVE or eAtlas for short.
+If you are here looking to [`rollup`](https://rollupjs.org/guide/en/) your React component library or some other JS `library` then I hope it this will be useful or at least encouraging read. I learned what is in this article from efforts of trying to rollup a React component library namely: [Turing Geovisualization Engine](https://github.com/layik/eAtlas/tree/npm) - TGVE or eAtlas for short. If you are just starting to learn about bundlers or rollup itself, this might not be a good place to be.
 
 ## Do not ctrl + c this
 
