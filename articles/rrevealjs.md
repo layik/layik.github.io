@@ -4,6 +4,9 @@ permalink: /rrevealjs.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+16th Apr 2021
+# Reproducible Slides with RevealJS
+
 In the latest Drupal Yorkshire meeting, and I am an outsider, they discussed choice of presentations and without thinking about dependencies I recommended revealjs via Rmarkdown. As you can see in this repo (may be I should remove the builds) you can find few revealjs presentations, but I am still happy to consider alternatives of course.
 
 I also said and I have said it elsewhere, R people or Rstats people are generally academic smart people and they need publications. Therefore, it is not surprising that [Rmarkdown](https://rmarkdown.rstudio.com) does a great job in driving [pandoc](https://pandoc.org) to generate revealjs presentations and much more. If the job needs LaTeX that is another blog post. If you do not want to install yet another tool, and manage HTML tags as it is shown in the revealjs docs, then you can stop here.

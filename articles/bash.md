@@ -4,6 +4,8 @@ permalink: /bash.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+9th Sep 2020
+
 # Back to bash
 
 Lets imagine that you have a front-end pure HTML/CSS/JS code or used a modern framework to build it. You have deployed it behind a file server like Nginx and you like to renew the data that is fed into the app from Google Sheets/similar source. 

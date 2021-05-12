@@ -4,6 +4,8 @@ permalink: /electronjsfiles.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+29th Sep 2019
+
 ## ElectronJS
 For this post (though I have not written about ElectornJs before) I must assume that you are familiar. [Here](https://electronjs.org/docs/tutorial/about), go and have a loook if you must.
 

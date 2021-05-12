@@ -4,6 +4,10 @@ permalink: /wowchemy.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+4th Oct 2020
+
+# wowchemy
+
 This "academic" theme seems to be making some noise on GH and there are some 5K stargazers on it. When I tried it, the documentation was a pack of signposts and arrows to use Netlify. Now, obviously open source contributors should be making a living and it is unfair for me to criticise any effort of releasing code without "proper" documentation. This would all be, I am sure, vehemently rejected by those contributors as my failure of getting it right or reading the docs right.
 
 With that out of my chest, the template is just a standard one. However, if you have copied their `starter-academic` repo then you must watchout for:

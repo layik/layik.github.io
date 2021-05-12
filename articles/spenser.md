@@ -4,6 +4,7 @@ permalink: /spenser.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+24th Sep 2020
 
 # Crunching tens of GBs of CSV
 

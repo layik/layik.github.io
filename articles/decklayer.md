@@ -4,6 +4,8 @@ permalink: /decklayer.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+31st Jan 2021
+
 ### Result
 For those who do not want to read all this, find the sample layer code [here](https://codepen.io/layik/pen/XWXrVbO?editors=0011) and hidden below:
 

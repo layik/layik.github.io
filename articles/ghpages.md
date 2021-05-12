@@ -4,6 +4,8 @@ permalink: /ghpages.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+22nd Mar 2021
+
 # Deploying a React app on GH pages
 
 1. [Introduction](#introduction)

@@ -4,6 +4,8 @@ permalink: /rollup.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+12th May 2021
+
 # Rolling up a React Component Library
 This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files using [`rollupjs`](https://rollupjs.org/guide/en/).
 
@@ -16,7 +18,7 @@ If you are here looking to [`rollup`](https://rollupjs.org/guide/en/) your React
 
 This is the most important takeaway of this post and this is why I am writing this entry. There is no recipe to bundle your application just like X app unless your application is like X app.
 
-In that regard, a starter example will be useful of course but would be different. The fact that rollup is also "fiddly" to an extent but I found it much more straightforward than webpack, I hope becomes clear if you continue working on your [`rollup.config.js` file](https://rollupjs.org/guide/en/#configuration-files).
+In that regard, a starter example will be useful of course but would be different. The fact that rollup is also "fiddly" to an extent but I found it much more straightforward than [webpack](https://webpack.js.org), I hope becomes clear if you continue working on your own [`rollup.config.js` file](https://rollupjs.org/guide/en/#configuration-files) and throughout this article.
 
 ## What you will learn
 Here is what you can learn from this post:
@@ -200,8 +202,8 @@ The bundled `css` would also be done, in this case, separately in a file with th
 So that leaves us with testing the output. Let us imagine that like me, you also put everything in the externals and must install all the dependencies. I literally copied over the library's dependencies to a test application and installed them.
 
 ```sh
-npx create-react-app test-library
-cd test-library
+npx create-react-app test-app
+cd test-app
 vi package.json
 # add your deps to the dependencies
 yarn
@@ -209,6 +211,11 @@ yarn
 
 Then in the `App.jsx`, if you have copied over the output from your `rollup.js` to a path where you can import it, just go `import Eatlas from './eatlas.js'` (assuming same directory path). Then you *should* be able to run it just like having installed via `yarn add eatlas` or linked it from the original project.
 
+That also means in our case, where we rollup only our code and everything else is external, the package json of `test-app` and the original project `eatlas` would have to be the same. In addition ot any other peer-dependencies and what not. 
+
+Another caveat as mentioned above, due to the way this rollup script works, we would also have to make sure that the relative paths of images must be the same. In this case, we have the entire JS code running from a file called `eatlas.js`, that is the library. So, any image which used to be called from `../../img` must now be called from the same location. Repeat, it is possible and will update this article when I know more, to bundle images just like we do in RevealJS etc.
+
 ## Conclusion (do not read)
 I can say without any hesitation that both webpack and the `react-scripts` are both [fiddly](https://dictionary.cambridge.org/dictionary/english/fiddly) to say the least, the latter of which is built on the [former](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/package.json#L86). But the criticism is a little unfair in the context of JavaScript (JS), I mean we should find a specific word to describe JS much stronger than fiddly. 
+
 

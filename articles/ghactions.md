@@ -4,6 +4,8 @@ permalink: /ghactions.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+16th June 2020
+
 # GitHub Actions
 
 These days we no longer need to worry about setting up our Jenkins or other CI/CD pipelines. Travis and others provide what you need to deploy an automated pipeline to deliver your new versions of your applications.

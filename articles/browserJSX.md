@@ -4,6 +4,10 @@ permalink: /htmljsx.html
 [Home](https://layik.github.io) | About | Current
 <hr/>
 
+28th Mar 2019
+
+# JSX in Browser
+
 [This](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html) example from React docs shows how to use JSX in the browser:
 
 ```

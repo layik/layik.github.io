@@ -4,6 +4,9 @@ permalink: /anydomain.html
 [Home](https://layik.github.io)
 <hr/>
 
+28th March 2019
+
+# Binding any domain to a machine
 Working on a specific project we needed to simulate a domain name pointing to one of our servers. What seems to be a difficult problem, is actually totally easy to solve.
 
 The Linux `/etc/hosts` file can do this by adding a new line such as:
