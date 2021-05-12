@@ -1,6 +1,8 @@
 Posts:
 - 
-* Latest - [Deploy a React app on gh-pages](https://layik.github.io/ghpages)
+* [Rolling up a React Component Library](https://layik.github.io/rollup)
+
+* [Deploy a React app on gh-pages](https://layik.github.io/ghpages)
 
 * [SPENSER data science showcase](https://layik.github.io/spenser)
 
