@@ -172,9 +172,12 @@ We were building `cjs` right? That is the first plugin. The next one `scss` just
   external: EXTERNALS.concat(["lodash", "polished", "underscore"])
 }
 ```
+
+### Results
 Here is what you would be seeing in your `not uglified` bundle if you have a look:
 
 ```js
+// bundle.js
 'use strict';
 // sounds familiar (see (5) above)
 const ENVIRONMENT = "production";
@@ -190,6 +193,8 @@ var centroid = require('@turf/centroid');
 // .... so many more lines
 ```
 As you can see, without any of the above externals, the script will return and ask the user to get those packages into scope.
+
+The bundled `css` would also be done, in this case, separately in a file with the same name `eatlas.css` and would contain all css found by `rollup` and simply concatenated. This, I cannot point you to source code, would be some traversal of the files in your codebase starting with top level `css` file found. 
 
 ## Testing it
 So that leaves us with testing the output. Let us imagine that like me, you also put everything in the externals and must install all the dependencies. I literally copied over the library's dependencies to a test application and installed them.
