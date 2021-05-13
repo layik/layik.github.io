@@ -6,6 +6,12 @@ permalink: /rollup.html
 
 12th May 2021
 
+* [Who should read this?](#Who-should-read-this?)
+* [Do not ctrl + c this](#Do-not-ctrl-+-c-this)
+* [What you will learn](#What-you-will-learn)
+* [The rollup.config.js file](#Please-show-me-your-rollup.config.js)
+* [Conclusion](#Conclusion)
+
 # Rolling up a React Component Library
 This article is an attempt at helping you bundle together your React (with JSX) component library as a single file to use in HTML files using [`rollupjs`](https://rollupjs.org/guide/en/).
 
@@ -215,7 +221,7 @@ That also means in our case, where we rollup only our code and everything else i
 
 Another caveat as mentioned above, due to the way this rollup script works, we would also have to make sure that the relative paths of images must be the same. In this case, we have the entire JS code running from a file called `eatlas.js`, that is the library. So, any image which used to be called from `../../img` must now be called from the same location. Repeat, it is possible and will update this article when I know more, to bundle images just like we do in RevealJS etc.
 
-## Conclusion (do not read)
+## Conclusion
 I can say without any hesitation that both webpack and the `react-scripts` are both [fiddly](https://dictionary.cambridge.org/dictionary/english/fiddly) to say the least, the latter of which is built on the [former](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/package.json#L86). But the criticism is a little unfair in the context of JavaScript (JS), I mean we should find a specific word to describe JS much stronger than fiddly. 
 
 
