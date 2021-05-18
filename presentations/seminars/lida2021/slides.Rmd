@@ -1,5 +1,5 @@
 ---
-title: "Using Turing Geovisualization Engine beta release"
+title: "Turing Geovisualization Engine beta release"
 subtitle: "LIDA Seminars 2021"
 abstract: ""
 author: 
@@ -19,22 +19,26 @@ bibliography: refs.bib
 #    <br/>
 ---
 
+## TGVE
+<img style="max-height:70vh" src="https://user-images.githubusercontent.com/408568/118050552-63b1aa00-b377-11eb-9aa6-8b9f5bef9e13.png" />
 
-## Intro
+# Project Overview
 
-* Research Project:
+* Processing and visualizing spatio-temporal data using open source tech
+* Apply empirically-informed guidelines around visualization design and techniques from Geographic Information Science. Paper [@glyphmaps]
+* Production grade delivery + packaging (Dockerized)
 
 # Talk Overview
 
 <div class="container">
 <div class="col">
 A damaged Graphics Processing Unit (GPU)
-![104290923_2519668941677516_7302972911295968679_n](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
+![Baked GPU](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
 </div>
-<div class="col">
+<div class="col" style="padding-top: 10%">
 * Brief outline of the project
-* Github pages + similar services
-* Use it!
+* Brief GitHub pages
+* Walk through (github pages option)
 
 </div>
 </div>
@@ -43,48 +47,120 @@ A damaged Graphics Processing Unit (GPU)
 <img width="90%" alt="What is an eatlas?" src="https://user-images.githubusercontent.com/408568/84770154-f8c4eb00-afce-11ea-9f2c-7de0bc5aa200.png">
 
 * Feature extraction? Beautiful pictures?
-* Data exploration/interrogation to draw insights
-* Combining different datasets
-* Decision making and public engagement tool
+* Data exploration/interrogation to draw insights?
+* Combining different datasets?
+* Decision making and public engagement tool?
 
-## TGVE
-<img width="90%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
+# TGVE
+<img width="60%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
-* npm package: https://www.npmjs.com/package/eatlas
-* more packages soon.
+* npm(?) package: https://www.npmjs.com/package/eatlas
+* R workflow package (geoplumber)
+* Outside the browser, superfast Native App
+* Beta release for user testing/feedback
 
-# COVID19 application
+# Showcases
 
+<img alt="heatmap" width="80%" src="https://user-images.githubusercontent.com/408568/118051386-d1120a80-b378-11eb-88d1-7a7673d9ab01.png">
+
+* Two different projects from UoL both national scale datasets
+* Ability to go from data to vector tiles (?) to data driven map tiles
+* Processing data at scale in realtime using R.data.table on typical servers.
+
+## SPENSER
+
+- Data Processing & Development pipeline
+- Production deployment (Docker container)
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/115556688-d5cb2d80-a2a8-11eb-8111-e2254d6cc559.png">
+
+## SaferActive
+- Various types of data including vector tiles (data driven styling)
+- Production deployment (Docker)
+- Processing national data and visualizing it at scale
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053025-aa090800-b37b-11eb-8942-9275a8531f43.png">
+
+## COVID19 application
+<!-- replace with saferactive  showcase or skip quickly-->
 <!-- mind the diff in height as images are not equal sized -->
 <img width="41%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798748-39cef680-aff3-11ea-87cf-c4d0cd9e09d3.png">
 <img width="46%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798767-3f2c4100-aff3-11ea-9b1d-17f34a66beb0.png">
 
 Heavily customised code base of the project source code.
 
-# SPENSER showcase
+# TGVE (re)design
+<div style="float:left; max-width:30%; text-align:left"> 
+- Modular architecture, examples like CMS (Wordpress), ERP (Odoo) etc.
+- Modules like data wrangling, visualization and AI? etc...
+- Scalable tech and tapping into both R + React ecosystems
 
-- Data Processing & Development pipeline
-- Production deployment (Docker container)
-- TGVE!
+</div>
+<img float="right" width="60%" src="https://user-images.githubusercontent.com/408568/118049576-d457c700-b375-11eb-982a-a30332bca8e3.png" />
 
-<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/115556688-d5cb2d80-a2a8-11eb-8111-e2254d6cc559.png">
+## Modular design
+<div style="float:left; max-width:50%; text-align:left"> 
+One area of modular design is how eAtlas uses with Uber's DeckGL visualization layers:
+
+- Managing layers (including custom)
+- Using layers
+
+</div>
+<img align="left" width="50%" alt="TGVE JSON to widgets" src="https://user-images.githubusercontent.com/408568/116392490-6b6e3c00-a818-11eb-8e70-b013720306f2.png">
+
+<img float="right" width="37%" alt="TGVE widgets" src="https://user-images.githubusercontent.com/408568/116392643-93f63600-a818-11eb-9e07-6acf45555711.png">
+
+# GitHub pages
+- Your two minute crash course if you do not use it already
+- Free hosting for Open Source (OS) projects
+- Free Coninuous Delivery again for OS
+- Free Visibility (Shop Window - Nik's description)
+
+http://vcg.github.io/upset/
 
 # Let us do it
-- Clone the template
-- Get some data
-- Launch
+- We can use the TGVE in two ways, but in this session can only do one
+- An easy to use front-end only on github
+- A little more advanced way using R
 
-# Conclusion
+## Usin github pages
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053696-e5f09d00-b37c-11eb-854e-4f4a58260c6d.png">
+
+- [Wiki](https://github.com/layik/eAtlas/wiki/Using-TGVE#using-github-pages) entry to do this
+    (1) Use the [template](https://github.com/layik/eatlas-template) repository & Setup github pages on new github settings
+    (2) Get data and add it to your repository or pull it from external source, anywhere with ["CORS"](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) permissions
+    (3) Change the environment variables on the Actions. Commit and have a coffee
+
+
+## Using R (time left?)
+- Get some data and in case of separate geography and "csv" make sure there is a matching geography column
+- Some plumbing using R package plumber
+- Build and Run
+- Reproducible R code example running TGVE: [here](https://gist.github.com/layik/03ef53df53d7b9fce4141c2ef590839a#gistcomment-3740692)
+- Wiki entry [here](#)
+
+<!-- For Friday slice of COVID19 data from UK dashboard. -->
+
+# Conclusions
+- We can process and visualize spatio-temporal data at scale 
+- We can do this better than alternatives, there is better tech
+- We *should* contribute to the OS community
+- TGVE has a clear future path for more funding and wider contribution
+- TGVE is built on the right tools *hoping* to be used
 
 # Thank you
 
-* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
-* repo home: www.github.com/layik/eAtlas
-* COVID19 showcase www.geoplumber.com
-
 <img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/84832513-4f5d1400-b025-11ea-908e-401316e6552e.png">
 
+* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
+* repo home: www.github.com/layik/eAtlas
+* SPENSER showcase www.geospenser.com
+
+
 # References
+
+
 <style>
 .box {
     border-radius: 3px;
@@ -126,4 +202,11 @@ Heavily customised code base of the project source code.
     max-width:50%;
     flex: 1;
 }
+body {
+    background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 3% 96%;
+}
 </style>
+<!-- https://user-images.githubusercontent.com/408568/118673703-2161f000-b7f1-11eb-84af-1fd3b15a94cd.png -->
