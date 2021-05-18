@@ -138,7 +138,7 @@ http://vcg.github.io/upset/
 - Some plumbing using R package plumber
 - Build and Run
 - Reproducible R code example running TGVE: [here](https://gist.github.com/layik/03ef53df53d7b9fce4141c2ef590839a#gistcomment-3740692)
-- Wiki entry [here](#)
+- Wiki entry [here](https://github.com/layik/eAtlas/wiki/Using-TGVE-Locally)
 
 <!-- For Friday slice of COVID19 data from UK dashboard. -->
 
