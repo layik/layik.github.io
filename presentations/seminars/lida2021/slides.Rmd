@@ -51,13 +51,20 @@ A damaged Graphics Processing Unit (GPU)
 * Combining different datasets?
 * Decision making and public engagement tool?
 
-# TGVE
+# TGVE (1)
 <img width="60%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
 * npm(?) package: https://www.npmjs.com/package/eatlas
 * R workflow package (geoplumber)
 * Outside the browser, superfast Native App
 * Beta release for user testing/feedback
+
+# TGVE (2)
+<img width="40%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/118800906-54ab8a00-b898-11eb-85c3-d09bdbceeca1.png">
+
+* A web application powered by R + React
+* R package `geoplumber` (not on CRAN and welcomes contributions) can run it
+* Dockerfile to deploy both
 
 # Showcases
 
