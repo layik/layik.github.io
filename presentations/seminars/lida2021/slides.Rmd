@@ -129,14 +129,14 @@ One area of modular design is how eAtlas uses with Uber's DeckGL visualization l
 - Free hosting for Open Source (OS) projects
 - Free Coninuous Delivery again for OS
 - Free Visibility (Shop Window - Nik's description)
-- Example GH: 
-    - http://vcg.github.io/upset/
+- Example GH pages: 
+    - Upset plots: http://vcg.github.io/upset/
     - R pkgdown: https://github.com/r-lib/pkgdown
 
 # Let us do it
 - We can use the TGVE in two ways, but in this session can only do one
 - An easy to use front-end only on github
-- A little more advanced way using R
+- A little more advanced way using R (time left?)
 
 ## Usin github pages
 
