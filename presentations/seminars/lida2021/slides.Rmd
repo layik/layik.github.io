@@ -124,12 +124,14 @@ One area of modular design is how eAtlas uses with Uber's DeckGL visualization l
 <img float="right" width="37%" alt="TGVE widgets" src="https://user-images.githubusercontent.com/408568/116392643-93f63600-a818-11eb-9e07-6acf45555711.png">
 
 # GitHub pages
-- Your two minute crash course if you do not use it already
+- Your two minute crash course if you do not use it already. 
+    - Git beginner tutorial for LIDA interns can be found [here](https://layik.github.io/tutorials/lida-rr/git-github)
 - Free hosting for Open Source (OS) projects
 - Free Coninuous Delivery again for OS
 - Free Visibility (Shop Window - Nik's description)
-
-http://vcg.github.io/upset/
+- Example GH: 
+    - http://vcg.github.io/upset/
+    - R pkgdown: https://github.com/r-lib/pkgdown
 
 # Let us do it
 - We can use the TGVE in two ways, but in this session can only do one
