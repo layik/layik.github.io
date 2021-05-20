@@ -22,6 +22,7 @@ Posts:
 
 Presentations:
 -
+* [LIDA May 21](https://layik.github.io/presentations/seminars/lida2021/slides.html)
 * [LeedsJS](https://layik.github.io/presentations/leedsjs/slides.html) (27th November 2019)
 * [eRum2020](https://layik.github.io/presentations/eRum2020/slides.html)
 
