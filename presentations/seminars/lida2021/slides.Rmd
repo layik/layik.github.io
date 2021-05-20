@@ -152,7 +152,7 @@ One area of modular design is how eAtlas uses with Uber's DeckGL visualization l
 - Get some data and in case of separate geography and "csv" make sure there is a matching geography column
 - Some plumbing using R package plumber
 - Build and Run
-- Reproducible R code example running TGVE: [here](https://gist.github.com/layik/03ef53df53d7b9fce4141c2ef590839a#gistcomment-3740692)
+- Reproducible R code example running TGVE: [here](https://github.com/layik/eAtlas/wiki/Reproducible-TGVE)
 - Wiki entry [here](https://github.com/layik/eAtlas/wiki/Using-TGVE-Locally)
 
 <!-- For Friday slice of COVID19 data from UK dashboard. -->
