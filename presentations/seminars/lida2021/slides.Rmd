@@ -76,12 +76,17 @@ A damaged Graphics Processing Unit (GPU)
 
 ## SPENSER
 
+www.geopspenser.com
+
 - Data Processing & Development pipeline
 - Production deployment (Docker container)
 
 <img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/115556688-d5cb2d80-a2a8-11eb-8111-e2254d6cc559.png">
 
 ## SaferActive
+
+https://map.saferactive.org
+
 - Various types of data including vector tiles (data driven styling)
 - Production deployment (Docker)
 - Processing national data and visualizing it at scale
@@ -95,6 +100,7 @@ A damaged Graphics Processing Unit (GPU)
 <img width="46%" alt="covid19" src="https://user-images.githubusercontent.com/408568/84798767-3f2c4100-aff3-11ea-9b1d-17f34a66beb0.png">
 
 Heavily customised code base of the project source code.
+(not deployed)
 
 # TGVE (re)design
 <div style="float:left; max-width:30%; text-align:left"> 
