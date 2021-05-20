@@ -25,7 +25,7 @@ bibliography: refs.bib
 # Project Overview
 
 * Processing and visualizing spatio-temporal data using open source tech
-* Apply empirically-informed guidelines around visualization design and techniques from Geographic Information Science. Paper [@glyphmaps]
+* Apply empirically-informed guidelines around visualization design and techniques from Geographic Information Science. Paper [@ijgi10040213]
 * Production grade delivery + packaging (Dockerized)
 
 # Talk Overview
@@ -168,7 +168,6 @@ http://vcg.github.io/upset/
 
 * www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
 * repo home: www.github.com/layik/eAtlas
-* SPENSER showcase www.geospenser.com
 
 
 # References
