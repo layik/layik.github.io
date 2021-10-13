@@ -1,0 +1,154 @@
+---
+title: "Visualizing SaferActive output with Turing Geovisualization Engine"
+abstract: ""
+author: 
+  - L Hama
+date: '`r Sys.Date()`'
+output:
+  revealjs::revealjs_presentation:
+    theme: night
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+bibliography: refs.bib
+# <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
+#    <br/>    
+#    <br/>
+---
+
+## TGVE
+<img style="max-height:70vh" src="https://user-images.githubusercontent.com/408568/118050552-63b1aa00-b377-11eb-9aa6-8b9f5bef9e13.png" />
+
+# Talk Overview
+
+<div class="container">
+<div class="col">
+![Baked GPU](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
+</div>
+<div class="col" style="padding-top: 10%">
+* Brief outline of the project
+* Brief GitHub pages
+* Walk through (github pages option)
+
+</div>
+</div>
+
+# TGVE (1)
+<img width="60%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
+
+* npm(?) package: https://www.npmjs.com/package/eatlas
+* R workflow package (geoplumber)
+* Outside the browser, superfast Native App
+* Beta release for user testing/feedback
+
+# SaferActive
+
+https://map.saferactive.org
+
+- Various types of data including vector tiles (data driven styling)
+- Production deployment (Docker)
+- Processing national data and visualizing it at scale
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053025-aa090800-b37b-11eb-8942-9275a8531f43.png">
+
+# GitHub pages
+- Your two minute crash course if you do not use it already. 
+    - Git beginner tutorial for LIDA interns can be found [here](https://layik.github.io/tutorials/lida-rr/git-github)
+- Free hosting for Open Source (OS) projects
+- Free Coninuous Delivery again for OS
+- Free Visibility (Shop Window - Nik's description)
+- Example GH pages: 
+    - Upset plots: http://vcg.github.io/upset/
+    - R pkgdown: https://github.com/r-lib/pkgdown
+
+# Let us do it
+- We can use the TGVE in two ways, but in this session can only do one
+- An easy to use front-end only on github
+- A little more advanced way using R (time left?)
+
+## Usin github pages
+
+<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053696-e5f09d00-b37c-11eb-854e-4f4a58260c6d.png">
+
+- [Wiki](https://github.com/layik/eAtlas/wiki/Using-TGVE#using-github-pages) entry to do this
+    (1) Use the [template](https://github.com/layik/eatlas-template) repository & Setup github pages on new github settings
+    (2) Get data and add it to your repository or pull it from external source, anywhere with ["CORS"](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) permissions
+    (3) Change the environment variables on the Actions. Commit and have a coffee
+
+
+## Using R (time left?)
+- Get some data and in case of separate geography and "csv" make sure there is a matching geography column
+- Some plumbing using R package plumber
+- Build and Run
+- Reproducible R code example running TGVE: [here](https://github.com/layik/eAtlas/wiki/Reproducible-TGVE)
+- Wiki entry [here](https://github.com/layik/eAtlas/wiki/Using-TGVE-Locally)
+
+<!-- For Friday slice of COVID19 data from UK dashboard. -->
+
+# Conclusions
+- We can process and visualize spatio-temporal data at scale 
+- We can do this better than alternatives, there is better tech
+- We *should* contribute to the OS community
+- TGVE has a clear future path for more funding and wider contribution
+- TGVE is built on the right tools *hoping* to be used
+
+# Thank you
+
+<img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/84832513-4f5d1400-b025-11ea-908e-401316e6552e.png">
+
+* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
+* repo home: www.github.com/layik/eAtlas
+
+
+# References
+
+
+<style>
+.box {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    /* width: 80%;   create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.box:before,
+.box:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.box:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.box:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
+
+.container{
+    display: flex;
+}
+.col{
+    max-width:50%;
+    flex: 1;
+}
+body {
+    background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 3% 96%;
+}
+</style>
+<!-- https://user-images.githubusercontent.com/408568/118673703-2161f000-b7f1-11eb-84af-1fd3b15a94cd.png -->
