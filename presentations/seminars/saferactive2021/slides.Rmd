@@ -16,24 +16,25 @@ bibliography: refs.bib
 #    <br/>
 ---
 
-## TGVE
-<img style="max-height:70vh" src="https://user-images.githubusercontent.com/408568/118050552-63b1aa00-b377-11eb-9aa6-8b9f5bef9e13.png" />
-
 # Talk Overview
 
 <div class="container">
 <div class="col">
-![Baked GPU](https://user-images.githubusercontent.com/408568/84829978-8ed53180-b020-11ea-9be4-8f0feeebe8dc.jpg)
+![SaferActive TGVE](https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png)
 </div>
-<div class="col" style="padding-top: 10%">
-* Brief outline of the project
+<div class="col">
+* Brief outline of TGVE
 * Brief GitHub pages
-* Walk through (github pages option)
+* Serving full STATS19 data from conventional servers
+* Visualizing SaferActive data on TGVE
 
 </div>
 </div>
 
 # TGVE (1)
+<img style="max-height:60vh" src="https://user-images.githubusercontent.com/408568/118050552-63b1aa00-b377-11eb-9aa6-8b9f5bef9e13.png" />
+
+# TGVE (2)
 <img width="60%" alt="TGVE" src="https://user-images.githubusercontent.com/408568/84771152-cf0cc380-afd0-11ea-86e7-1af1157f44fb.png">
 
 * npm(?) package: https://www.npmjs.com/package/eatlas
@@ -41,32 +42,14 @@ bibliography: refs.bib
 * Outside the browser, superfast Native App
 * Beta release for user testing/feedback
 
-# SaferActive
-
-https://map.saferactive.org
-
-- Various types of data including vector tiles (data driven styling)
-- Production deployment (Docker)
-- Processing national data and visualizing it at scale
-
-<img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053025-aa090800-b37b-11eb-8942-9275a8531f43.png">
-
-# GitHub pages
-- Your two minute crash course if you do not use it already. 
-    - Git beginner tutorial for LIDA interns can be found [here](https://layik.github.io/tutorials/lida-rr/git-github)
+# GitHub  (30 sec)
+- Git beginner tutorial for LIDA interns can be found [here](https://layik.github.io/tutorials/lida-rr/git-github)
 - Free hosting for Open Source (OS) projects
 - Free Coninuous Delivery again for OS
 - Free Visibility (Shop Window - Nik's description)
-- Example GH pages: 
-    - Upset plots: http://vcg.github.io/upset/
-    - R pkgdown: https://github.com/r-lib/pkgdown
 
-# Let us do it
-- We can use the TGVE in two ways, but in this session can only do one
-- An easy to use front-end only on github
-- A little more advanced way using R (time left?)
 
-## Usin github pages
+# Usin github pages
 
 <img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053696-e5f09d00-b37c-11eb-854e-4f4a58260c6d.png">
 
@@ -75,22 +58,47 @@ https://map.saferactive.org
     (2) Get data and add it to your repository or pull it from external source, anywhere with ["CORS"](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) permissions
     (3) Change the environment variables on the Actions. Commit and have a coffee
 
+# Using R (no time to discuss)
+<div class="container">
+<div class="col">
+<img alt="RStudio"
+ src="https://user-images.githubusercontent.com/408568/137389861-c70b6cf1-2599-4aa9-80a8-25bb62604709.png" />
+</div>
+<div class="col">
 
-## Using R (time left?)
-- Get some data and in case of separate geography and "csv" make sure there is a matching geography column
-- Some plumbing using R package plumber
-- Build and Run
+<img alt="RStudio"
+ src="https://user-images.githubusercontent.com/408568/137390405-89bde368-08ba-4d66-af84-a8d16a3131eb.png" />
+</div></div>
+- Showing the same results on TGVE using geoplumber R package
 - Reproducible R code example running TGVE: [here](https://github.com/layik/eAtlas/wiki/Reproducible-TGVE)
 - Wiki entry [here](https://github.com/layik/eAtlas/wiki/Using-TGVE-Locally)
 
-<!-- For Friday slice of COVID19 data from UK dashboard. -->
+# SaferActive - 2015-2019 every crash
 
+https://map.saferactive.org
+<div class="container">
+<div class="col">
+- Various types of data including vector tiles (data driven styling)
+- Production deployment (Docker)
+- Processing national data and visualizing it at scale
+</div>
+<div class="col">
+<img alt="RStudio"
+src="https://user-images.githubusercontent.com/408568/88201918-03167c80-cc40-11ea-8f45-371963a92e19.png">
+</div>
+</div>
+# SaferActive - LA and Police Force outputs
+<div class="container">
+<div class="col">
+- https://saferactive.github.io/tgve
+</div><div class="col">
+<img style="max-height:50vh; float: right" src="https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png" alt="saferactive data on TGVE" />
+</div>
+</div>
 # Conclusions
 - We can process and visualize spatio-temporal data at scale 
 - We can do this better than alternatives, there is better tech
-- We *should* contribute to the OS community
-- TGVE has a clear future path for more funding and wider contribution
-- TGVE is built on the right tools *hoping* to be used
+- TGVE deployment on GitHub pages are long term deployments
 
 # Thank you
 
