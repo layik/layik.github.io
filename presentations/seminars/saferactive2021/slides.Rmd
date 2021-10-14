@@ -40,7 +40,6 @@ bibliography: refs.bib
 * npm(?) package: https://www.npmjs.com/package/eatlas
 * R workflow package (geoplumber)
 * Outside the browser, superfast Native App
-* Beta release for user testing/feedback
 
 # GitHub  (30 sec)
 - Git beginner tutorial for LIDA interns can be found [here](https://layik.github.io/tutorials/lida-rr/git-github)
@@ -104,9 +103,9 @@ src="https://user-images.githubusercontent.com/408568/88201918-03167c80-cc40-11e
 
 <img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/84832513-4f5d1400-b025-11ea-908e-401316e6552e.png">
 
-* www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
-* repo home: www.github.com/layik/eAtlas
-
+* Project on ATI: www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
+* Project on GH: www.github.com/tgve
+* Recent visualization paper (see [@ijgi10040213])
 
 # References
 
