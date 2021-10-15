@@ -101,11 +101,12 @@ src="https://user-images.githubusercontent.com/408568/88201918-03167c80-cc40-11e
 
 # Thank you
 
-<img height="320" alt="graph vis" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
-
 * ATI: www.turing.ac.uk/research/research-projects/turing-geovisualization-engine
 * GH: www.github.com/tgve
 * Recent visualization paper - [@ijgi10040213]
+
+<img tyle="max-height:60vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
+
 
 # References
 
