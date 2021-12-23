@@ -1,5 +1,5 @@
 ---
-title: "Turing Geovisualization Engine"
+title: "TGVE Phase II and tgver R package"
 abstract: ""
 author: 
   - L Hama
@@ -17,14 +17,6 @@ bibliography: refs.bib
 #    <br/>
 ---
 
-# Rationale
-
-- We needed it even before the funding
-- Geovisualization is tricky
-- Mainstream datas science workflows has gaps for geovisualization
-- Discover new methods and techniques
-- We can and are inspired by Tableau et al.
-
 # So far
 
 <div class="container">
@@ -32,73 +24,22 @@ bibliography: refs.bib
 ![SaferActive TGVE](https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png)
 </div>
 <div class="col">
-* "stable" but still labelled "beta" npm package
-* showcased two national scale datasets
-* new R package `tgver` (not on CRAN yet)
-* scalable, decoupled and production grade application
+* "stable" npm package
+* at least two national scale datasets
+* JS toolchain reliant build (x)
+* new R package `tgver`
+* few writeup attemps (time!)
 
 </div>
 </div>
 
-# Paradigm
-
-<img alt="R & JS" src="https://user-images.githubusercontent.com/408568/147229407-4944d4a2-09ce-4710-be42-3227ca31a260.png" width="100%"/>
-
-- RStudio and others drive JS from R (Shiny)
-- TGVE keeps them (R & JS) separate completely
-
-
-# The npm package (1)
-
-- Easy usage in various environments (web, mobile, desktop and GitHub pages)
-  - data democratization
-- API driven development
-- Automating laborious tasks (Smart)
-- Current challenge: modular and extensible
-
-# The npm package (2)
-
-```{JavaScript}
-function App() {
-  return (
-    <Eatlas 
-    defaultURL='https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla&structure={"date":"date","newCases":"newCasesBySpecimenDate","ctyua19cd":"areaCode"}&format=csv'
-    geographyURL='https://raw.githubusercontent.com/tgve/eatlas-data/main/utlas.geojson'
-    geographyColumn='ctyua19cd'
-    column="newCases"
-    dark="false"
-    />
-  );
-}
-```
-
-# API variables in URL
-
-We can pass data and geography sources (all API values) to an instance of the TGVE.
-
-- use the same instance with different datasets
-- easy use in R and Python workflows (Rmarkdown & Jupyter respectively)
-- like: `www.instance.com?defaultURL=url&geographyURL=geoURL&geographycolumn=name`
-- future versions: `www.instance.com?...filter={column:[1,2]}`
-
-# Showcase SPENSER
-```{r}
-knitr::include_url("https://geospenser.com")
-```
-
-# Showcase SaferActive
-
-```{r}
-knitr::include_url("https://map.saferactive.org?")
-```
-
-# R package: tgver (1)
+# tgver (1)
 ```{r, eval=FALSE}
 # eval=FALSE
 tgver::tgve()
 ```
 ```{r}
-knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson")
+knitr::include_url("https://tgve.github.io/eatlas-template")
 ```
 
 
@@ -113,10 +54,12 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 
 1. do interactive geospatial analysis and visualization fast. 
 2. use R’s echo-system to drive (1) 
-3. facilitate web application deployment for production
-4. discover/research
+3. facilitate web application deployment for production.
+4. learn/research
 
 </div></div>
+
+The old approach was using JS build tool chain.
 
 # tgver (3)
 
@@ -128,22 +71,23 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 
 <div class="container">
 <div class="col">
-- Break grounds?
-- Ask for features?
-- Your help!
+- Posted an [update](https://app.slack.com/client/T17H34RB2/CDJEMK67Q) on Turing `urbananalytics` channel on Slack
+- I need to do more!
 
 </div>
 <div class="col">
 <img alt="RStudio"
-src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png">
-Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-communities-8a26d4712d68
+src="">
 </div>
 </div>
+
+# REG
+
+Document to write a plan
 
 # Conclusions
 
-- Continue developing The TGVE to become an essential geospatial analytics tool
-- Like the name RAM :)
+- 
 
 # Thank you
 

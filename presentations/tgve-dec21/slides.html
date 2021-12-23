@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="L Hama" />
-  <meta name="dcterms.date" content="2021-12-06" />
-  <title>TGVE Phase II and tgver R package</title>
+  <meta name="dcterms.date" content="2021-12-23" />
+  <title>Turing Geovisualization Engine</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -514,16 +514,27 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="slides_files/header-attrs-2.11/header-attrs.js"></script>
+    <script src="slides_files/header-attrs-2.10/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 <section>
-    <h1 class="title">TGVE Phase II and tgver R package</h1>
+    <h1 class="title">Turing Geovisualization Engine</h1>
     <h2 class="author">L Hama</h2>
-    <h3 class="date">2021-12-06</h3>
+    <h3 class="date">2021-12-23</h3>
+</section>
+
+<section id="rationale" class="title-slide slide level1">
+<h1>Rationale</h1>
+<ul>
+<li>We needed it even before the funding</li>
+<li>Geovisualization is tricky</li>
+<li>Mainstream datas science workflows has gaps for geovisualization</li>
+<li>Discover new methods and techniques</li>
+<li>We can and are inspired by Tableau et al.</li>
+</ul>
 </section>
 
 <section id="so-far" class="title-slide slide level1">
@@ -534,22 +545,83 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </div>
 <div class="col">
 <ul>
-<li>“stable” npm package</li>
-<li>at least two national scale datasets</li>
-<li>JS toolchain reliant build (x)</li>
-<li>new R package <code>tgver</code></li>
-<li>few writeup attemps (time!)</li>
+<li>“stable” but still labelled “beta” npm package</li>
+<li>showcased two national scale datasets</li>
+<li>new R package <code>tgver</code> (not on CRAN yet)</li>
+<li>scalable, decoupled and production grade application</li>
 </ul>
 </div>
 </div>
 </section>
 
-<section id="tgver-1" class="title-slide slide level1">
-<h1>tgver (1)</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval=FALSE</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>tgver<span class="sc">::</span><span class="fu">tgve</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/eatlas-template&quot;</span>)</span></code></pre></div>
-<iframe src="https://tgve.github.io/eatlas-template" width="768" height="400px" data-external="1">
+<section id="paradigm" class="title-slide slide level1">
+<h1>Paradigm</h1>
+<p><img alt="R & JS" src="https://user-images.githubusercontent.com/408568/147229407-4944d4a2-09ce-4710-be42-3227ca31a260.png" width="100%"/></p>
+<ul>
+<li>RStudio and others drive JS from R (Shiny)</li>
+<li>TGVE keeps them (R &amp; JS) separate completely</li>
+</ul>
+</section>
+
+<section id="the-npm-package-1" class="title-slide slide level1">
+<h1>The npm package (1)</h1>
+<ul>
+<li>Easy usage in various environments (web, mobile, desktop and GitHub pages)
+<ul>
+<li>data democratization</li>
+</ul></li>
+<li>API driven development</li>
+<li>Automating laborious tasks (Smart)</li>
+<li>Current challenge: modular and extensible</li>
+</ul>
+</section>
+
+<section id="the-npm-package-2" class="title-slide slide level1">
+<h1>The npm package (2)</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">App</span>() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>Eatlas </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    defaultURL<span class="op">=</span><span class="st">&#39;https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla&amp;structure={&quot;date&quot;:&quot;date&quot;,&quot;newCases&quot;:&quot;newCasesBySpecimenDate&quot;,&quot;ctyua19cd&quot;:&quot;areaCode&quot;}&amp;format=csv&#39;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    geographyURL<span class="op">=</span><span class="st">&#39;https://raw.githubusercontent.com/tgve/eatlas-data/main/utlas.geojson&#39;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    geographyColumn<span class="op">=</span><span class="st">&#39;ctyua19cd&#39;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">&quot;newCases&quot;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    dark<span class="op">=</span><span class="st">&quot;false&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">/&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+
+<section id="api-variables-in-url" class="title-slide slide level1">
+<h1>API variables in URL</h1>
+<p>We can pass data and geography sources (all API values) to an instance of the TGVE.</p>
+<ul>
+<li>use the same instance with different datasets</li>
+<li>easy use in R and Python workflows (Rmarkdown &amp; Jupyter respectively)</li>
+<li>like: <code>www.instance.com?defaultURL=url&amp;geographyURL=geoURL&amp;geographycolumn=name</code></li>
+<li>future versions: <code>www.instance.com?...filter={column:[1,2]}</code></li>
+</ul>
+</section>
+
+<section id="showcase-spenser" class="title-slide slide level1">
+<h1>Showcase SPENSER</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://geospenser.com&quot;</span>)</span></code></pre></div>
+<iframe src="https://geospenser.com" width="768" height="400px" data-external="1">
+</iframe>
+</section>
+
+<section id="showcase-saferactive" class="title-slide slide level1">
+<h1>Showcase SaferActive</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://map.saferactive.org?&quot;</span>)</span></code></pre></div>
+<iframe src="https://map.saferactive.org?" width="768" height="400px" data-external="1">
+</iframe>
+</section>
+
+<section id="r-package-tgver-1" class="title-slide slide level1">
+<h1>R package: tgver (1)</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval=FALSE</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tgver<span class="sc">::</span><span class="fu">tgve</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson&quot;</span>)</span></code></pre></div>
+<iframe src="https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson" width="768" height="400px" data-external="1">
 </iframe>
 </section>
 
@@ -564,23 +636,19 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ol type="1">
 <li>do interactive geospatial analysis and visualization fast.</li>
 <li>use R’s echo-system to drive (1)</li>
-<li>facilitate web application deployment for production.</li>
-<li>learn/research</li>
+<li>facilitate web application deployment for production</li>
+<li>discover/research</li>
 </ol>
 </div>
 </div>
-<p>The old approach was using JS build tool chain.</p>
 </section>
 
 <section id="tgver-3" class="title-slide slide level1">
 <h1>tgver (3)</h1>
 <ul>
-<li><ol type="1">
-<li>Advanced geospatial analysis</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li></li>
-</ol></li>
+<li>For (1) Advanced geospatial analysis, one vignette is in.</li>
+<li>for (2) more docs and emphasis? Shiny/IPyWidget comparison. Why not URL params?</li>
+<li>For (3) the package needs more functions. We can leave this for future versions</li>
 </ul>
 </section>
 
@@ -589,26 +657,26 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="container">
 <div class="col">
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>Break grounds?</li>
+<li>Ask for features?</li>
+<li>Your help!</li>
 </ul>
 </div>
 <div class="col">
 <p><img alt="RStudio"
-src=""></p>
+src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png"> Image credit: <a href="https://medium.com/@jeremymeiss/on-open-source-and-building-communities-8a26d4712d68" class="uri">https://medium.com/@jeremymeiss/on-open-source-and-building-communities-8a26d4712d68</a></p>
 </div>
 </div>
 </section>
 
-<section>
-<section id="reg" class="title-slide slide level1">
-<h1>REG</h1>
-<p>Document to write a plan</p>
+<section id="conclusions" class="title-slide slide level1">
+<h1>Conclusions</h1>
+<ul>
+<li>Continue developing The TGVE to become an essential geospatial analytics tool</li>
+<li>Like the name RAM :)</li>
+</ul>
 </section>
-<section id="conclusions" class="slide level2">
-<h2># Conclusions</h2>
-</section></section>
+
 <section id="thank-you" class="title-slide slide level1">
 <h1>Thank you</h1>
 <ul>
@@ -688,18 +756,43 @@ Beecham, Roger, Jason Dykes, Layik Hama, and Nik Lomax. 2021. <span>“On the Us
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: false,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Opens links in an iframe preview overlay
         previewLinks: true,
         // Transition style
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
 
 
 
