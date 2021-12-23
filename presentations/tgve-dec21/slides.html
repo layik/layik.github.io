@@ -526,15 +526,49 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h3 class="date">2021-12-23</h3>
 </section>
 
-<section id="rationale" class="title-slide slide level1">
-<h1>Rationale</h1>
+<section id="who" class="title-slide slide level1">
+<h1>Who?</h1>
 <ul>
-<li>We needed it even before the funding</li>
-<li>Geovisualization is tricky</li>
-<li>Mainstream datas science workflows has gaps for geovisualization</li>
-<li>Discover new methods and techniques</li>
-<li>We can and are inspired by Tableau et al.</li>
+<li><a href="https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax">Nik Lomax</a>
+<ul>
+<li>Associate Professor of Data Analytics for Population Research</li>
+</ul></li>
+<li><a href="https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham">Roger Beecham</a>
+<ul>
+<li>Lecturer in Geographic Data Science, co-leader of the Centre for Spatial Analysis and Policy (CSAP)</li>
+</ul></li>
+<li>Layik Hama</li>
 </ul>
+</section>
+
+<section id="what" class="title-slide slide level1">
+<h1>What?</h1>
+<div class="container">
+<div class="col">
+<blockquote>
+<p>The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial data analysis, built using R and React (JavaScript).</p>
+</blockquote>
+</div>
+<div class="col">
+<p><img style="max-height:50vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png"></p>
+</div>
+</div>
+</section>
+
+<section id="why-rationale" class="title-slide slide level1">
+<h1>why (rationale)?</h1>
+<ul>
+<li>We needed it even before the funding (2019)</li>
+<li>Geovisualization is tough</li>
+<li>Mainstream data science workflows has gaps for geovisualization</li>
+<li>Web enables interactivity in data science (both in R and Python)</li>
+<li>To discover new methods and techniques</li>
+<li>We can and are inspired by giants like Tableau et al.</li>
+</ul>
+<blockquote>
+<p>“The most profound technologies are those that disappear”</p>
+</blockquote>
+<p>~ <span class="citation" data-cites="weiser1991computer">(Weiser 1991)</span></p>
 </section>
 
 <section id="so-far" class="title-slide slide level1">
@@ -600,6 +634,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>like: <code>www.instance.com?defaultURL=url&amp;geographyURL=geoURL&amp;geographycolumn=name</code></li>
 <li>future versions: <code>www.instance.com?...filter={column:[1,2]}</code></li>
 </ul>
+</section>
+
+<section id="jupyter-without-ipywidgets" class="title-slide slide level1">
+<h1>Jupyter without IPyWidgets</h1>
+<p><img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/></p>
+<p><a href="https://www.kaggle.com/layikhama/jupyter-tgve" class="uri">https://www.kaggle.com/layikhama/jupyter-tgve</a></p>
 </section>
 
 <section id="showcase-spenser" class="title-slide slide level1">
@@ -669,6 +709,23 @@ src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png"> Image credi
 </div>
 </section>
 
+<section id="future" class="title-slide slide level1">
+<h1>Future</h1>
+<ul>
+<li>Easy
+<ul>
+<li>Novel visualization layers</li>
+<li>Automated geography detection</li>
+<li>Dataset report generation</li>
+<li>A road map is here: <a href="https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap" class="uri">https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap</a></li>
+</ul></li>
+<li>Advanced:
+<ul>
+<li>AI module(s)</li>
+</ul></li>
+</ul>
+</section>
+
 <section id="conclusions" class="title-slide slide level1">
 <h1>Conclusions</h1>
 <ul>
@@ -685,7 +742,7 @@ src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png"> Image credi
 <li>Recent visualization paper - <span class="citation" data-cites="ijgi10040213">(Beecham et al. 2021)</span></li>
 </ul>
 <!-- <iframe src="https://github.com/tgve"></iframe> -->
-<p><img tyle="max-height:60vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png"></p>
+<p><img alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png"></p>
 </section>
 
 <section id="references" class="title-slide slide level1">
@@ -727,6 +784,10 @@ src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png"> Image credi
 .container{
     display: flex;
 }
+.col ul, .col ol {
+  padding-top: 20px;
+}
+
 .col{
     max-width:50%;
     flex: 1;
@@ -742,6 +803,9 @@ body {
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-ijgi10040213" class="csl-entry" role="doc-biblioentry">
 Beecham, Roger, Jason Dykes, Layik Hama, and Nik Lomax. 2021. <span>“On the Use of <span>‘Glyphmaps’</span> for Analysing the Scale and Temporal Spread of COVID-19 Reported Cases.”</span> <em>ISPRS International Journal of Geo-Information</em> 10 (4). <a href="https://doi.org/10.3390/ijgi10040213">https://doi.org/10.3390/ijgi10040213</a>.
+</div>
+<div id="ref-weiser1991computer" class="csl-entry" role="doc-biblioentry">
+Weiser, Mark. 1991. <span>“The Computer for the 21 St Century.”</span> <em>Scientific American</em> 265 (3): 94–105.
 </div>
 </div>
 </section>

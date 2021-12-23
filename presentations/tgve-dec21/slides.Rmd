@@ -17,13 +17,36 @@ bibliography: refs.bib
 #    <br/>
 ---
 
-# Rationale
+# Who?
+- [Nik Lomax](https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax) 
+  - Associate Professor of Data Analytics for Population Research
+- [Roger Beecham](https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham)
+  - Lecturer in Geographic Data Science, co-leader of the Centre for Spatial Analysis and Policy (CSAP)
+  
+- Layik Hama
 
-- We needed it even before the funding
-- Geovisualization is tricky
-- Mainstream datas science workflows has gaps for geovisualization
-- Discover new methods and techniques
-- We can and are inspired by Tableau et al.
+# What?
+
+<div class="container">
+<div class="col">
+> The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial data analysis, built using R and React (JavaScript).
+
+</div><div class="col">
+<img style="max-height:50vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
+</div></div>
+
+# why (rationale)?
+
+- We needed it even before the funding (2019)
+- Geovisualization is tough
+- Mainstream data science workflows has gaps for geovisualization 
+- Web enables interactivity in data science (both in R and Python)
+- To discover new methods and techniques
+- We can and are inspired by giants like Tableau et al.
+
+> "The most profound technologies are those that disappear" 
+
+~ [@weiser1991computer]
 
 # So far
 
@@ -80,6 +103,12 @@ We can pass data and geography sources (all API values) to an instance of the TG
 - easy use in R and Python workflows (Rmarkdown & Jupyter respectively)
 - like: `www.instance.com?defaultURL=url&geographyURL=geoURL&geographycolumn=name`
 - future versions: `www.instance.com?...filter={column:[1,2]}`
+
+# Jupyter without IPyWidgets
+
+<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/>
+
+https://www.kaggle.com/layikhama/jupyter-tgve
 
 # Showcase SPENSER
 ```{r}
@@ -140,6 +169,16 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
 </div>
 </div>
 
+# Future
+
+- Easy
+  - Novel visualization layers
+  - Automated geography detection
+  - Dataset report generation
+  - A road map is here: https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap
+- Advanced:
+  - AI module(s)
+
 # Conclusions
 
 - Continue developing The TGVE to become an essential geospatial analytics tool
@@ -152,7 +191,7 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
 * Recent visualization paper - [@ijgi10040213]
 
 <!-- <iframe src="https://github.com/tgve"></iframe> -->
-<img tyle="max-height:60vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
+<img alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
 
 
 # References
@@ -195,6 +234,10 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
 .container{
     display: flex;
 }
+.col ul, .col ol {
+  padding-top: 20px;
+}
+
 .col{
     max-width:50%;
     flex: 1;
