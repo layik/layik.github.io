@@ -95,32 +95,6 @@ function App() {
 }
 ```
 
-# API variables in URL
-
-We can pass data and geography sources (all API values) to an instance of the TGVE.
-
-- use the same instance with different datasets
-- easy use in R and Python workflows (Rmarkdown & Jupyter respectively)
-- like: `www.instance.com?defaultURL=url&geographyURL=geoURL&geographycolumn=name`
-- future versions: `www.instance.com?...filter={column:[1,2]}`
-
-# Jupyter without IPyWidgets
-
-<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/>
-
-https://www.kaggle.com/layikhama/jupyter-tgve
-
-# Showcase SPENSER
-```{r}
-knitr::include_url("https://geospenser.com")
-```
-
-# Showcase SaferActive
-
-```{r}
-knitr::include_url("https://map.saferactive.org?")
-```
-
 # R package: tgver (1)
 ```{r, eval=FALSE}
 # eval=FALSE
@@ -152,6 +126,32 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 - For (1) Advanced geospatial analysis, one vignette is in.
 - for (2) more docs and emphasis? Shiny/IPyWidget comparison. Why not URL params?
 - For (3) the package needs more functions. We can leave this for future versions
+
+# API variables in URL
+
+We can pass data and geography sources (all API values) to an instance of the TGVE.
+
+- use the same instance with different datasets
+- easy use in R and Python workflows (Rmarkdown & Jupyter respectively)
+- like: `www.instance.com?defaultURL=url&geographyURL=geoURL&geographycolumn=name`
+- future versions: `www.instance.com?...filter={column:[1,2]}`
+
+# Jupyter without IPyWidgets
+
+<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/>
+
+https://www.kaggle.com/layikhama/jupyter-tgve
+
+# Showcase SPENSER
+```{r}
+knitr::include_url("https://geospenser.com")
+```
+
+# Showcase SaferActive
+
+```{r}
+knitr::include_url("https://map.saferactive.org?")
+```
 
 # Build community
 

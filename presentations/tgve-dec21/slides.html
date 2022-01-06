@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="L Hama" />
-  <meta name="dcterms.date" content="2021-12-23" />
+  <meta name="dcterms.date" content="2022-01-06" />
   <title>Turing Geovisualization Engine</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -523,7 +523,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Turing Geovisualization Engine</h1>
     <h2 class="author">L Hama</h2>
-    <h3 class="date">2021-12-23</h3>
+    <h3 class="date">2022-01-06</h3>
 </section>
 
 <section id="who" class="title-slide slide level1">
@@ -625,42 +625,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 
-<section id="api-variables-in-url" class="title-slide slide level1">
-<h1>API variables in URL</h1>
-<p>We can pass data and geography sources (all API values) to an instance of the TGVE.</p>
-<ul>
-<li>use the same instance with different datasets</li>
-<li>easy use in R and Python workflows (Rmarkdown &amp; Jupyter respectively)</li>
-<li>like: <code>www.instance.com?defaultURL=url&amp;geographyURL=geoURL&amp;geographycolumn=name</code></li>
-<li>future versions: <code>www.instance.com?...filter={column:[1,2]}</code></li>
-</ul>
-</section>
-
-<section id="jupyter-without-ipywidgets" class="title-slide slide level1">
-<h1>Jupyter without IPyWidgets</h1>
-<p><img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/></p>
-<p><a href="https://www.kaggle.com/layikhama/jupyter-tgve" class="uri">https://www.kaggle.com/layikhama/jupyter-tgve</a></p>
-</section>
-
-<section id="showcase-spenser" class="title-slide slide level1">
-<h1>Showcase SPENSER</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://geospenser.com&quot;</span>)</span></code></pre></div>
-<iframe src="https://geospenser.com" width="768" height="400px" data-external="1">
-</iframe>
-</section>
-
-<section id="showcase-saferactive" class="title-slide slide level1">
-<h1>Showcase SaferActive</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://map.saferactive.org?&quot;</span>)</span></code></pre></div>
-<iframe src="https://map.saferactive.org?" width="768" height="400px" data-external="1">
-</iframe>
-</section>
-
 <section id="r-package-tgver-1" class="title-slide slide level1">
 <h1>R package: tgver (1)</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval=FALSE</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tgver<span class="sc">::</span><span class="fu">tgve</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval=FALSE</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tgver<span class="sc">::</span><span class="fu">tgve</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson&quot;</span>)</span></code></pre></div>
 <iframe src="https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson" width="768" height="400px" data-external="1">
 </iframe>
 </section>
@@ -690,6 +659,37 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>for (2) more docs and emphasis? Shiny/IPyWidget comparison. Why not URL params?</li>
 <li>For (3) the package needs more functions. We can leave this for future versions</li>
 </ul>
+</section>
+
+<section id="api-variables-in-url" class="title-slide slide level1">
+<h1>API variables in URL</h1>
+<p>We can pass data and geography sources (all API values) to an instance of the TGVE.</p>
+<ul>
+<li>use the same instance with different datasets</li>
+<li>easy use in R and Python workflows (Rmarkdown &amp; Jupyter respectively)</li>
+<li>like: <code>www.instance.com?defaultURL=url&amp;geographyURL=geoURL&amp;geographycolumn=name</code></li>
+<li>future versions: <code>www.instance.com?...filter={column:[1,2]}</code></li>
+</ul>
+</section>
+
+<section id="jupyter-without-ipywidgets" class="title-slide slide level1">
+<h1>Jupyter without IPyWidgets</h1>
+<p><img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/></p>
+<p><a href="https://www.kaggle.com/layikhama/jupyter-tgve" class="uri">https://www.kaggle.com/layikhama/jupyter-tgve</a></p>
+</section>
+
+<section id="showcase-spenser" class="title-slide slide level1">
+<h1>Showcase SPENSER</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://geospenser.com&quot;</span>)</span></code></pre></div>
+<iframe src="https://geospenser.com" width="768" height="400px" data-external="1">
+</iframe>
+</section>
+
+<section id="showcase-saferactive" class="title-slide slide level1">
+<h1>Showcase SaferActive</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://map.saferactive.org?&quot;</span>)</span></code></pre></div>
+<iframe src="https://map.saferactive.org?" width="768" height="400px" data-external="1">
+</iframe>
 </section>
 
 <section id="build-community" class="title-slide slide level1">
