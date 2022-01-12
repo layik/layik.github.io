@@ -114,7 +114,7 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 </div>
 <div class="col">
 
-1. do interactive geospatial analysis and visualization fast. 
+1. do interactive geospatial analysis and visualization fast.
 2. use R’s echo-system to drive (1) 
 3. facilitate web application deployment for production
 4. discover/research
@@ -126,6 +126,10 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 - For (1) Advanced geospatial analysis, one vignette is in.
 - for (2) more docs and emphasis? Shiny/IPyWidget comparison. Why not URL params?
 - For (3) the package needs more functions. We can leave this for future versions
+
+# tgver (4) - time permitting
+
+The R vignette: https://tgve.github.io/tgver/articles/r-and-js.html
 
 # Highlight (1)
 
