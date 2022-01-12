@@ -127,7 +127,9 @@ knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://ra
 - for (2) more docs and emphasis? Shiny/IPyWidget comparison. Why not URL params?
 - For (3) the package needs more functions. We can leave this for future versions
 
-# API variables in URL
+# Highlight (1)
+
+<h2> API variables in URL </h2>
 
 We can pass data and geography sources (all API values) to an instance of the TGVE.
 
@@ -136,9 +138,10 @@ We can pass data and geography sources (all API values) to an instance of the TG
 - like: `www.instance.com?defaultURL=url&geographyURL=geoURL&geographycolumn=name`
 - future versions: `www.instance.com?...filter={column:[1,2]}`
 
-# Jupyter without IPyWidgets
+# Highlight (2)
+<h3> Jupyter without IPyWidgets </h3>
 
-<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="80%"/>
+<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/147249542-fccdfb53-0fa9-4dc7-bf08-9c081d70d279.png" width="70%"/>
 
 https://www.kaggle.com/layikhama/jupyter-tgve
 
@@ -152,6 +155,15 @@ knitr::include_url("https://geospenser.com")
 ```{r}
 knitr::include_url("https://map.saferactive.org?")
 ```
+
+# Desktop
+
+- Build Tools use Rust Lang
+- Using WebAssembly & WebViews
+- TGVE npm package in a CRA app is Tauri compliant
+- More at: https://github.com/tgve/eAtlas/wiki/Using-TGVE-as-Native-App
+
+<img alt="kaggle" src="https://user-images.githubusercontent.com/408568/149109939-ce8c300d-933d-4cdd-99a1-2e5e5d4900a1.png" width="50%"/>
 
 # Build community
 
@@ -181,8 +193,10 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
 
 # Conclusions
 
-- Continue developing The TGVE to become an essential geospatial analytics tool
-- Like the name RAM :)
+- Current functionality is enough to get the packages out
+- Funding to collaborate with Turing REG (Research Engineering Group) 
+- Continue developing The TGVE
+- Continue building a community around TGVE
 
 # Thank you
 
