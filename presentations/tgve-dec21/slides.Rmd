@@ -29,7 +29,7 @@ bibliography: refs.bib
 
 <div class="container">
 <div class="col">
-> The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial data analysis, built using R and React (JavaScript).
+> The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial[@zou2018overview] data analysis, built using R and React (JavaScript).
 
 </div><div class="col">
 <img style="max-height:50vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
