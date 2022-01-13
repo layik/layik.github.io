@@ -187,13 +187,14 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
 
 # Future
 
-- Easy
+- Obvious
   - Novel visualization layers
   - Automated geography detection
   - Dataset report generation
   - A road map is here: https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap
-- Advanced:
-  - AI module(s)
+- AI module(s)? 
+  - VISAI?
+  - Data profiling?
 
 # Conclusions
 
