@@ -86,7 +86,7 @@ function App() {
   return (
     <Eatlas 
     defaultURL='https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla&structure={"date":"date","newCases":"newCasesBySpecimenDate","ctyua19cd":"areaCode"}&format=csv'
-    geographyURL='https://raw.githubusercontent.com/tgve/eatlas-data/main/utlas.geojson'
+    geographyURL='https://raw.githubusercontent.com/tgve/example-data/main/utlas.geojson'
     geographyColumn='ctyua19cd'
     column="newCases"
     dark="false"
@@ -101,7 +101,7 @@ function App() {
 tgver::tgve()
 ```
 ```{r}
-knitr::include_url("https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson")
+knitr::include_url("https://tgve.github.io/app/?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
 ```
 
 
@@ -165,7 +165,7 @@ knitr::include_url("https://map.saferactive.org?")
 - Build Tools use Rust Lang
 - Using WebAssembly & WebViews
 - TGVE npm package in a CRA app is Tauri compliant
-- More at: https://github.com/tgve/eAtlas/wiki/Using-TGVE-as-Native-App
+- More at: https://github.com/tgve/tgvejs
 
 <img alt="kaggle" src="https://user-images.githubusercontent.com/408568/149109939-ce8c300d-933d-4cdd-99a1-2e5e5d4900a1.png" width="50%"/>
 
@@ -191,7 +191,7 @@ Image credit: https://medium.com/@jeremymeiss/on-open-source-and-building-commun
   - Novel visualization layers
   - Automated geography detection
   - Dataset report generation
-  - A road map is here: https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap
+
 - AI module(s)? 
   - VISAI?
   - Data profiling?

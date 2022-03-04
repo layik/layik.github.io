@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="L Hama" />
-  <meta name="dcterms.date" content="2022-01-13" />
+  <meta name="dcterms.date" content="2022-03-04" />
   <title>Turing Geovisualization Engine</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -523,7 +523,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Turing Geovisualization Engine</h1>
     <h2 class="author">L Hama</h2>
-    <h3 class="date">2022-01-13</h3>
+    <h3 class="date">2022-03-04</h3>
 </section>
 
 <section id="who" class="title-slide slide level1">
@@ -616,7 +616,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>Eatlas </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    defaultURL<span class="op">=</span><span class="st">&#39;https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla&amp;structure={&quot;date&quot;:&quot;date&quot;,&quot;newCases&quot;:&quot;newCasesBySpecimenDate&quot;,&quot;ctyua19cd&quot;:&quot;areaCode&quot;}&amp;format=csv&#39;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    geographyURL<span class="op">=</span><span class="st">&#39;https://raw.githubusercontent.com/tgve/eatlas-data/main/utlas.geojson&#39;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    geographyURL<span class="op">=</span><span class="st">&#39;https://raw.githubusercontent.com/tgve/example-data/main/utlas.geojson&#39;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    geographyColumn<span class="op">=</span><span class="st">&#39;ctyua19cd&#39;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">&quot;newCases&quot;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    dark<span class="op">=</span><span class="st">&quot;false&quot;</span></span>
@@ -629,8 +629,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h1>R package: tgver (1)</h1>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval=FALSE</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tgver<span class="sc">::</span><span class="fu">tgve</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson&quot;</span>)</span></code></pre></div>
-<iframe src="https://tgve.github.io/eatlas-template?defaultURL=https://raw.githubusercontent.com/tgve/eatlas-data/main/casualties_100.geojson" width="768" height="400px" data-external="1">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://tgve.github.io/app/?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson&quot;</span>)</span></code></pre></div>
+<iframe src="https://tgve.github.io/app/?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson" width="768" height="400px" data-external="1">
 </iframe>
 </section>
 
@@ -709,7 +709,7 @@ Jupyter without IPyWidgets
 <li>Build Tools use Rust Lang</li>
 <li>Using WebAssembly &amp; WebViews</li>
 <li>TGVE npm package in a CRA app is Tauri compliant</li>
-<li>More at: <a href="https://github.com/tgve/eAtlas/wiki/Using-TGVE-as-Native-App" class="uri">https://github.com/tgve/eAtlas/wiki/Using-TGVE-as-Native-App</a></li>
+<li>More at: <a href="https://github.com/tgve/tgvejs" class="uri">https://github.com/tgve/tgvejs</a></li>
 </ul>
 <p><img alt="kaggle" src="https://user-images.githubusercontent.com/408568/149109939-ce8c300d-933d-4cdd-99a1-2e5e5d4900a1.png" width="50%"/></p>
 </section>
@@ -739,7 +739,6 @@ src="https://miro.medium.com/max/1400/1*uPU7iG4_TJYenjuY8J8WWQ.png"> Image credi
 <li>Novel visualization layers</li>
 <li>Automated geography detection</li>
 <li>Dataset report generation</li>
-<li>A road map is here: <a href="https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap" class="uri">https://github.com/tgve/eAtlas/wiki/Using-TGVE#roadmap</a></li>
 </ul></li>
 <li>AI module(s)?
 <ul>

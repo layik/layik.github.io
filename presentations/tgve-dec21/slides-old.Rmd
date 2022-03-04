@@ -39,7 +39,7 @@ bibliography: refs.bib
 tgver::tgve()
 ```
 ```{r}
-knitr::include_url("https://tgve.github.io/eatlas-template")
+knitr::include_url("https://tgve.github.io/app/")
 ```
 
 

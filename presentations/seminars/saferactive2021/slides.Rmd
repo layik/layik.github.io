@@ -17,7 +17,6 @@ bibliography: refs.bib
 ---
 
 # Talk Overview
-
 <div class="container">
 <div class="col">
 ![SaferActive TGVE](https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png)
@@ -29,6 +28,7 @@ bibliography: refs.bib
 * Visualizing SaferActive data on TGVE
 
 </div>
+NOTE: these slides refer to repositories which have changed (4th Mar 2022).
 </div>
 
 # TGVE (1)
@@ -53,7 +53,7 @@ bibliography: refs.bib
 <img width="70%" alt="SPENSER" src="https://user-images.githubusercontent.com/408568/118053696-e5f09d00-b37c-11eb-854e-4f4a58260c6d.png">
 
 - [Wiki](https://github.com/layik/eAtlas/wiki/Using-TGVE#using-github-pages) entry to do this
-    (1) Use the [template](https://github.com/layik/eatlas-template) repository & Setup github pages on new github settings
+    (1) Use the [template](https://github.com/tgve/app/) repository & Setup github pages on new github settings
     (2) Get data and add it to your repository or pull it from external source, anywhere with ["CORS"](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) permissions
     (3) Change the environment variables on the Actions. Commit and have a coffee
 
