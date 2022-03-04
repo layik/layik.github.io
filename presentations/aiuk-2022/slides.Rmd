@@ -1,0 +1,151 @@
+---
+title: "Turing Geovisualization Engine"
+subtitle: "AIUK 2022"
+abstract: ""
+author: 
+  - TGVE Team
+date: '`r Sys.Date()`'
+output:
+  revealjs::revealjs_presentation:
+    theme: night
+    self_contained: false
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+bibliography: refs.bib
+# <section data-background-image="https://user-images.githubusercontent.com/408568/84669610-f1dda000-af1c-11ea-8622-18570449ba70.png"st ></section>
+#    <br/>    
+#    <br/>
+---
+
+# Who?
+- [Nik Lomax](https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax) 
+  - Associate Professor of Data Analytics for Population Research
+- [Roger Beecham](https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham)
+  - Lecturer in Geographic Data Science, co-leader of the Centre for Spatial Analysis and Policy (CSAP)
+  
+- Layik Hama
+
+# What?
+
+<div class="container">
+<div class="col">
+> The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial[@zou2018overview] data analysis, built using R and React (JavaScript).
+
+</div><div class="col">
+<img style="max-height:50vh" alt="tgve home" src="https://user-images.githubusercontent.com/408568/137463237-014ff068-0966-47f9-b7fe-fbb91d85bf9b.png">
+</div></div>
+
+# why (rationale)?
+
+- We needed it even before the funding (2019)
+- Geovisualization is tough
+- Mainstream data science workflows has gaps for geovisualization 
+- Web enables interactivity in data science (both in R and Python)
+- To discover new methods and techniques
+- We can and are inspired by giants like Tableau et al.
+
+> "The most profound technologies are those that disappear" 
+
+~ [@weiser1991computer]
+
+# So far
+
+<div class="container">
+<div class="col">
+![SaferActive TGVE](https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png)
+</div>
+<div class="col">
+* "stable" but still labelled "beta" npm package
+* showcased two national scale datasets
+* new R package `tgver` (not on CRAN yet)
+* scalable, decoupled and production grade application
+
+</div>
+</div>
+
+# The npm package
+
+- Easy usage in various environments (web, mobile, desktop and GitHub pages)
+  - data democratization
+- API driven development
+- Automating laborious tasks (Smart)
+- Current challenge: modular and extensible
+
+# R package: tgver
+```{r, eval=FALSE}
+# eval=FALSE
+tgver::tgve()
+```
+```{r}
+knitr::include_url("https://tgve.github.io/app/?defaultURL=https://raw.githubusercontent.com/tgve/example-data/main/casualties_100.geojson")
+```
+
+
+# Showcase SPENSER
+```{r}
+knitr::include_url("https://geospenser.com")
+```
+
+# Showcase SaferActive
+
+```{r}
+knitr::include_url("https://map.saferactive.org?")
+```
+
+# References
+
+
+<style>
+.box {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    /* width: 80%;   create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.box:before,
+.box:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.box:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.box:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
+
+.container{
+    display: flex;
+}
+.col ul, .col ol {
+  padding-top: 20px;
+}
+
+.col{
+    max-width:50%;
+    flex: 1;
+}
+body {
+    background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 3% 96%;
+}
+</style>
+<!-- https://user-images.githubusercontent.com/408568/118673703-2161f000-b7f1-11eb-84af-1fd3b15a94cd.png -->
