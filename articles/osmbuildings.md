@@ -31,7 +31,6 @@ function App() {
   return (
     <Tgve
       onViewStateChange={({ viewState }) => {
-        console.log("osmbuildings")
         if (viewState) {
           setVs(viewState)
           const newURL = generateURL()
@@ -58,7 +57,6 @@ function App() {
     const y = lat2tile(vs.latitude, z);
 
     const tileURL = `https://data.osmbuildings.org/0.2/anonymous/tile/${z}/${x}/${y}.json`;
-    // console.log(tileURL, vs);
     return tileURL;
   }
 }
@@ -74,7 +72,7 @@ function lat2tile(lat, zoom) { return (Math.floor((1 - Math.log(Math.tan(lat * M
 export default App;
 ```
 
-The above is a very simple component that keeps updating a TGVE instance with OSM data using TGVE version 1.5.1 callback, namely `onViewStateChange`. As the TGVE returns the current viewport of the map, we can generate an OSM tile URL that we can fetch building GeoJSON data from and in turn feed the data back to TGVE.
+The above is a very simple component that keeps updating a TGVE instance with OSM data using TGVE version 1.5.1 callback, namely `onViewStateChange`. As the TGVE returns the current viewport of the map, we can generate an OSM tile URL that we can fetch building GeoJSON data from and in turn feed the data back to the TGVE application.
 
 The result would be something like:
 <img src="https://user-images.githubusercontent.com/408568/189155598-d4809604-6f6d-4863-82b6-34721d12c190.png" width="100%">
