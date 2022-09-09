@@ -76,3 +76,11 @@ The above is a very simple component that keeps updating a TGVE instance with OS
 
 The result would be something like:
 <img src="https://user-images.githubusercontent.com/408568/189155598-d4809604-6f6d-4863-82b6-34721d12c190.png" width="100%">
+
+A more user friendly and maybe clone of the Leaflet plugin mentioned above would be to update the TGVE app from the code above with splitting the screen into four squares, fetching each squre centre tiles in this simple algorithm:
+
+1. Start with the four square centres of a default view port
+2. As the user pans or zooms, recalculate the four centres of current view port
+3. Update the state to reflect (2)
+
+What is currently missing in the TGVE is DeckGL's transition effect to emulate the Leaflet plugin. This has not been committed to the TGVE yet but was tested and looks promising.
