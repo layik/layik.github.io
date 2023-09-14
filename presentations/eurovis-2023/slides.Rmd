@@ -1,9 +1,9 @@
 ---
-title: "TGVE: a tool for analysis and visualization of geospatial data"
-subtitle: "EuroVIS 2023 - Leipzig"
+title: "Turing Geovisualization Engine"
+subtitle: "AIUK 2022"
 abstract: ""
 author: 
-  - Layik Hama
+  - TGVE Team
 date: '`r Sys.Date()`'
 output:
   revealjs::revealjs_presentation:
@@ -19,13 +19,13 @@ bibliography: refs.bib
 ---
 
 # Who?
-- Layik Hama
-  - Research Fellow in data visualization
 - [Nik Lomax](https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax) 
-  - Professor of Population Geography
+  - Associate Professor of Data Analytics for Population Research
 - [Roger Beecham](https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham)
   - Lecturer in Geographic Data Science, co-leader of the Centre for Spatial Analysis and Policy (CSAP)
   
+- Layik Hama
+
 # What?
 
 <div class="container">
@@ -93,11 +93,6 @@ knitr::include_url("https://geospenser.com")
 knitr::include_url("https://map.saferactive.org?")
 ```
 
-# Q & A
-
-![SaferActive TGVE](https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png)
-
-
 # References
 
 
@@ -148,9 +143,9 @@ knitr::include_url("https://map.saferactive.org?")
 }
 body {
     background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
-    background-size: 5%;
+    background-size: 10%;
     background-repeat: no-repeat;
-    background-position: 96% 3%;
+    background-position: 3% 96%;
 }
 </style>
 <!-- https://user-images.githubusercontent.com/408568/118673703-2161f000-b7f1-11eb-84af-1fd3b15a94cd.png -->

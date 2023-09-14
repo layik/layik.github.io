@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Layik Hama" />
-  <meta name="dcterms.date" content="2023-05-18" />
-  <title>TGVE: a tool for analysis and visualization of geospatial data</title>
+  <meta name="author" content="TGVE Team" />
+  <meta name="dcterms.date" content="2022-03-04" />
+  <title>Turing Geovisualization Engine</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -514,40 +514,31 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="slides_files/header-attrs-2.21/header-attrs.js"></script>
+    <script src="slides_files/header-attrs-2.10/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 <section>
-    <h1 class="title">TGVE: a tool for analysis and visualization of
-geospatial data</h1>
-  <h1 class="subtitle">EuroVIS 2023 - Leipzig</h1>
-    <h2 class="author">Layik Hama</h2>
-    <h3 class="date">2023-05-18</h3>
+    <h1 class="title">Turing Geovisualization Engine</h1>
+  <h1 class="subtitle">AIUK 2022</h1>
+    <h2 class="author">TGVE Team</h2>
+    <h3 class="date">2022-03-04</h3>
 </section>
 
 <section id="who" class="title-slide slide level1">
 <h1>Who?</h1>
 <ul>
-<li>Layik Hama
+<li><a href="https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax">Nik Lomax</a>
 <ul>
-<li>Research Fellow in data visualization</li>
+<li>Associate Professor of Data Analytics for Population Research</li>
 </ul></li>
-<li><a
-href="https://environment.leeds.ac.uk/geography/staff/1064/dr-nik-lomax">Nik
-Lomax</a>
+<li><a href="https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham">Roger Beecham</a>
 <ul>
-<li>Professor of Population Geography</li>
+<li>Lecturer in Geographic Data Science, co-leader of the Centre for Spatial Analysis and Policy (CSAP)</li>
 </ul></li>
-<li><a
-href="https://environment.leeds.ac.uk/geography/staff/1003/dr-roger-beecham">Roger
-Beecham</a>
-<ul>
-<li>Lecturer in Geographic Data Science, co-leader of the Centre for
-Spatial Analysis and Policy (CSAP)</li>
-</ul></li>
+<li>Layik Hama</li>
 </ul>
 </section>
 
@@ -556,10 +547,7 @@ Spatial Analysis and Policy (CSAP)</li>
 <div class="container">
 <div class="col">
 <blockquote>
-<p>The Turing Geovisualisation Engine (TGVE) is an open source,
-web-based, interactive visual analytics tool for geospatial<span
-class="citation" data-cites="zou2018overview">(Zou et al. 2018)</span>
-data analysis, built using R and React (JavaScript).</p>
+<p>The Turing Geovisualisation Engine (TGVE) is an open source, web-based, interactive visual analytics tool for geospatial<span class="citation" data-cites="zou2018overview">(Zou et al. 2018)</span> data analysis, built using R and React (JavaScript).</p>
 </blockquote>
 </div>
 <div class="col">
@@ -574,25 +562,21 @@ data analysis, built using R and React (JavaScript).</p>
 <li>We needed it even before the funding (2019)</li>
 <li>Geovisualization is tough</li>
 <li>Mainstream data science workflows has gaps for geovisualization</li>
-<li>Web enables interactivity in data science (both in R and
-Python)</li>
+<li>Web enables interactivity in data science (both in R and Python)</li>
 <li>To discover new methods and techniques</li>
 <li>We can and are inspired by giants like Tableau et al.</li>
 </ul>
 <blockquote>
 <p>“The most profound technologies are those that disappear”</p>
 </blockquote>
-<p>~ <span class="citation" data-cites="weiser1991computer">(Weiser
-1991)</span></p>
+<p>~ <span class="citation" data-cites="weiser1991computer">(Weiser 1991)</span></p>
 </section>
 
 <section id="so-far" class="title-slide slide level1">
 <h1>So far</h1>
 <div class="container">
 <div class="col">
-<p><img
-data-src="https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png"
-alt="SaferActive TGVE" /></p>
+<p><img data-src="https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png" alt="SaferActive TGVE" /></p>
 </div>
 <div class="col">
 <ul>
@@ -608,8 +592,7 @@ alt="SaferActive TGVE" /></p>
 <section id="the-npm-package" class="title-slide slide level1">
 <h1>The npm package</h1>
 <ul>
-<li>Easy usage in various environments (web, mobile, desktop and GitHub
-pages)
+<li>Easy usage in various environments (web, mobile, desktop and GitHub pages)
 <ul>
 <li>data democratization</li>
 </ul></li>
@@ -640,13 +623,6 @@ pages)
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://map.saferactive.org?&quot;</span>)</span></code></pre></div>
 <iframe src="https://map.saferactive.org?" width="768" height="400px" data-external="1">
 </iframe>
-</section>
-
-<section id="q-a" class="title-slide slide level1">
-<h1>Q &amp; A</h1>
-<p><img
-data-src="https://user-images.githubusercontent.com/408568/134366068-ccbb553b-df85-4cfb-afea-e3bbf396d3fd.png"
-alt="SaferActive TGVE" /></p>
 </section>
 
 <section id="references" class="title-slide slide level1">
@@ -698,29 +674,18 @@ alt="SaferActive TGVE" /></p>
 }
 body {
     background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
-    background-size: 5%;
+    background-size: 10%;
     background-repeat: no-repeat;
     background-position: 3% 96%;
-    background-image: url(https://resources.library.leeds.ac.uk/final-chapter/img/logo_min_upperx.png);
-    background-size: 5%;
-    background-repeat: no-repeat;
-    background-position: 96% 3%;
 }
 </style>
 <!-- https://user-images.githubusercontent.com/408568/118673703-2161f000-b7f1-11eb-84af-1fd3b15a94cd.png -->
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="doc-bibliography">
-<div id="ref-weiser1991computer" class="csl-entry"
-role="doc-biblioentry">
-Weiser, Mark. 1991. <span>“The Computer for the 21 St Century.”</span>
-<em>Scientific American</em> 265 (3): 94–105.
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-weiser1991computer" class="csl-entry" role="doc-biblioentry">
+Weiser, Mark. 1991. <span>“The Computer for the 21 St Century.”</span> <em>Scientific American</em> 265 (3): 94–105.
 </div>
 <div id="ref-zou2018overview" class="csl-entry" role="doc-biblioentry">
-Zou, Taotao, Wenshu Li, Pengyuan Liu, Xianchuang Su, Hai Huang, Yang
-Han, and Xiaoying Guo. 2018. <span>“An Overview of Geospatial
-Information Visualization.”</span> In <em>2018 IEEE International
-Conference on Progress in Informatics and Computing (PIC)</em>, 250–54.
-IEEE.
+Zou, Taotao, Wenshu Li, Pengyuan Liu, Xianchuang Su, Hai Huang, Yang Han, and Xiaoying Guo. 2018. <span>“An Overview of Geospatial Information Visualization.”</span> In <em>2018 IEEE International Conference on Progress in Informatics and Computing (PIC)</em>, 250–54. IEEE.
 </div>
 </div>
 </section>
