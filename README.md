@@ -2,20 +2,15 @@ Posts:
 -
 * [Semantic Processing using ChatGPT](https://layik.github.io/gptdata) - Sep 2023
 
+Articles before LLMs:
+
 * [OSM Buildings with TGVE](https://layik.github.io/osmbuildings) - Sep 2022
-
 * [Rolling up a React Component Library](https://layik.github.io/rollup)
-
 * [Deploy a React app on gh-pages](https://layik.github.io/ghpages)
-
 * [SPENSER data science showcase](https://layik.github.io/spenser)
-
 * [DeckGL custom layer](https://layik.github.io/decklayer)
-
 * [Bashing data](https://layik.github.io/bash)
-
 * [GitHub Actions](https://layik.github.io/ghactions).
-
 * [ElectronJS - accessing local file system](https://layik.github.io/electronjsfiles).
 * [iOS keyboard extension height on iPhone X](https://layik.github.io/iOSkb).
 * [Importing JSX into HTML](https://layik.github.io/htmljsx).
