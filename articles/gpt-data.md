@@ -33,11 +33,15 @@ Sure, here are the counts for each group:
 9. Concepts and ideas: 18
 10. Miscellaneous: 12
 
+As we can see the total grouped is 134 (63 + 2 + 2 + 3 + 9 + 8 + 9 + 8 + 18 + 12), while the list of titles provided to the model was 197. Indeed, as of 26th September 2023, when asked ChatGPT4+ model to sum the numbers in the aboe 10 item list, it did list the numbers correctly to (63 + 2 + 2 + 3 + 9 + 8 + 9 + 8 + 18 + 12) but came up with 135. Upon telling the machine it was failing its math it apologised and confirmed the sum to be 134.
+
 The key to all this is not how the OpenAI's ChatGPT does the processing but how the model does the semantic grouping of the topics. For example grouping the "relevant" topics under `Countries and regions` (63 of them) rather than "Geographic regions" or any other topic name. This is an area of research which I have been exposed to back in 2015 whilst working on a knowledge structuring project; specifically looking at replicating www.freebase.com which became Google Knowledge Graph.
 
 How this is done in the GPT model by OpenAI is much more interesting and "natural" rather than having a team of experts (as it was the case for www.freebase.com) to define an "ontology" and then structuring human kowledge around such an ontology. I am aware what the expert would come up with would be a [Delphi](https://en.wikipedia.org/wiki/Delphi_method) method of doing the semantic structuring of knowledge. How the OpenAI model does it, I hope but doubt it, if ever defined would be worth studying and understanding.
 
-This short article is just a refresher for me but also an area that I would be following as NLP (Natural Language Processing and LLMs (Large Language Models) continue to develop. Since drafting this article, I have done more with the model but has asked the model to limit the scope of the semantic grouping of free text rather than the data in this article.
+This short article is just a refresher for me but also an area that I would be following as NLP (Natural Language Processing and LLMs (Large Language Models) continue to develop. As a snapshot of publications, as of 26th Sep 2023 if you search on Google Scholar for [`"semantic processing" "chatgpt"`](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22semantic+processing%22+%22chatgpt%22&btnG=) you would get about 67 results, if you add "ontology" to the keywords, there were around 12 results only.
+
+Since drafting this article, I have done a little more with the model, but have asked the model to limit the scope of the semantic grouping and used free/unstructured text rather than the clean data at the end of this article.
 
 The output from above JS line is below in case you need it. I cannot remember if I used the free GPT3.5 or the GPT4 model and would welcome your feedback.
 
