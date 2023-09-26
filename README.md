@@ -1,5 +1,9 @@
 Posts:
-- 
+-
+* [Semantic Processing using ChatGPT](https://layik.github.io/gptdata) - Sep 2023
+
+* [OSM Buildings with TGVE](https://layik.github.io/osmbuildings) - Sep 2022
+
 * [Rolling up a React Component Library](https://layik.github.io/rollup)
 
 * [Deploy a React app on gh-pages](https://layik.github.io/ghpages)
@@ -22,6 +26,9 @@ Posts:
 
 Presentations:
 -
+* [DynAIRx Vis 23](https://layik.github.io/presentations/viztig23/viztig23.pdf)
+* [TGVE Eurovis 23](https://diglib.eg.org/handle/10.2312/evs20231045)
+* [AIUK May 22](https://layik.github.io/presentations/aiuk-2022/slides.html)
 * [TGVE Dec 21](https://layik.github.io/presentations/tgve-dec21/slides.html)
 * [LIDA May 21](https://layik.github.io/presentations/seminars/lida2021/slides.html)
 * [LeedsJS](https://layik.github.io/presentations/leedsjs/slides.html) (27th November 2019)
@@ -37,7 +44,7 @@ Tutorials:
 This readme.md file serves both Layik's GitHub Pages and the [Repo](https://github.com/layik/layik.github.io)
 
 
-This microblog is created without much Jekyll. Jekyll powers `gh-pages`, will do my best to keep minimal meta-code in here. You too can create your blog this way. Here is the header in article "about.md". 
+This microblog is created without much Jekyll. Jekyll powers `gh-pages`, will do my best to keep minimal meta-code in here. You too can create your blog this way. Here is the header in article "about.md".
 
 Each MD (Markdown) file is pure and only contains a header YML config for Jekyll to find the URL and nothign else. If there is a counterpart Rmd (R Markdown) file, naturally it builds the Markdown.
 
