@@ -1,0 +1,7 @@
+.center p, .center h1 {
+  text-align: center;
+}
+
+.column {
+  word-wrap: break-word;
+}

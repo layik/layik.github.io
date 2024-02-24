@@ -1,0 +1,195 @@
+---
+engine: knitr
+format:
+  revealjs:
+    slide-number: c/t
+    width: 1600
+    height: 1024
+    logo: "https://comms.leeds.ac.uk/wp-content/uploads/sites/51/2021/04/Visual-identity-section-images--e1618925864440-250x81.png"
+    footer: "[University of Leeds](https://leeds.ac.uk)"
+    css: ["style.css"]
+    theme: simple
+    echo: true
+---
+
+# Knowledge Graphs in the age of ChatGPT
+
+<h3 style="text-align:center;"> Can RDF play any role?</h3>
+
+Layik Hama
+
+School of Computing
+
+March 2024
+
+## Overview
+- Brief introduction (~ 3 mins)
+- Brief history of www.freebase.com (~ 10 mins)
+- Reproducing www.freebase.com using Blazegraph (~ 15 mins)
+- Role of RDF in the age of Transformers (~ 10 mins)
+- Q&A (~10 mins)
+
+# Brief introduction
+<iframe style="width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
+
+## test
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+# Brief history of Metaweb
+
+## Timeline and people
+::: columns
+::: {.column width="40%"}
+- Important people:
+  - Veda Hlubinka-Cook: [wp:Veda Hlubinka-Cook](https://en.wikipedia.org/wiki/Veda_Hlubinka-Cook)
+  - John Giannadrea: [wp:John_Giannandrea](https://en.wikipedia.org/wiki/John_Giannandrea)
+  - Daniel Hillis: [wp:Danny_Hillis](https://en.wikipedia.org/wiki/Danny_Hillis)
+  - Kurt Bollacker: [wp:Kurt_Bollacker](https://en.wikipedia.org/wiki/Kurt_Bollacker)
+- Startup: 2005
+- Acquired by Google in 2010
+
+:::
+::: {.column width="60%"}
+![](https://i.ebayimg.com/images/g/uR8AAOSwQI1lj6xJ/s-l1600.jpg)
+~ D Hillis
+:::
+:::
+
+## www.freebase.com
+<iframe style="background-color:grey" width="100%" height="90%" src="https://www.youtube.com/embed/Wa__x-wUKWw?si=B0EF0Gn9ot2OpqTi&amp;start=1200" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+https://en.wikipedia.org/wiki/Alphabet_of_human_thought
+
+## Step 3
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+# Reproducing www.freebase.com using Blazegraph
+
+## Initial work
+::: columns
+::: {.column width="40%"}
+- Understanding the model behind www.freebase.com
+- Find the right tripple store (graph database)
+- Workout how we can interact with it
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+## Blazegraph for freebase.com
+::: columns
+::: {.column width="40%"}
+- I had a chat with X and they quoted us
+- We agreed on roughly what could get us started
+  - No images and any images coming would be from Wikipedia
+  - Workout the tech-stack that we would use
+  - Agree on the amount of data (tripples) to store
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+## Practical requirements
+::: columns
+::: {.column width="40%"}
+- Communications and teams (US, Canada and Germany)
+- Infrastructure (128GB server) to get us started
+  - Future sharding and scaling
+  - Plans for possible small data centre
+- Timeline etc.
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+# Knowledge Graphs in the age of Transformers
+
+## Generation of KGs (1)
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+## Generation of KGs (2)
+::: columns
+::: {.column width="60%"}
+
+- Mihindukulasooriya, Nandana, et al. "Text2kgbench: A benchmark for ontology-driven knowledge graph generation from text." International Semantic Web Conference. Cham: Springer Nature Switzerland, 2023.
+  - https://github.com/cenguix/Text2KGBench
+
+
+
+:::
+::: {.column width="40%"}
+<img src="https://github.com/layik/kurdi/assets/408568/f3df1b3c-b5b4-4566-a9c9-66a3f4589851" alt="Image from Mihindukulasooriya et al 2023"/>
+Image from Mihindukulasooriya et al 2023
+:::
+:::
+
+## Enhancing Transformers
+::: columns
+::: {.column width="60%"}
+- Shi, Xiao, et al. "Hallucination mitigation in natural language generation from large-scale open-domain knowledge graphs." Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.
+
+:::
+::: {.column width="40%"}
+<img src="https://github.com/layik/layik.github.io/assets/408568/5dbe9ed0-12e2-44aa-8733-af09c00384ea" />
+Image from Shi et al 2023
+:::
+:::
+
+## Fact checking?
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+## Final thoughts
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+
+## Step 3
+::: columns
+::: {.column width="40%"}
+
+:::
+::: {.column width="60%"}
+
+:::
+:::
+
+# Q & A
