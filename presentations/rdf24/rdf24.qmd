@@ -23,26 +23,42 @@ School of Computing
 March 2024
 
 ## Overview
+::: columns
+::: {.column width="40%"}
 - Brief introduction (~ 3 mins)
-- Brief history of www.freebase.com (~ 10 mins)
+- Brief introduction to Knowledge Graphs (~ 10 mins)
 - Reproducing www.freebase.com using Blazegraph (~ 15 mins)
 - Role of RDF in the age of Transformers (~ 10 mins)
 - Q&A (~10 mins)
 
+:::
+::: {.column width="60%"}
+![DALL·E 2024-02-24 16 25 31 - A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Gra](https://github.com/layik/layik.github.io/assets/408568/942f9123-984e-4b8e-b898-f0fc05ba1cde)
+:::
+:::
+
 # Brief introduction
 <iframe style="width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
 
-## test
+## My Involvement with Knowledge Graphs
 ::: columns
 ::: {.column width="40%"}
+- In 2015 for a year
+- Personal interest in epistemology
+- It was an opportunity
+- With the success of GPT (ChatGPT) the interest renewed
 
+> <div style='size: 0.8em'> draw an abstract picture of the cross-path of you GPT or ChatGPT with that of knowledge graphs such as Freebase or Google Knowledge Graphdraw an abstract picture of the cross-path of you GPT or ChatGPT with that of knowledge graphs such as Freebase or Google Knowledge Graph</div>
 :::
 ::: {.column width="60%"}
 
+<img src='https://github.com/layik/layik.github.io/assets/408568/40127200-3221-4507-a357-4b0a8ba175b' alt='DALL·E 2024-02-24 16 24 31 - An abstract representation of the intersection between advanced AI models like GPT or ChatGPT and knowledge graphs such as Freebase or Google Knowledg' />
+
 :::
 :::
 
-# Brief history of Metaweb
+# Brief introduction to Knowledge Graphs
+<h3 style="text-align: center"> via www.freebase.com</h3>
 
 ## Timeline and people
 ::: columns
