@@ -320,6 +320,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="rdf24_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="rdf24_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="rdf24_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -424,16 +427,25 @@ D Hillis
 </section>
 <section id="tripples-briefly-in-rdf" class="slide level2">
 <h2>Tripples (briefly) in RDF</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
 <ul>
 <li>Subject - predicate - Object</li>
 <li>Layik - is - person .</li>
 <li>Person - is - word .</li>
-<li>uri://people#LayikHama http://xmlns.com/foaf/0.1/knows uri://people#RoyRuddle</li>
+<li>uri://people#LayikHama <span style="color:blue">http://xmlns.com/foaf/0.1/knows</span> uri://people#RoyRuddle</li>
 </ul>
-</div><div class="column" style="width:60%;">
-
+<div class="cell" data-reveal="true" data-caption="RDF tripples" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR;
+    Layik-- is --&gt;Person;
+    Person-- is --&gt;Word;
+    LayikHama["uri://people#LayikHama"] -- "http://xmlns.com/foaf/0.1/knows" --&gt; RoyRuddle["uri://people#RoyRuddle"];
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
 </div>
 </div>
 </section></section>
@@ -449,7 +461,8 @@ D Hillis
 <ul>
 <li>Understanding the model behind www.freebase.com</li>
 <li>Find the right tripple store (graph database)</li>
-<li>Workout how we can interact with it</li>
+<li>Workout how we can interact with it (Metaphactory)</li>
+<li>Build an editing interface (custom React)</li>
 </ul>
 </div><div class="column" style="width:60%;">
 
@@ -461,7 +474,7 @@ D Hillis
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li>I had a chat with X and they quoted us</li>
+<li>I had a chat with X</li>
 <li>We agreed on roughly what could get us started
 <ul>
 <li>No images and any images coming would be from Wikipedia</li>

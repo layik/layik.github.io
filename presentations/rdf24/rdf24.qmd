@@ -89,17 +89,21 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 https://en.wikipedia.org/wiki/Alphabet_of_human_thought
 
 ## Tripples (briefly) in RDF
-::: columns
-::: {.column width="40%"}
+
 - Subject - predicate - Object
 - Layik - is - person .
 - Person - is - word .
-- uri://people#LayikHama http://xmlns.com/foaf/0.1/knows uri://people#RoyRuddle
-:::
-::: {.column width="60%"}
+- uri://people#LayikHama <span style="color:blue">http://xmlns.com/foaf/0.1/knows</span> uri://people#RoyRuddle
 
-:::
-:::
+```{mermaid}
+%%| echo: false
+%%| caption: RDF tripples
+%%|
+graph LR;
+    Layik-- is -->Person;
+    Person-- is -->Word;
+    LayikHama["uri://people#LayikHama"] -- "http://xmlns.com/foaf/0.1/knows" --> RoyRuddle["uri://people#RoyRuddle"];
+```
 
 # Reproducing www.freebase.com using Blazegraph
 
@@ -108,7 +112,8 @@ https://en.wikipedia.org/wiki/Alphabet_of_human_thought
 ::: {.column width="40%"}
 - Understanding the model behind www.freebase.com
 - Find the right tripple store (graph database)
-- Workout how we can interact with it
+- Workout how we can interact with it (Metaphactory)
+- Build an editing interface (custom React)
 
 :::
 ::: {.column width="60%"}
@@ -119,7 +124,7 @@ https://en.wikipedia.org/wiki/Alphabet_of_human_thought
 ## Blazegraph for freebase.com
 ::: columns
 ::: {.column width="40%"}
-- I had a chat with X and they quoted us
+- I had a chat with X
 - We agreed on roughly what could get us started
   - No images and any images coming would be from Wikipedia
   - Workout the tech-stack that we would use
