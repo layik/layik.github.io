@@ -14,13 +14,15 @@ format:
 
 # Knowledge Graphs in the age of ChatGPT
 
-<h3 style="text-align:center;"> Can RDF play any role?</h3>
+<h3 style="text-align:center;"> LLMs bringing back Knowledge Graphs</h3>
 
 Layik Hama
 
 School of Computing
 
 March 2024
+
+https://layik.github.io/presentations/rdf24/rdf24.html
 
 ## Overview
 - Brief introduction (~ 3 mins)
@@ -32,12 +34,19 @@ March 2024
 # Brief introduction
 <iframe style="width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
 
-## test
+## Brief introduction
 ::: columns
 ::: {.column width="40%"}
-
+- Startup project in 2015
+- Came back to LIDA in 2018
+- Started working on DynAIRx in Feb 2023
+- https://www.liverpool.ac.uk/dynairx/
 :::
 ::: {.column width="60%"}
+
+![](https://user-images.githubusercontent.com/408568/195129362-92b9fc70-e5b7-4895-9331-162324e53e76.png)
+
+Hama, Layik, Roger Beecham, and Nik Lomax. "TGVE: a Tool for Analysis and Visualization of Geospatial Data." (2023).
 
 :::
 :::
