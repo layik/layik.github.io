@@ -244,7 +244,7 @@ Image from Shi et al 2023
 ::: columns
 ::: {.column width="40%"}
 
-- LLMs (ChatGPT) has not "bulldozed" Knowledge Graphs
+- It is much easier to build knowledge graphs with LLMs
 - We discussed the interplay between LLMs and Knowledge Graphs
 - Could we think about new models of structuring knowledge?
 - As for RDF, can we think about new ways of storing, processing and retrieving semantic data?
@@ -256,7 +256,7 @@ Image from Shi et al 2023
 :::
 
 
-## Step 3
+<!-- ## Step 3
 ::: columns
 ::: {.column width="40%"}
 
@@ -264,6 +264,6 @@ Image from Shi et al 2023
 ::: {.column width="60%"}
 
 :::
-:::
+::: -->
 
 # Q & A
