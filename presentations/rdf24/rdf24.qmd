@@ -33,14 +33,15 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 - Role of RDF in the age of Transformers (~ 10 mins)
 - Q&A (~10 mins)
 
+> DALL·E 2024-02-24 16 25 31: A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Graph
 :::
 ::: {.column width="60%"}
-![DALL·E 2024-02-24 16 25 31 - A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Gra](https://github.com/layik/layik.github.io/assets/408568/942f9123-984e-4b8e-b898-f0fc05ba1cde)
+![](https://github-production-user-asset-6210df.s3.amazonaws.com/408568/307536065-942f9123-984e-4b8e-b898-f0fc05ba1cde.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240229T141100Z&X-Amz-Expires=300&X-Amz-Signature=42336be6b36cd6eb708579b1092fe68c30f2440b316558b9406d94f0699ee58c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=139284290){width=90%}
 :::
 :::
 
 # Brief introduction
-<iframe style="width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
+<iframe style="text-align: center; width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
 
 ## My Involvement with Knowledge Graphs
 ::: columns
@@ -57,7 +58,7 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 :::
 ::: {.column width="60%"}
 
-<img src='https://github.com/layik/layik.github.io/assets/408568/40127200-3221-4507-a357-4b0a8ba175b' alt='DALL·E 2024-02-24 16 24 31 - An abstract representation of the intersection between advanced AI models like GPT or ChatGPT and knowledge graphs such as Freebase or Google Knowledg' />
+![image](./figures/fb-domain.png)
 
 :::
 :::
@@ -78,7 +79,7 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 
 :::
 ::: {.column width="60%"}
-![](https://i.ebayimg.com/images/g/uR8AAOSwQI1lj6xJ/s-l1600.jpg)
+![](https://i.ebayimg.com/images/g/uR8AAOSwQI1lj6xJ/s-l1600.jpg){fig-align=center}
 ~ D Hillis
 :::
 :::
@@ -95,14 +96,17 @@ https://en.wikipedia.org/wiki/Alphabet_of_human_thought
 - Person - is - word .
 - uri://people#LayikHama <span style="color:blue">http://xmlns.com/foaf/0.1/knows</span> uri://people#RoyRuddle
 
-```{mermaid}
-%%| echo: false
-%%| caption: RDF tripples
-%%|
-graph LR;
-    Layik-- is -->Person;
-    Person-- is -->Word;
-    LayikHama["uri://people#LayikHama"] -- "http://xmlns.com/foaf/0.1/knows" --> RoyRuddle["uri://people#RoyRuddle"];
+```{dot}
+//| echo: false
+//| caption: RDF triples
+digraph RDF {
+    "Layik" -> "Person" [label="is"];
+    "Person" -> "Word" [label="is"];
+    "is" -> "is" [label="hasLabel"];
+    "is" -> "EN" [label="labelLanguage"];
+    "uri://people#LayikHama" -> "uri://people#RoyRuddle" [label="http://xmlns.com/foaf/0.1/knows"];
+}
+
 ```
 
 # Reproducing www.freebase.com using Blazegraph
@@ -114,17 +118,48 @@ graph LR;
 - Find the right tripple store (graph database)
 - Workout how we can interact with it (Metaphactory)
 - Build an editing interface (custom React)
+- Learn [SPARQL](https://en.wikipedia.org/wiki/SPARQL) to query the graph
 
 :::
 ::: {.column width="60%"}
+![image](./figures/fb-domain.png)
+[archive.org](https://web.archive.org/web/20141223123504/http://www.freebase.com/type/link?schema=)
+:::
+:::
 
+## Understanding the model (1)
+![](./figures/fb-domain.png){fig-align=center width=1200}
+
+[archive.org](https://web.archive.org/web/20141223123504/http://www.freebase.com/type/link?schema=)
+
+## Understanding the model (2)
+::: columns
+::: {.column width="40%"}
+- That Freebase is schema-less
+- A Linux like directory system is used
+  - /root
+     - /Universe
+       - /Galaxy
+- Specific terminology like topics and properties
+:::
+::: {.column width="60%"}
+
+```{dot}
+//| echo: false
+//| caption: RDF triples
+digraph RDF {
+    "type/object1" -> "type/object2" [label="type/link"];
+}
+
+```
 :::
 :::
+
 
 ## Blazegraph for freebase.com
 ::: columns
 ::: {.column width="40%"}
-- I had a chat with X
+- I had a chat with Bradley Bebee ([LinkedIn](https://www.linkedin.com/in/bradley-bebee-a15764b/))
 - We agreed on roughly what could get us started
   - No images and any images coming would be from Wikipedia
   - Workout the tech-stack that we would use
@@ -132,7 +167,7 @@ graph LR;
 
 :::
 ::: {.column width="60%"}
-
+![](https://www.zdnet.com/a/img/2018/05/31/c0a17943-1c8f-4013-a9b9-6d02636ba99b/awsneptune.jpg){fig-align="center"}
 :::
 :::
 

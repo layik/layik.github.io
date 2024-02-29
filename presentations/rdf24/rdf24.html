@@ -320,9 +320,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="rdf24_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="rdf24_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="rdf24_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -351,20 +348,18 @@ LLMs bringing back Knowledge Graphs
 <li>Role of RDF in the age of Transformers (~ 10 mins)</li>
 <li>Q&amp;A (~10 mins)</li>
 </ul>
+<blockquote>
+<p>DALL·E 2024-02-24 16 25 31: A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Graph</p>
+</blockquote>
 </div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/layik/layik.github.io/assets/408568/942f9123-984e-4b8e-b898-f0fc05ba1cde.png"></p>
-<figcaption>DALL·E 2024-02-24 16 25 31 - A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Gra</figcaption>
-</figure>
-</div>
+<p><img data-src="https://github-production-user-asset-6210df.s3.amazonaws.com/408568/307536065-942f9123-984e-4b8e-b898-f0fc05ba1cde.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240229%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20240229T141100Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=42336be6b36cd6eb708579b1092fe68c30f2440b316558b9406d94f0699ee58c&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=139284290" style="width:90.0%"></p>
 </div>
 </div>
 </section></section>
 <section>
 <section id="brief-introduction" class="title-slide slide level1 center">
 <h1>Brief introduction</h1>
-<iframe style="width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups">
+<iframe style="text-align: center; width: 80vw; height: 80vh; border: none;" src="https://query.wikidata.org/embed.html#%23A%20network%20of%20Drug-disease%20interactions%20on%20infectious%20diseases%20%28Source%3A%20Disease%20Ontology%2C%20NDF-RT%20and%20ChEMBL%29%0A%23defaultView%3AGraph%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Frgb%20%3Flink%0AWHERE%0A%7B%0A%20%20VALUES%20%3Ftoggle%20%7B%20true%20false%20%7D%0A%20%20%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%3B%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP279%2B%20wd%3AQ12206%3B%20%20%23%20Diabetes%20mellitus%0A%20%20%20%20%20%20%20%20%20%20%20wdt%3AP2176%20%3Fdrug.%0A%20%20%3Fdrug%20rdfs%3Alabel%20%3FdrugLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdrugLabel%29%20%3D%20%22en%22%29.%0A%20%20%3Fdisease%20rdfs%3Alabel%20%3FdiseaseLabel.%0A%20%20%20%20FILTER%28LANG%28%3FdiseaseLabel%29%20%3D%20%22en%22%29.%0A%20%20%0A%20%20BIND%28IF%28%3Ftoggle%2C%3Fdisease%2C%3Fdrug%29%20AS%20%3Fitem%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%3FdiseaseLabel%2C%3FdrugLabel%29%20AS%20%3FitemLabel%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%229ecae1%22%2C%223182bd%22%29%20AS%20%3Frgb%29.%0A%20%20BIND%28IF%28%3Ftoggle%2C%22%22%2C%3Fdisease%29%20AS%20%3Flink%29.%0A%7D%0ALIMIT%20100%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups">
 </iframe>
 </section>
 <section id="my-involvement-with-knowledge-graphs" class="slide level2">
@@ -383,7 +378,12 @@ LLMs bringing back Knowledge Graphs
 <li>With the success of GPT (ChatGPT) the interest renewed</li>
 </ul>
 </div><div class="column" style="width:60%;">
-<p><img src="https://github.com/layik/layik.github.io/assets/408568/40127200-3221-4507-a357-4b0a8ba175b" alt="DALL·E 2024-02-24 16 24 31 - An abstract representation of the intersection between advanced AI models like GPT or ChatGPT and knowledge graphs such as Freebase or Google Knowledg"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./figures/fb-domain.png"></p>
+<figcaption>image</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section></section>
@@ -411,7 +411,7 @@ via www.freebase.com
 </ul>
 </div><div class="column" style="width:60%;">
 <dl>
-<dt><img data-src="https://i.ebayimg.com/images/g/uR8AAOSwQI1lj6xJ/s-l1600.jpg"></dt>
+<dt><img data-src="https://i.ebayimg.com/images/g/uR8AAOSwQI1lj6xJ/s-l1600.jpg" class="quarto-figure quarto-figure-center"></dt>
 <dd>
 D Hillis
 </dd>
@@ -433,16 +433,94 @@ D Hillis
 <li>Person - is - word .</li>
 <li>uri://people#LayikHama <span style="color:blue">http://xmlns.com/foaf/0.1/knows</span> uri://people#RoyRuddle</li>
 </ul>
-<div class="cell" data-reveal="true" data-caption="RDF tripples" data-layout-align="default">
+<div class="cell" data-caption="RDF triples" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">graph LR;
-    Layik-- is --&gt;Person;
-    Person-- is --&gt;Word;
-    LayikHama["uri://people#LayikHama"] -- "http://xmlns.com/foaf/0.1/knows" --&gt; RoyRuddle["uri://people#RoyRuddle"];
-</pre>
+<svg width="960" height="480" viewbox="0.00 0.00 529.87 221.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 217.6)">
+<title>RDF</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-217.6 525.87,-217.6 525.87,4 -4,4"></polygon>
+<!-- Layik -->
+<g id="node1" class="node">
+<title>Layik</title>
+<ellipse fill="none" stroke="black" cx="37.32" cy="-195.6" rx="33.62" ry="18"></ellipse>
+<text text-anchor="middle" x="37.32" y="-191.4" font-family="Times,serif" font-size="14.00">Layik</text>
+</g>
+<!-- Person -->
+<g id="node2" class="node">
+<title>Person</title>
+<ellipse fill="none" stroke="black" cx="37.32" cy="-106.8" rx="37.15" ry="18"></ellipse>
+<text text-anchor="middle" x="37.32" y="-102.6" font-family="Times,serif" font-size="14.00">Person</text>
+</g>
+<!-- Layik&#45;&gt;Person -->
+<g id="edge1" class="edge">
+<title>Layik-&gt;Person</title>
+<path fill="none" stroke="black" d="M37.32,-177.45C37.32,-165.32 37.32,-148.82 37.32,-134.92"></path>
+<polygon fill="black" stroke="black" points="40.82,-134.91 37.32,-124.91 33.82,-134.91 40.82,-134.91"></polygon>
+<text text-anchor="middle" x="41.99" y="-147" font-family="Times,serif" font-size="14.00">is</text>
+</g>
+<!-- Word -->
+<g id="node3" class="node">
+<title>Word</title>
+<ellipse fill="none" stroke="black" cx="37.32" cy="-18" rx="33.05" ry="18"></ellipse>
+<text text-anchor="middle" x="37.32" y="-13.8" font-family="Times,serif" font-size="14.00">Word</text>
+</g>
+<!-- Person&#45;&gt;Word -->
+<g id="edge2" class="edge">
+<title>Person-&gt;Word</title>
+<path fill="none" stroke="black" d="M37.32,-88.65C37.32,-76.52 37.32,-60.02 37.32,-46.12"></path>
+<polygon fill="black" stroke="black" points="40.82,-46.11 37.32,-36.11 33.82,-46.11 40.82,-46.11"></polygon>
+<text text-anchor="middle" x="41.99" y="-58.2" font-family="Times,serif" font-size="14.00">is</text>
+</g>
+<!-- is -->
+<g id="node4" class="node">
+<title>is</title>
+<ellipse fill="none" stroke="black" cx="119.32" cy="-195.6" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="119.32" y="-191.4" font-family="Times,serif" font-size="14.00">is</text>
+</g>
+<!-- is&#45;&gt;is -->
+<g id="edge3" class="edge">
+<title>is-&gt;is</title>
+<path fill="none" stroke="black" d="M143.86,-203.72C154.83,-204.49 164.32,-201.79 164.32,-195.6 164.32,-191.44 160.04,-188.86 153.9,-187.84"></path>
+<polygon fill="black" stroke="black" points="153.98,-184.34 143.86,-187.48 153.72,-191.34 153.98,-184.34"></polygon>
+<text text-anchor="middle" x="189.59" y="-191.4" font-family="Times,serif" font-size="14.00">hasLabel</text>
+</g>
+<!-- EN -->
+<g id="node5" class="node">
+<title>EN</title>
+<ellipse fill="none" stroke="black" cx="119.32" cy="-106.8" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="119.32" y="-102.6" font-family="Times,serif" font-size="14.00">EN</text>
+</g>
+<!-- is&#45;&gt;EN -->
+<g id="edge4" class="edge">
+<title>is-&gt;EN</title>
+<path fill="none" stroke="black" d="M119.32,-177.45C119.32,-165.32 119.32,-148.82 119.32,-134.92"></path>
+<polygon fill="black" stroke="black" points="122.82,-134.91 119.32,-124.91 115.82,-134.91 122.82,-134.91"></polygon>
+<text text-anchor="middle" x="160.52" y="-147" font-family="Times,serif" font-size="14.00">labelLanguage</text>
+</g>
+<!-- uri://people#LayikHama -->
+<g id="node6" class="node">
+<title>uri://people#LayikHama</title>
+<ellipse fill="none" stroke="black" cx="338.32" cy="-195.6" rx="105.93" ry="18"></ellipse>
+<text text-anchor="middle" x="338.32" y="-191.4" font-family="Times,serif" font-size="14.00">uri://people#LayikHama</text>
+</g>
+<!-- uri://people#RoyRuddle -->
+<g id="node7" class="node">
+<title>uri://people#RoyRuddle</title>
+<ellipse fill="none" stroke="black" cx="338.32" cy="-106.8" rx="104.25" ry="18"></ellipse>
+<text text-anchor="middle" x="338.32" y="-102.6" font-family="Times,serif" font-size="14.00">uri://people#RoyRuddle</text>
+</g>
+<!-- uri://people#LayikHama&#45;&gt;uri://people#RoyRuddle -->
+<g id="edge5" class="edge">
+<title>uri://people#LayikHama-&gt;uri://people#RoyRuddle</title>
+<path fill="none" stroke="black" d="M338.32,-177.45C338.32,-165.32 338.32,-148.82 338.32,-134.92"></path>
+<polygon fill="black" stroke="black" points="341.82,-134.91 338.32,-124.91 334.82,-134.91 341.82,-134.91"></polygon>
+<text text-anchor="middle" x="430.1" y="-147" font-family="Times,serif" font-size="14.00">http://xmlns.com/foaf/0.1/knows</text>
+</g>
+</g>
+</svg>
 </div>
 <p></p></figure><p></p>
 </div>
@@ -463,9 +541,72 @@ D Hillis
 <li>Find the right tripple store (graph database)</li>
 <li>Workout how we can interact with it (Metaphactory)</li>
 <li>Build an editing interface (custom React)</li>
+<li>Learn <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a> to query the graph</li>
 </ul>
 </div><div class="column" style="width:60%;">
+<p><img data-src="./figures/fb-domain.png" alt="image"> <a href="https://web.archive.org/web/20141223123504/http://www.freebase.com/type/link?schema=">archive.org</a></p>
+</div>
+</div>
+</section>
+<section id="understanding-the-model-1" class="slide level2">
+<h2>Understanding the model (1)</h2>
 
+<img data-src="./figures/fb-domain.png" class="quarto-figure quarto-figure-center r-stretch" width="1200"><p><a href="https://web.archive.org/web/20141223123504/http://www.freebase.com/type/link?schema=">archive.org</a></p>
+</section>
+<section id="understanding-the-model-2" class="slide level2">
+<h2>Understanding the model (2)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>That Freebase is schema-less</li>
+<li>A Linux like directory system is used
+<ul>
+<li>/root
+<ul>
+<li>/Universe
+<ul>
+<li>/Galaxy</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Specific terminology like topics and properties</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-caption="RDF triples" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 125.54 132.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 128.8)">
+<title>RDF</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-128.8 121.54,-128.8 121.54,4 -4,4"></polygon>
+<!-- type/object1 -->
+<g id="node1" class="node">
+<title>type/object1</title>
+<ellipse fill="none" stroke="black" cx="58.77" cy="-106.8" rx="58.54" ry="18"></ellipse>
+<text text-anchor="middle" x="58.77" y="-102.6" font-family="Times,serif" font-size="14.00">type/object1</text>
+</g>
+<!-- type/object2 -->
+<g id="node2" class="node">
+<title>type/object2</title>
+<ellipse fill="none" stroke="black" cx="58.77" cy="-18" rx="58.54" ry="18"></ellipse>
+<text text-anchor="middle" x="58.77" y="-13.8" font-family="Times,serif" font-size="14.00">type/object2</text>
+</g>
+<!-- type/object1&#45;&gt;type/object2 -->
+<g id="edge1" class="edge">
+<title>type/object1-&gt;type/object2</title>
+<path fill="none" stroke="black" d="M58.77,-88.65C58.77,-76.52 58.77,-60.02 58.77,-46.12"></path>
+<polygon fill="black" stroke="black" points="62.27,-46.11 58.77,-36.11 55.27,-46.11 62.27,-46.11"></polygon>
+<text text-anchor="middle" x="83.66" y="-58.2" font-family="Times,serif" font-size="14.00">type/link</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -474,7 +615,7 @@ D Hillis
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li>I had a chat with X</li>
+<li>I had a chat with Bradley Bebee (<a href="https://www.linkedin.com/in/bradley-bebee-a15764b/">LinkedIn</a>)</li>
 <li>We agreed on roughly what could get us started
 <ul>
 <li>No images and any images coming would be from Wikipedia</li>
@@ -483,7 +624,11 @@ D Hillis
 </ul></li>
 </ul>
 </div><div class="column" style="width:60%;">
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://www.zdnet.com/a/img/2018/05/31/c0a17943-1c8f-4013-a9b9-6d02636ba99b/awsneptune.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
