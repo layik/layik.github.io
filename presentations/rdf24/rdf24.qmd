@@ -66,7 +66,7 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 # Brief introduction to Knowledge Graphs
 <h3 style="text-align: center"> via www.freebase.com</h3>
 
-## Timeline and people
+## Metaweb: timeline and people
 ::: columns
 ::: {.column width="40%"}
 - Important people:
@@ -185,23 +185,28 @@ digraph RDF {
 :::
 :::
 
-# Knowledge Graphs in the age of Transformers
+# Knowledge Graphs in the age of GPTs
 
-## Generation of KGs (1)
+## Introduce RAG
 ::: columns
 ::: {.column width="40%"}
+- Before GPTs
+
+> Lewis, Patrick, et al. "Retrieval-augmented generation for knowledge-intensive nlp tasks." Advances in Neural Information Processing Systems 33 (2020): 9459-9474.
 
 :::
 ::: {.column width="60%"}
+![](./figures/rag-lewis-et-al-2020.png){fig-align=center}
 
 :::
 :::
 
-## Generation of KGs (2)
+## Generation of KGs (more)
 ::: columns
 ::: {.column width="60%"}
+- Genearing Knowledge Graphs and using them later
 
-- Mihindukulasooriya, Nandana, et al. "Text2kgbench: A benchmark for ontology-driven knowledge graph generation from text." International Semantic Web Conference. Cham: Springer Nature Switzerland, 2023.
+> Mihindukulasooriya, Nandana, et al. "Text2kgbench: A benchmark for ontology-driven knowledge graph generation from text." International Semantic Web Conference. Cham: Springer Nature Switzerland, 2023.
   - https://github.com/cenguix/Text2KGBench
 
 
@@ -216,7 +221,9 @@ Image from Mihindukulasooriya et al 2023
 ## Enhancing LLMs
 ::: columns
 ::: {.column width="60%"}
-- Shi, Xiao, et al. "Hallucination mitigation in natural language generation from large-scale open-domain knowledge graphs." Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.
+- Similar to RAG
+
+> Shi, Xiao, et al. "Hallucination mitigation in natural language generation from large-scale open-domain knowledge graphs." Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.
 
 :::
 ::: {.column width="40%"}
