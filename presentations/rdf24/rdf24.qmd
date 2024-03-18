@@ -191,11 +191,22 @@ digraph RDF {
 # Knowledge Graphs in the age of GPTs
 
 ## Age of GPTS?
+
+::: columns
+::: {.column width="40%"}
+
 - One youtube link that is useful
 - Bigram generator to explain "transformers"
 - What you already know/heard about ChatGPT/Bard etc
 
-<iframe style="text-align: center; width: 80vw; height: 80vh; border: none;" src="https://www.youtube.com/embed/PaCmpygFfXo?si=Nt6U0ctBFjhmJOD4&amp;start=1264" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+:::
+::: {.column width="60%"}
+<iframe style="text-align: center; width: 90vw; height: 90vh; border: none;" src="https://www.youtube.com/embed/PaCmpygFfXo?si=Nt6U0ctBFjhmJOD4&amp;start=1264" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:::
+:::
+
+
 
 ## Taxonomy and survey
 ::: columns
