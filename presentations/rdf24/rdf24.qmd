@@ -30,7 +30,7 @@ https://layik.github.io/presentations/rdf24/rdf24.html
 - Brief introduction (~ 3 mins)
 - Brief introduction to Knowledge Graphs (~ 10 mins)
 - Reproducing www.freebase.com using Blazegraph (~ 15 mins)
-- Role of RDF in the age of Transformers (~ 10 mins)
+- Role of RDF (Knowledge Graphs) in the age of Transformers (~ 10 mins)
 - Q&A (~10 mins)
 
 > DALL·E 2024-02-24 16 25 31: A simple abstract illustration showing the integration of AI models like GPT or ChatGPT with knowledge graphs such as Freebase or Google Knowledge Graph
@@ -189,6 +189,29 @@ digraph RDF {
 :::
 
 # Knowledge Graphs in the age of GPTs
+
+## Age of GPTS?
+- One youtube link that is useful
+- Bigram generator to explain "transformers"
+- What you already know/heard about ChatGPT/Bard etc
+
+<iframe style="text-align: center; width: 80vw; height: 80vh; border: none;" src="https://www.youtube.com/embed/PaCmpygFfXo?si=Nt6U0ctBFjhmJOD4&amp;start=1264" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Taxonomy and survey
+::: columns
+::: {.column width="40%"}
+
+- Knowledge-Aware Inference
+- Knowledge-Aware Training
+- and Knowledge Aware Validation
+
+ ~ Agrawal et. al. 2023
+
+:::
+::: {.column width="60%"}
+![](./figures/agrawal-et-al-2023.png){fig-align=center}
+:::
+:::
 
 ## Introduce RAG
 ::: columns
