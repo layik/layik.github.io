@@ -157,7 +157,7 @@ digraph RDF {
 
 ## Freebase data taster
 
-<a href="https://asciinema.org/a/HIt2Va2YWVe1qy3boTukcbgQe" target="_blank"><img src="https://asciinema.org/a/HIt2Va2YWVe1qy3boTukcbgQe.svg" /></a>
+<a href="https://asciinema.org/a/fzvuExSAHTuTfhmXaTcZKQ5yl?t=100" target="_blank"><img src="https://asciinema.org/a/fzvuExSAHTuTfhmXaTcZKQ5yl.svg" /></a>
 
 ## Blazegraph for freebase.com
 ::: columns
